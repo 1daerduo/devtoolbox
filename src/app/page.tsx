@@ -145,6 +145,54 @@ const tools = [
     href: '/tools/diff-checker',
     icon: '≠',
   },
+  {
+    name: 'Cron 表达式生成器',
+    desc: '可视化生成 Cron 定时表达式，实时预览下次执行时间。',
+    href: '/tools/cron-generator',
+    icon: '⏱️',
+  },
+  {
+    name: '进制转换器',
+    desc: '二进制、八进制、十进制、十六进制等多种进制互转。',
+    href: '/tools/number-base',
+    icon: '🔢',
+  },
+  {
+    name: 'Lorem Ipsum 生成器',
+    desc: '生成中英文占位文本，支持自定义段落数，前端设计必备。',
+    href: '/tools/lorem-ipsum',
+    icon: '📃',
+  },
+  {
+    name: 'HTML 格式化',
+    desc: 'HTML 代码美化与压缩，支持自定义缩进。',
+    href: '/tools/html-formatter',
+    icon: '🔖',
+  },
+  {
+    name: 'JS 格式化',
+    desc: 'JavaScript 代码美化与压缩，前端开发调试必备。',
+    href: '/tools/js-formatter',
+    icon: '⚡',
+  },
+  {
+    name: 'Markdown 转 HTML',
+    desc: 'Markdown 转换为 HTML 代码，实时预览渲染效果。',
+    href: '/tools/markdown-to-html',
+    icon: '↗️',
+  },
+  {
+    name: 'Base64 图片互转',
+    desc: '图片与 Base64 编码互转，支持拖拽上传和粘贴截图。',
+    href: '/tools/base64-image',
+    icon: '🖼️',
+  },
+  {
+    name: 'Bcrypt 生成验证',
+    desc: '安全生成 Bcrypt 密码哈希，验证密码与哈希是否匹配。',
+    href: '/tools/bcrypt-generator',
+    icon: '🔒',
+  },
 ]
 
 export default function HomePage() {
@@ -156,8 +204,8 @@ export default function HomePage() {
           在线开发者工具集合
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算、密码生成……
-          24 款开发工具，一站式解决。
+          免费、快速、无需注册。JSON 格式化、Cron 表达式、进制转换、JWT 解码、Bcrypt、HTML/JS 格式化……
+          32 款开发工具，一站式解决。
         </p>
         <Link
           href="/tools/json-formatter"
@@ -172,7 +220,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
           所有工具
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {tools.map((tool) => (
             <Link
               key={tool.href}

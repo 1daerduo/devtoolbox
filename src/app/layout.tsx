@@ -10,11 +10,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://devtoolbox-61u.pages.dev'),
   title: 'DevToolbox - 在线开发者工具集合',
-  description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、SQL格式化、时间戳转换、二维码生成、IP查询、Base64、XML/YAML格式化等24款实用开发工具。全部在浏览器本地处理，数据安全。',
-  keywords: ['开发者工具', 'JSON格式化', 'JWT解码', 'SQL格式化', '时间戳转换', '二维码生成', '正则表达式', 'Base64', 'IP查询', 'XML格式化', 'YAML格式化', 'CSV转换', 'UUID生成', '密码生成', '文本对比'],
+  description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt、SQL格式化、时间戳转换、二维码生成、IP查询、Base64、HTML/JS格式化等32款实用开发工具。全部在浏览器本地处理，数据安全。',
+  keywords: ['开发者工具', 'JSON格式化', 'JWT解码', 'Cron表达式', '进制转换', 'Bcrypt', 'SQL格式化', '时间戳转换', '二维码生成', '正则表达式', 'Base64', 'IP查询', 'XML格式化', 'YAML格式化', 'HTML格式化', 'JS格式化', 'CSV转换', 'UUID生成', '密码生成', '文本对比'],
   openGraph: {
     title: 'DevToolbox - 免费在线开发者工具集合',
-    description: '24款免费在线开发者工具，JSON格式化、JWT解码、SQL格式化、Base64、二维码等，无需注册，数据本地处理。',
+    description: '32款免费在线开发者工具，JSON格式化、Cron表达式、进制转换、Bcrypt、JWT解码、HTML/JS格式化等，无需注册，数据本地处理。',
     url: 'https://devtoolbox-61u.pages.dev',
     siteName: 'DevToolbox',
     locale: 'zh_CN',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DevToolbox - 在线开发者工具集合',
-    description: '24款免费在线开发者工具，JSON、JWT、SQL格式化等。',
+    description: '32款免费在线开发者工具，JSON、Cron、进制转换、Bcrypt、JWT、HTML/JS格式化等。',
   },
   robots: {
     index: true,
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'WebApplication',
               name: 'DevToolbox',
               url: 'https://devtoolbox-61u.pages.dev',
-              description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、SQL格式化等24款实用工具。',
+              description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt等32款实用工具。',
               applicationCategory: 'DeveloperApplication',
               operatingSystem: 'All',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -67,10 +67,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/my-ip" className="hover:text-primary-600 no-underline whitespace-nowrap">IP查询</Link>
               <Link href="/tools/password-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">密码</Link>
               <Link href="/tools/diff-checker" className="hover:text-primary-600 no-underline whitespace-nowrap">Diff</Link>
-              <Link href="/tools/case-converter" className="hover:text-primary-600 no-underline whitespace-nowrap">大小写</Link>
-              <Link href="/tools/image-compressor" className="hover:text-primary-600 no-underline whitespace-nowrap">图片压缩</Link>
-              <Link href="/tools/markdown-editor" className="hover:text-primary-600 no-underline whitespace-nowrap">MD编辑</Link>
-              <Link href="/tools/css-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">CSS</Link>
+              <Link href="/tools/cron-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Cron</Link>
+              <Link href="/tools/number-base" className="hover:text-primary-600 no-underline whitespace-nowrap">进制</Link>
+              <Link href="/tools/bcrypt-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Bcrypt</Link>
+              <Link href="/tools/html-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">HTML</Link>
+              <Link href="/tools/js-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JS</Link>
             </div>
             {/* Mobile nav: horizontal scroll */}
             <div className="flex md:hidden gap-3 text-xs text-gray-600 overflow-x-auto">
@@ -83,8 +84,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/timestamp" className="hover:text-primary-600 no-underline whitespace-nowrap">时间戳</Link>
               <Link href="/tools/my-ip" className="hover:text-primary-600 no-underline whitespace-nowrap">IP</Link>
               <Link href="/tools/diff-checker" className="hover:text-primary-600 no-underline">Diff</Link>
-              <Link href="/tools/image-compressor" className="hover:text-primary-600 no-underline">图片</Link>
-              <Link href="/tools/css-formatter" className="hover:text-primary-600 no-underline">CSS</Link>
+              <Link href="/tools/cron-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Cron</Link>
+              <Link href="/tools/number-base" className="hover:text-primary-600 no-underline whitespace-nowrap">进制</Link>
+              <Link href="/tools/bcrypt-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Bcrypt</Link>
+              <Link href="/tools/html-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">HTML</Link>
+              <Link href="/tools/js-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JS</Link>
             </div>
           </div>
         </nav>
