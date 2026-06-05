@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://devtoolbox.pages.dev'
+const BASE_URL = 'https://devtoolbox-61u.pages.dev'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = [
