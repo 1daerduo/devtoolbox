@@ -50,7 +50,7 @@ export default function JsonFormatterClient() {
             </button>
           </div>
           <textarea
-            className="w-full h-80 border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
+            className="w-full min-h-[180px] sm:min-h-[250px] lg:h-80 border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
             value={input}
             onChange={e => setInput(e.target.value)}
             placeholder='粘贴 JSON 数据，例如：{"name":"DevToolbox","version":1}'
@@ -63,12 +63,12 @@ export default function JsonFormatterClient() {
             {output && <CopyButton text={output} />}
           </div>
           {error && (
-            <div className="w-full h-80 border border-red-300 bg-red-50 rounded-lg p-3 text-sm text-red-600 overflow-auto">
+            <div className="w-full min-h-[180px] sm:min-h-[250px] lg:h-80 border border-red-300 bg-red-50 rounded-lg p-3 text-sm text-red-600 overflow-auto">
               {error}
             </div>
           )}
           {!error && (
-            <pre className="w-full h-80 border rounded-lg p-3 font-mono text-sm bg-gray-50 border-gray-300 overflow-auto whitespace-pre-wrap">
+            <pre className="w-full min-h-[180px] sm:min-h-[250px] lg:h-80 border rounded-lg p-3 font-mono text-sm bg-gray-50 border-gray-300 overflow-auto whitespace-pre-wrap">
               {output || '结果将显示在这里...'}
             </pre>
           )}

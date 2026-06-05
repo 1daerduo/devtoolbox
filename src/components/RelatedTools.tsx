@@ -28,7 +28,7 @@ export default function RelatedTools({ current }: Props) {
   return (
     <section className="mt-10 pt-6 border-t border-gray-200">
       <h3 className="text-base font-semibold text-gray-700 mb-4">🔧 你可能还需要</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         {items.map((slug) => {
           const t = toolMap[slug]
           if (!t) return null

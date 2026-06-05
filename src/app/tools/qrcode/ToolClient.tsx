@@ -52,7 +52,7 @@ export default function QrcodeClient() {
         <div>
           <label className="font-medium text-gray-700 block mb-2">输入内容</label>
           <textarea
-            className="w-full h-32 border rounded-lg p-3 text-sm bg-white border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none mb-3"
+            className="w-full min-h-[100px] border rounded-lg p-3 text-sm bg-white border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none mb-3"
             value={text}
             onChange={e => setText(e.target.value)}
             placeholder="输入文本或网址（URL）..."
@@ -92,7 +92,7 @@ export default function QrcodeClient() {
               <img src={qrDataUrl} alt="生成的二维码" className="border rounded-lg max-w-full" />
               <div className="mt-3 flex gap-2 justify-center">
                 <button onClick={download}
-                  className="bg-gray-700 text-white px-4 py-1.5 rounded-lg hover:bg-gray-800 text-sm font-medium">
+                  className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 text-sm font-medium min-h-[44px]">
                   下载 PNG
                 </button>
               </div>

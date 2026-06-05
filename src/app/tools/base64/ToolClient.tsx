@@ -43,21 +43,21 @@ export default function Base64Client() {
       <h1 className="text-2xl font-bold mb-2 text-gray-900">Base64 编码 / 解码</h1>
       <p className="text-sm text-gray-500 mb-6">在线 Base64 编码解码工具，支持 UTF-8 中文，一键交换输入输出。</p>
 
-      <div className="flex gap-2 mb-6">
+      <div className="flex gap-2 mb-6 flex-wrap">
         <button onClick={() => { setMode('encode'); setOutput(''); setError('') }}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium min-h-[44px] ${
             mode === 'encode' ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}>
           编码 Encode
         </button>
         <button onClick={() => { setMode('decode'); setOutput(''); setError('') }}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium min-h-[44px] ${
             mode === 'decode' ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}>
           解码 Decode
         </button>
         <button onClick={swap}
-          className="ml-auto px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200">
+          className="ml-auto px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 min-h-[44px]">
           ⇅ 交换输入输出
         </button>
       </div>
@@ -69,12 +69,12 @@ export default function Base64Client() {
               {mode === 'encode' ? '输入原文' : '输入 Base64'}
             </label>
             <button onClick={() => { setInput(''); setOutput(''); setError('') }}
-              className="text-sm text-gray-500 hover:text-red-500">
+              className="text-sm text-gray-500 hover:text-red-500 min-h-[32px]">
               清空
             </button>
           </div>
           <textarea
-            className="w-full h-64 border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
+            className="w-full min-h-[140px] sm:min-h-[200px] border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
             value={input}
             onChange={e => setInput(e.target.value)}
             placeholder={mode === 'encode' ? '输入要编码的文本...' : '输入要解码的 Base64 字符串...'}
@@ -89,14 +89,14 @@ export default function Base64Client() {
             {output && <CopyButton text={output} />}
           </div>
           {error && (
-            <div className="w-full h-64 border border-red-300 bg-red-50 rounded-lg p-3 text-sm text-red-600 overflow-auto">
+            <div className="w-full min-h-[140px] sm:min-h-[200px] border border-red-300 bg-red-50 rounded-lg p-3 text-sm text-red-600 overflow-auto">
               {error}
             </div>
           )}
           {!error && (
             <textarea
               readOnly
-              className="w-full h-64 border rounded-lg p-3 font-mono text-sm bg-gray-50 border-gray-300 text-gray-900 outline-none resize-none"
+              className="w-full min-h-[140px] sm:min-h-[200px] border rounded-lg p-3 font-mono text-sm bg-gray-50 border-gray-300 text-gray-900 outline-none resize-none"
               value={output}
               placeholder="结果将显示在这里..."
             />
@@ -106,12 +106,11 @@ export default function Base64Client() {
 
       <div className="mt-4 flex gap-3">
         <button onClick={process}
-          className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium">
+          className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium min-h-[44px]">
           {mode === 'encode' ? '编码 →' : '← 解码'}
         </button>
       </div>
 
-      {/* 说明 */}
       <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
         <strong>说明：</strong>
         支持 UTF-8 中文编码。Base64 是一种用 64 个字符表示二进制数据的方法，常用于邮件附件、API 传输等场景。

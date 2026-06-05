@@ -1,6 +1,11 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Link from 'next/link'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: 'DevToolbox - 在线开发者工具集合',
@@ -17,12 +22,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="text-xl font-bold text-primary-600 no-underline">
               DevToolbox
             </Link>
-            <div className="flex gap-6 text-sm text-gray-600">
-              <Link href="/tools/json-formatter" className="hover:text-primary-600 no-underline">JSON格式化</Link>
-              <Link href="/tools/timestamp" className="hover:text-primary-600 no-underline">时间戳</Link>
-              <Link href="/tools/qrcode" className="hover:text-primary-600 no-underline">二维码</Link>
-              <Link href="/tools/regex" className="hover:text-primary-600 no-underline">正则测试</Link>
-              <Link href="/tools/base64" className="hover:text-primary-600 no-underline">Base64</Link>
+            <div className="hidden md:flex gap-6 text-sm text-gray-600">
+              <Link href="/tools/json-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JSON格式化</Link>
+              <Link href="/tools/timestamp" className="hover:text-primary-600 no-underline whitespace-nowrap">时间戳</Link>
+              <Link href="/tools/qrcode" className="hover:text-primary-600 no-underline whitespace-nowrap">二维码</Link>
+              <Link href="/tools/regex" className="hover:text-primary-600 no-underline whitespace-nowrap">正则测试</Link>
+              <Link href="/tools/base64" className="hover:text-primary-600 no-underline whitespace-nowrap">Base64</Link>
+            </div>
+            {/* Mobile nav: horizontal scroll */}
+            <div className="flex md:hidden gap-4 text-xs text-gray-600 overflow-x-auto">
+              <Link href="/tools/json-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JSON</Link>
+              <Link href="/tools/timestamp" className="hover:text-primary-600 no-underline whitespace-nowrap">时间戳</Link>
+              <Link href="/tools/qrcode" className="hover:text-primary-600 no-underline whitespace-nowrap">二维码</Link>
+              <Link href="/tools/regex" className="hover:text-primary-600 no-underline whitespace-nowrap">正则</Link>
+              <Link href="/tools/base64" className="hover:text-primary-600 no-underline whitespace-nowrap">Base64</Link>
             </div>
           </div>
         </nav>

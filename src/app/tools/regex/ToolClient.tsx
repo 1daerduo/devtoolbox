@@ -77,7 +77,7 @@ export default function RegexClient() {
             </div>
           </div>
           <button onClick={test}
-            className="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium h-10">
+            className="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium min-h-[44px]">
             测试匹配
           </button>
         </div>
@@ -85,7 +85,7 @@ export default function RegexClient() {
         <div>
           <label className="text-sm font-medium text-gray-700 block mb-1">测试文本</label>
           <textarea
-            className="w-full h-32 border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 text-gray-900 focus:border-primary-500 outline-none mb-3"
+            className="w-full min-h-[120px] border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 text-gray-900 focus:border-primary-500 outline-none mb-3"
             value={testText}
             onChange={e => setTestText(e.target.value)}
             placeholder="粘贴要测试的文本..."

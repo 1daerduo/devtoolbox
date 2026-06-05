@@ -71,7 +71,7 @@ export default function TimestampClient() {
             placeholder="输入时间戳，如 1717593600"
           />
           <button onClick={tsToDate}
-            className="bg-primary-600 text-white px-4 py-1.5 rounded-lg hover:bg-primary-700 text-sm font-medium">
+            className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium min-h-[44px]">
             转换 →
           </button>
           {dateResult && (
@@ -93,12 +93,12 @@ export default function TimestampClient() {
               onChange={e => setDateInput(e.target.value)}
             />
             <button onClick={setNowInput}
-              className="text-xs text-primary-600 border border-gray-200 px-2 py-1 rounded hover:bg-primary-50">
+              className="text-xs text-primary-600 border border-gray-200 px-2 py-1.5 rounded hover:bg-primary-50 min-h-[44px]">
               当前
             </button>
           </div>
           <button onClick={dateToTs}
-            className="bg-primary-600 text-white px-4 py-1.5 rounded-lg hover:bg-primary-700 text-sm font-medium">
+            className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 text-sm font-medium min-h-[44px]">
             ← 转换
           </button>
           {tsResult && (
