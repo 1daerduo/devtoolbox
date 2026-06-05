@@ -21,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'image-compressor',
     'markdown-editor',
     'css-formatter',
+    'jwt-decoder',
+    'xml-formatter',
+    'json-to-csv',
+    'my-ip',
+    'yaml-formatter',
+    'sql-formatter',
+    'diff-checker',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

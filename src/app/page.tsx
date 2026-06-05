@@ -103,6 +103,48 @@ const tools = [
     href: '/tools/css-formatter',
     icon: '🎨',
   },
+  {
+    name: 'JWT 解码器',
+    desc: '在线解析 JWT Token，查看 Header/Payload/Signature。',
+    href: '/tools/jwt-decoder',
+    icon: '🔑',
+  },
+  {
+    name: 'XML 格式化',
+    desc: 'XML 格式化与压缩，支持自定义缩进。',
+    href: '/tools/xml-formatter',
+    icon: '<>',
+  },
+  {
+    name: 'JSON ↔ CSV 转换',
+    desc: 'JSON 与 CSV 格式互转，支持自定义分隔符。',
+    href: '/tools/json-to-csv',
+    icon: '⇄',
+  },
+  {
+    name: 'IP 地址查询',
+    desc: '查询公网 IP、地理位置、运营商和浏览器信息。',
+    href: '/tools/my-ip',
+    icon: '🌐',
+  },
+  {
+    name: 'YAML 格式化',
+    desc: 'YAML ↔ JSON 互转与格式验证，DevOps 必备。',
+    href: '/tools/yaml-formatter',
+    icon: 'Y↔J',
+  },
+  {
+    name: 'SQL 格式化',
+    desc: 'SQL 美化与压缩，支持多种数据库方言。',
+    href: '/tools/sql-formatter',
+    icon: '🛢️',
+  },
+  {
+    name: '文本差异对比',
+    desc: '在线 Diff Checker，可视化两个文本的行级差异。',
+    href: '/tools/diff-checker',
+    icon: '≠',
+  },
 ]
 
 export default function HomePage() {
@@ -115,7 +157,7 @@ export default function HomePage() {
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
           免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算、密码生成……
-          17 款开发工具，一站式解决。
+          24 款开发工具，一站式解决。
         </p>
         <Link
           href="/tools/json-formatter"

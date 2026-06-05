@@ -18,6 +18,13 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'image-compressor': { name: '图片压缩', desc: '在线压缩 PNG/JPG/WebP' },
   'markdown-editor': { name: 'Markdown 编辑器', desc: '实时预览 Markdown 编辑器' },
   'css-formatter': { name: 'CSS 格式化', desc: 'CSS 美化与压缩' },
+  'jwt-decoder': { name: 'JWT 解码器', desc: '解析 JWT Token 数据' },
+  'xml-formatter': { name: 'XML 格式化', desc: 'XML 格式化与压缩' },
+  'json-to-csv': { name: 'JSON ↔ CSV', desc: 'JSON 与 CSV 互转' },
+  'my-ip': { name: 'IP 地址查询', desc: '查询公网 IP 与位置' },
+  'yaml-formatter': { name: 'YAML 格式化', desc: 'YAML ↔ JSON 互转' },
+  'sql-formatter': { name: 'SQL 格式化', desc: 'SQL 美化与压缩' },
+  'diff-checker': { name: '文本差异对比', desc: '在线 Diff Checker' },
 }
 
 // Related tools for each tool
@@ -40,6 +47,13 @@ const related: Record<string, string[]> = {
   'image-compressor': ['color-converter', 'qrcode', 'css-formatter'],
   'markdown-editor': ['word-count', 'html-entity', 'css-formatter'],
   'css-formatter': ['color-converter', 'case-converter', 'markdown-editor'],
+  'jwt-decoder': ['base64', 'hash-generator', 'json-formatter'],
+  'xml-formatter': ['json-formatter', 'sql-formatter', 'yaml-formatter'],
+  'json-to-csv': ['json-formatter', 'sql-formatter', 'yaml-formatter'],
+  'my-ip': ['url-encode', 'base64', 'uuid-generator'],
+  'yaml-formatter': ['json-formatter', 'xml-formatter', 'diff-checker'],
+  'sql-formatter': ['json-formatter', 'diff-checker', 'json-to-csv'],
+  'diff-checker': ['regex', 'word-count', 'text-dedup'],
 }
 
 interface Props {
