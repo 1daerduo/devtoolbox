@@ -31,8 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/password-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">密码</Link>
               <Link href="/tools/word-count" className="hover:text-primary-600 no-underline whitespace-nowrap">字数</Link>
               <Link href="/tools/case-converter" className="hover:text-primary-600 no-underline whitespace-nowrap">大小写</Link>
-              <Link href="/tools/regex" className="hover:text-primary-600 no-underline whitespace-nowrap">正则</Link>
-              <Link href="/tools/base64" className="hover:text-primary-600 no-underline whitespace-nowrap">Base64</Link>
+              <Link href="/tools/image-compressor" className="hover:text-primary-600 no-underline whitespace-nowrap">图片压缩</Link>
+              <Link href="/tools/markdown-editor" className="hover:text-primary-600 no-underline whitespace-nowrap">MD编辑</Link>
+              <Link href="/tools/css-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">CSS</Link>
             </div>
             {/* Mobile nav: horizontal scroll */}
             <div className="flex md:hidden gap-3 text-xs text-gray-600 overflow-x-auto">
@@ -42,10 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/qrcode" className="hover:text-primary-600 no-underline whitespace-nowrap">二维码</Link>
               <Link href="/tools/timestamp" className="hover:text-primary-600 no-underline whitespace-nowrap">时间戳</Link>
               <Link href="/tools/password-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">密码</Link>
-              <Link href="/tools/word-count" className="hover:text-primary-600 no-underline whitespace-nowrap">字数</Link>
-              <Link href="/tools/case-converter" className="hover:text-primary-600 no-underline whitespace-nowrap">大小写</Link>
-              <Link href="/tools/regex" className="hover:text-primary-600 no-underline whitespace-nowrap">正则</Link>
-              <Link href="/tools/base64" className="hover:text-primary-600 no-underline whitespace-nowrap">Base64</Link>
+              <Link href="/tools/word-count" className="hover:text-primary-600 no-underline">字数</Link>
+              <Link href="/tools/case-converter" className="hover:text-primary-600 no-underline">大小写</Link>
+              <Link href="/tools/image-compressor" className="hover:text-primary-600 no-underline">图片压缩</Link>
+              <Link href="/tools/markdown-editor" className="hover:text-primary-600 no-underline">MD编辑</Link>
+              <Link href="/tools/css-formatter" className="hover:text-primary-600 no-underline">CSS</Link>
             </div>
           </div>
         </nav>

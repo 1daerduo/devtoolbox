@@ -15,24 +15,31 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'html-entity': { name: 'HTML 实体编解码', desc: 'HTML 特殊字符与实体互转' },
   'text-dedup': { name: '文本去重排序', desc: '按行去重、排序、反转' },
   'case-converter': { name: '大小写转换', desc: '大写/小写/驼峰等9种格式' },
+  'image-compressor': { name: '图片压缩', desc: '在线压缩 PNG/JPG/WebP' },
+  'markdown-editor': { name: 'Markdown 编辑器', desc: '实时预览 Markdown 编辑器' },
+  'css-formatter': { name: 'CSS 格式化', desc: 'CSS 美化与压缩' },
 }
 
 // Related tools for each tool
 const related: Record<string, string[]> = {
   'json-formatter': ['base64', 'hash-generator', 'color-converter'],
   timestamp: ['uuid-generator', 'password-generator', 'base64'],
-  qrcode: ['url-encode', 'color-converter', 'html-entity'],
+  qrcode: ['url-encode', 'color-converter', 'image-compressor'],
   regex: ['word-count', 'html-entity', 'json-formatter'],
   base64: ['url-encode', 'hash-generator', 'html-entity'],
   'url-encode': ['html-entity', 'base64', 'json-formatter'],
-  'word-count': ['case-converter', 'regex', 'text-dedup'],
+  'word-count': ['case-converter', 'markdown-editor', 'text-dedup'],
   'hash-generator': ['password-generator', 'uuid-generator', 'base64'],
-  'color-converter': ['qrcode', 'json-formatter', 'case-converter'],
+  'color-converter': ['qrcode', 'json-formatter', 'css-formatter'],
   'uuid-generator': ['hash-generator', 'password-generator', 'timestamp'],
   'password-generator': ['hash-generator', 'uuid-generator', 'base64'],
-  'html-entity': ['url-encode', 'regex', 'case-converter'],
+  'html-entity': ['url-encode', 'regex', 'markdown-editor'],
   'text-dedup': ['word-count', 'case-converter', 'regex'],
-  'case-converter': ['text-dedup', 'word-count', 'color-converter'],
+  'case-converter': ['text-dedup', 'word-count', 'css-formatter'],
+  // Tier3
+  'image-compressor': ['color-converter', 'qrcode', 'css-formatter'],
+  'markdown-editor': ['word-count', 'html-entity', 'css-formatter'],
+  'css-formatter': ['color-converter', 'case-converter', 'markdown-editor'],
 }
 
 interface Props {

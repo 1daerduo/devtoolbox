@@ -85,6 +85,24 @@ const tools = [
     href: '/tools/case-converter',
     icon: 'Aa',
   },
+  {
+    name: '图片压缩',
+    desc: '在线压缩 PNG/JPG/WebP，调节质量，实时预览。',
+    href: '/tools/image-compressor',
+    icon: '🖼️',
+  },
+  {
+    name: 'Markdown 编辑器',
+    desc: '实时预览 Markdown，导出 HTML 或 .md 文件。',
+    href: '/tools/markdown-editor',
+    icon: '📄',
+  },
+  {
+    name: 'CSS 格式化',
+    desc: 'CSS 美化与压缩，一键复制输出结果。',
+    href: '/tools/css-formatter',
+    icon: '🎨',
+  },
 ]
 
 export default function HomePage() {
@@ -97,7 +115,7 @@ export default function HomePage() {
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
           免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算、密码生成……
-          14 款开发工具，一站式解决。
+          17 款开发工具，一站式解决。
         </p>
         <Link
           href="/tools/json-formatter"
