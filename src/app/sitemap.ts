@@ -14,6 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hash-generator',
     'color-converter',
     'uuid-generator',
+    'password-generator',
+    'html-entity',
+    'text-dedup',
+    'case-converter',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

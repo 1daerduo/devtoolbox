@@ -11,20 +11,28 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'hash-generator': { name: '哈希生成器', desc: 'MD5/SHA 哈希值生成' },
   'color-converter': { name: '颜色转换', desc: 'HEX/RGB/HSL 格式互转' },
   'uuid-generator': { name: 'UUID 生成器', desc: 'UUID v4/v7 批量生成' },
+  'password-generator': { name: '密码生成器', desc: '安全随机密码生成' },
+  'html-entity': { name: 'HTML 实体编解码', desc: 'HTML 特殊字符与实体互转' },
+  'text-dedup': { name: '文本去重排序', desc: '按行去重、排序、反转' },
+  'case-converter': { name: '大小写转换', desc: '大写/小写/驼峰等9种格式' },
 }
 
 // Related tools for each tool
 const related: Record<string, string[]> = {
-  'json-formatter': ['base64', 'regex', 'hash-generator'],
-  timestamp: ['base64', 'json-formatter', 'uuid-generator'],
-  qrcode: ['url-encode', 'base64', 'json-formatter'],
-  regex: ['json-formatter', 'url-encode', 'word-count'],
-  base64: ['url-encode', 'json-formatter', 'hash-generator'],
-  'url-encode': ['base64', 'json-formatter', 'regex'],
-  'word-count': ['json-formatter', 'regex', 'base64'],
-  'hash-generator': ['base64', 'uuid-generator', 'json-formatter'],
-  'color-converter': ['json-formatter', 'base64', 'qrcode'],
-  'uuid-generator': ['hash-generator', 'timestamp', 'base64'],
+  'json-formatter': ['base64', 'hash-generator', 'color-converter'],
+  timestamp: ['uuid-generator', 'password-generator', 'base64'],
+  qrcode: ['url-encode', 'color-converter', 'html-entity'],
+  regex: ['word-count', 'html-entity', 'json-formatter'],
+  base64: ['url-encode', 'hash-generator', 'html-entity'],
+  'url-encode': ['html-entity', 'base64', 'json-formatter'],
+  'word-count': ['case-converter', 'regex', 'text-dedup'],
+  'hash-generator': ['password-generator', 'uuid-generator', 'base64'],
+  'color-converter': ['qrcode', 'json-formatter', 'case-converter'],
+  'uuid-generator': ['hash-generator', 'password-generator', 'timestamp'],
+  'password-generator': ['hash-generator', 'uuid-generator', 'base64'],
+  'html-entity': ['url-encode', 'regex', 'case-converter'],
+  'text-dedup': ['word-count', 'case-converter', 'regex'],
+  'case-converter': ['text-dedup', 'word-count', 'color-converter'],
 }
 
 interface Props {

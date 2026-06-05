@@ -61,6 +61,30 @@ const tools = [
     href: '/tools/uuid-generator',
     icon: '🆔',
   },
+  {
+    name: '密码生成器',
+    desc: '生成安全随机密码，支持自定义长度与字符类型。',
+    href: '/tools/password-generator',
+    icon: '🔐',
+  },
+  {
+    name: 'HTML 实体编解码',
+    desc: 'HTML 特殊字符与实体互相转换，防 XSS。',
+    href: '/tools/html-entity',
+    icon: '🔣',
+  },
+  {
+    name: '文本去重排序',
+    desc: '按行去重、排序、反转、去空行。',
+    href: '/tools/text-dedup',
+    icon: '📋',
+  },
+  {
+    name: '大小写转换',
+    desc: '大写/小写/驼峰/蛇形等 9 种格式互转。',
+    href: '/tools/case-converter',
+    icon: 'Aa',
+  },
 ]
 
 export default function HomePage() {
@@ -72,8 +96,8 @@ export default function HomePage() {
           在线开发者工具集合
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算……
-          10 款开发工具，一站式解决。
+          免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算、密码生成……
+          14 款开发工具，一站式解决。
         </p>
         <Link
           href="/tools/json-formatter"
