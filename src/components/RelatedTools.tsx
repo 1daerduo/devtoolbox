@@ -6,15 +6,25 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   qrcode: { name: '二维码生成器', desc: '在线生成可下载的二维码' },
   regex: { name: '正则表达式测试', desc: '在线正则匹配与高亮' },
   base64: { name: 'Base64 编解码', desc: '文本与 Base64 互转' },
+  'url-encode': { name: 'URL 编码解码', desc: 'URL 编码与解码互转' },
+  'word-count': { name: '字数统计', desc: '字符数、单词数、段落数统计' },
+  'hash-generator': { name: '哈希生成器', desc: 'MD5/SHA 哈希值生成' },
+  'color-converter': { name: '颜色转换', desc: 'HEX/RGB/HSL 格式互转' },
+  'uuid-generator': { name: 'UUID 生成器', desc: 'UUID v4/v7 批量生成' },
 }
 
 // Related tools for each tool
 const related: Record<string, string[]> = {
-  'json-formatter': ['base64', 'regex', 'timestamp'],
-  timestamp: ['base64', 'json-formatter', 'qrcode'],
-  qrcode: ['base64', 'json-formatter', 'regex'],
-  regex: ['json-formatter', 'base64', 'timestamp'],
-  base64: ['json-formatter', 'regex', 'qrcode'],
+  'json-formatter': ['base64', 'regex', 'hash-generator'],
+  timestamp: ['base64', 'json-formatter', 'uuid-generator'],
+  qrcode: ['url-encode', 'base64', 'json-formatter'],
+  regex: ['json-formatter', 'url-encode', 'word-count'],
+  base64: ['url-encode', 'json-formatter', 'hash-generator'],
+  'url-encode': ['base64', 'json-formatter', 'regex'],
+  'word-count': ['json-formatter', 'regex', 'base64'],
+  'hash-generator': ['base64', 'uuid-generator', 'json-formatter'],
+  'color-converter': ['json-formatter', 'base64', 'qrcode'],
+  'uuid-generator': ['hash-generator', 'timestamp', 'base64'],
 }
 
 interface Props {

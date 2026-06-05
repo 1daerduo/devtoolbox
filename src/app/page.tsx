@@ -31,6 +31,36 @@ const tools = [
     href: '/tools/base64',
     icon: 'B64',
   },
+  {
+    name: 'URL 编码解码',
+    desc: 'URL 编码与解码，将特殊字符转为 %XX 格式。',
+    href: '/tools/url-encode',
+    icon: '🔗',
+  },
+  {
+    name: '字数统计',
+    desc: '实时统计中文字符、英文单词、段落数、句子数。',
+    href: '/tools/word-count',
+    icon: '📝',
+  },
+  {
+    name: '哈希生成器',
+    desc: 'MD5、SHA-1、SHA-256、SHA-512 哈希值生成。',
+    href: '/tools/hash-generator',
+    icon: '#️⃣',
+  },
+  {
+    name: '颜色转换',
+    desc: 'HEX、RGB、HSL 三种颜色格式互相转换。',
+    href: '/tools/color-converter',
+    icon: '🎨',
+  },
+  {
+    name: 'UUID 生成器',
+    desc: '生成 UUID v4/v7，支持批量生成一键复制。',
+    href: '/tools/uuid-generator',
+    icon: '🆔',
+  },
 ]
 
 export default function HomePage() {
@@ -42,8 +72,8 @@ export default function HomePage() {
           在线开发者工具集合
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成……
-          常用开发工具，一站式解决。
+          免费、快速、无需注册。JSON 格式化、时间戳转换、二维码生成、URL编码、哈希计算……
+          10 款开发工具，一站式解决。
         </p>
         <Link
           href="/tools/json-formatter"

@@ -9,6 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'qrcode',
     'regex',
     'base64',
+    'url-encode',
+    'word-count',
+    'hash-generator',
+    'color-converter',
+    'uuid-generator',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({
