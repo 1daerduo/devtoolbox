@@ -46,10 +46,23 @@ const tools = [
 
   // 图像/其他
   { name: '图片压缩', desc: '在线压缩 PNG/JPG/WebP，调节质量，实时预览。', href: '/tools/image-compressor', icon: '🖼️', category: '图像/其他' },
+  { name: '图片格式转换', desc: 'JPG/PNG/WebP/BMP 格式互转，拖拽上传，纯浏览器处理。', href: '/tools/image-converter', icon: '🔄', category: '图像/其他' },
+  { name: 'CSS 渐变生成器', desc: '可视化生成线性/径向/圆锥渐变，多色标自由调节。', href: '/tools/css-gradient', icon: '🌈', category: '图像/其他' },
+  { name: 'SVG 转 PNG', desc: '在线将 SVG 矢量图转为 PNG 位图，自定义尺寸背景。', href: '/tools/svg-to-png', icon: '🖼️→', category: '图像/其他' },
+
+  // 查询工具
   { name: 'IP 地址查询', desc: '查询公网 IP、地理位置、运营商和浏览器信息。', href: '/tools/my-ip', icon: '🌐', category: '查询工具' },
+  { name: 'User Agent 解析', desc: '解析浏览器 UA 字符串，识别浏览器/OS/设备类型。', href: '/tools/user-agent', icon: '🔍', category: '查询工具' },
+  { name: '邮箱验证器', desc: '在线验证邮箱格式，支持批量检测，数据本地处理。', href: '/tools/email-validator', icon: '📧', category: '查询工具' },
+
+  // 网络工具
+  { name: 'DNS 查询工具', desc: '在线查询 A/AAAA/CNAME/MX/NS/TXT 等 DNS 记录。', href: '/tools/dns-lookup', icon: '🌍', category: '网络工具' },
+
+  // SEO工具
+  { name: 'Meta 标签生成器', desc: '生成 SEO Meta/OG/Twitter Card 标签，可视化预览。', href: '/tools/meta-tag', icon: '🏷️', category: 'SEO工具' },
 ]
 
-const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '图像/其他']
+const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', 'SEO工具', '图像/其他']
 
 const categoryIcons: Record<string, string> = {
   '全部': '🏠',
@@ -59,6 +72,8 @@ const categoryIcons: Record<string, string> = {
   '转换器': '🔀',
   '文本工具': '📝',
   '查询工具': '🔍',
+  '网络工具': '🌍',
+  'SEO工具': '🏷️',
   '图像/其他': '🖼️',
 }
 

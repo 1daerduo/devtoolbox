@@ -28,12 +28,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'yaml-formatter',
     'sql-formatter',
     'diff-checker',
+    'base64-image',
+    'bcrypt-generator',
+    'cron-generator',
+    'html-formatter',
+    'js-formatter',
+    'lorem-ipsum',
+    'markdown-to-html',
+    'number-base',
+    'user-agent',
+    'image-converter',
+    'meta-tag',
+    'email-validator',
+    'dns-lookup',
+    'css-gradient',
+    'random-number',
+    'svg-to-png',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({
     url: `${BASE_URL}/tools/${slug}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly',
+    changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
@@ -41,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 1,
     },
     ...toolEntries,

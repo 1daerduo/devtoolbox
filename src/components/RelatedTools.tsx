@@ -25,9 +25,26 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'yaml-formatter': { name: 'YAML 格式化', desc: 'YAML ↔ JSON 互转' },
   'sql-formatter': { name: 'SQL 格式化', desc: 'SQL 美化与压缩' },
   'diff-checker': { name: '文本差异对比', desc: '在线 Diff Checker' },
+  // Round 2 (previously missing)
+  'base64-image': { name: 'Base64 图片互转', desc: '图片与 Base64 编码互转' },
+  'bcrypt-generator': { name: 'Bcrypt 生成验证', desc: 'Bcrypt 密码哈希生成与验证' },
+  'cron-generator': { name: 'Cron 表达式生成器', desc: '可视化生成 Cron 定时表达式' },
+  'html-formatter': { name: 'HTML 格式化', desc: 'HTML 代码美化与压缩' },
+  'js-formatter': { name: 'JS 格式化', desc: 'JavaScript 美化与压缩' },
+  'lorem-ipsum': { name: 'Lorem Ipsum 生成器', desc: '中英文占位文本生成' },
+  'markdown-to-html': { name: 'Markdown 转 HTML', desc: 'Markdown 转换为 HTML 代码' },
+  'number-base': { name: '进制转换器', desc: '多进制互转' },
+  // Round 3 (new)
+  'user-agent': { name: 'User Agent 解析', desc: '浏览器 UA 字符串解析' },
+  'image-converter': { name: '图片格式转换', desc: 'JPG/PNG/WebP 格式互转' },
+  'meta-tag': { name: 'Meta 标签生成器', desc: 'SEO/OG/Twitter 标签生成' },
+  'email-validator': { name: '邮箱验证器', desc: '邮箱格式在线验证' },
+  'dns-lookup': { name: 'DNS 查询工具', desc: 'A/AAAA/CNAME/MX 等记录查询' },
+  'css-gradient': { name: 'CSS 渐变生成器', desc: '可视化 CSS 渐变生成' },
+  'random-number': { name: '随机数生成器', desc: '随机整数/小数批量生成' },
+  'svg-to-png': { name: 'SVG 转 PNG', desc: 'SVG 矢量图转 PNG 位图' },
 }
 
-// Related tools for each tool
 const related: Record<string, string[]> = {
   'json-formatter': ['base64', 'hash-generator', 'color-converter'],
   timestamp: ['uuid-generator', 'password-generator', 'base64'],
@@ -39,21 +56,38 @@ const related: Record<string, string[]> = {
   'hash-generator': ['password-generator', 'uuid-generator', 'base64'],
   'color-converter': ['qrcode', 'json-formatter', 'css-formatter'],
   'uuid-generator': ['hash-generator', 'password-generator', 'timestamp'],
-  'password-generator': ['hash-generator', 'uuid-generator', 'base64'],
+  'password-generator': ['hash-generator', 'uuid-generator', 'random-number'],
   'html-entity': ['url-encode', 'regex', 'markdown-editor'],
   'text-dedup': ['word-count', 'case-converter', 'regex'],
   'case-converter': ['text-dedup', 'word-count', 'css-formatter'],
-  // Tier3
-  'image-compressor': ['color-converter', 'qrcode', 'css-formatter'],
-  'markdown-editor': ['word-count', 'html-entity', 'css-formatter'],
-  'css-formatter': ['color-converter', 'case-converter', 'markdown-editor'],
+  'image-compressor': ['image-converter', 'svg-to-png', 'color-converter'],
+  'markdown-editor': ['word-count', 'markdown-to-html', 'html-entity'],
+  'css-formatter': ['css-gradient', 'color-converter', 'html-formatter'],
   'jwt-decoder': ['base64', 'hash-generator', 'json-formatter'],
   'xml-formatter': ['json-formatter', 'sql-formatter', 'yaml-formatter'],
   'json-to-csv': ['json-formatter', 'sql-formatter', 'yaml-formatter'],
-  'my-ip': ['url-encode', 'base64', 'uuid-generator'],
+  'my-ip': ['dns-lookup', 'user-agent', 'url-encode'],
   'yaml-formatter': ['json-formatter', 'xml-formatter', 'diff-checker'],
   'sql-formatter': ['json-formatter', 'diff-checker', 'json-to-csv'],
   'diff-checker': ['regex', 'word-count', 'text-dedup'],
+  // Round 2
+  'base64-image': ['base64', 'image-converter', 'image-compressor'],
+  'bcrypt-generator': ['hash-generator', 'password-generator', 'base64'],
+  'cron-generator': ['timestamp', 'uuid-generator', 'random-number'],
+  'html-formatter': ['css-formatter', 'js-formatter', 'meta-tag'],
+  'js-formatter': ['json-formatter', 'html-formatter', 'css-formatter'],
+  'lorem-ipsum': ['word-count', 'markdown-editor', 'random-number'],
+  'markdown-to-html': ['markdown-editor', 'html-formatter', 'json-formatter'],
+  'number-base': ['color-converter', 'hash-generator', 'timestamp'],
+  // Round 3
+  'user-agent': ['my-ip', 'dns-lookup', 'email-validator'],
+  'image-converter': ['image-compressor', 'svg-to-png', 'base64-image'],
+  'meta-tag': ['html-formatter', 'json-formatter', 'url-encode'],
+  'email-validator': ['user-agent', 'regex', 'password-generator'],
+  'dns-lookup': ['my-ip', 'user-agent', 'url-encode'],
+  'css-gradient': ['color-converter', 'css-formatter', 'image-converter'],
+  'random-number': ['password-generator', 'uuid-generator', 'number-base'],
+  'svg-to-png': ['image-converter', 'image-compressor', 'base64-image'],
 }
 
 interface Props {

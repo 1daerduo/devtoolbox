@@ -11,11 +11,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://devtoolbox-61u.pages.dev'),
   title: 'DevToolbox - 在线开发者工具集合',
-  description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt、SQL格式化、时间戳转换、二维码生成、IP查询、Base64、HTML/JS格式化等32款实用开发工具。全部在浏览器本地处理，数据安全。',
-  keywords: ['开发者工具', 'JSON格式化', 'JWT解码', 'Cron表达式', '进制转换', 'Bcrypt', 'SQL格式化', '时间戳转换', '二维码生成', '正则表达式', 'Base64', 'IP查询', 'XML格式化', 'YAML格式化', 'HTML格式化', 'JS格式化', 'CSV转换', 'UUID生成', '密码生成', '文本对比'],
+  description: '免费在线开发者工具集合，包含JSON格式化、CSS渐变生成、图片格式转换、DNS查询、Meta标签生成、JWT解码、Cron表达式、进制转换、Bcrypt、SQL格式化、时间戳转换、二维码生成、IP查询、Base64、HTML/JS格式化等40款实用开发工具。全部在浏览器本地处理，数据安全。',
+  keywords: ['开发者工具', 'JSON格式化', 'CSS渐变', '图片格式转换', 'DNS查询', 'Meta标签', 'User Agent', 'SVG转PNG', 'JWT解码', 'Cron表达式', '进制转换', 'Bcrypt', 'SQL格式化', '时间戳转换', '二维码生成', '正则表达式', 'Base64', 'IP查询', 'XML格式化', 'YAML格式化', 'HTML格式化', 'JS格式化', 'CSV转换', 'UUID生成', '密码生成', '文本对比', '邮箱验证'],
   openGraph: {
     title: 'DevToolbox - 免费在线开发者工具集合',
-    description: '32款免费在线开发者工具，JSON格式化、Cron表达式、进制转换、Bcrypt、JWT解码、HTML/JS格式化等，无需注册，数据本地处理。',
+    description: '40款免费在线开发者工具，CSS渐变、图片格式转换、DNS查询、Meta标签、JSON格式化、Cron表达式、进制转换、Bcrypt、JWT解码等，无需注册，数据本地处理。',
     url: 'https://devtoolbox-61u.pages.dev',
     siteName: 'DevToolbox',
     locale: 'zh_CN',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DevToolbox - 在线开发者工具集合',
-    description: '32款免费在线开发者工具，JSON、Cron、进制转换、Bcrypt、JWT、HTML/JS格式化等。',
+    description: '40款免费在线开发者工具，CSS渐变、图片格式转换、DNS查询、Meta标签、JSON、Cron等。',
   },
   robots: {
     index: true,
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'WebApplication',
               name: 'DevToolbox',
               url: 'https://devtoolbox-61u.pages.dev',
-              description: '免费在线开发者工具集合，包含JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt等32款实用工具。',
+              description: '免费在线开发者工具集合，包含CSS渐变生成、图片格式转换、DNS查询、Meta标签生成、JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt等40款实用工具。',
               applicationCategory: 'DeveloperApplication',
               operatingSystem: 'All',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -74,6 +74,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/bcrypt-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Bcrypt</Link>
               <Link href="/tools/html-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">HTML</Link>
               <Link href="/tools/js-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JS</Link>
+              <Link href="/tools/dns-lookup" className="hover:text-primary-600 no-underline whitespace-nowrap">DNS</Link>
+              <Link href="/tools/css-gradient" className="hover:text-primary-600 no-underline whitespace-nowrap">渐变</Link>
             </div>
             {/* Mobile nav: horizontal scroll */}
             <div className="flex md:hidden gap-3 text-xs text-gray-600 overflow-x-auto">
@@ -91,6 +93,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tools/bcrypt-generator" className="hover:text-primary-600 no-underline whitespace-nowrap">Bcrypt</Link>
               <Link href="/tools/html-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">HTML</Link>
               <Link href="/tools/js-formatter" className="hover:text-primary-600 no-underline whitespace-nowrap">JS</Link>
+              <Link href="/tools/dns-lookup" className="hover:text-primary-600 no-underline whitespace-nowrap">DNS</Link>
+              <Link href="/tools/css-gradient" className="hover:text-primary-600 no-underline whitespace-nowrap">渐变</Link>
             </div>
           </div>
         </nav>
