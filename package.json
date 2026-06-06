@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "node scripts/test.mjs",
+    "build:test": "npm run build && npm test",
     "start": "next start",
     "lint": "next lint"
   },
