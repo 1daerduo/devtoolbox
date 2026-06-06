@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import Link from 'next/link'
+import RecentToolsTracker from '@/components/RecentToolsTracker'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <body className="min-h-screen bg-gray-50 text-gray-900">
+        <RecentToolsTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,245 +1,231 @@
+'use client'
+
 import Link from 'next/link'
+import { useState, useEffect, useMemo } from 'react'
 
 const tools = [
-  {
-    name: 'JSON 格式化',
-    desc: '格式化、压缩、验证 JSON 数据，支持语法高亮显示。',
-    href: '/tools/json-formatter',
-    icon: '{ }',
-  },
-  {
-    name: '时间戳转换',
-    desc: 'Unix 时间戳与日期时间互相转换，支持秒/毫秒。',
-    href: '/tools/timestamp',
-    icon: '🕐',
-  },
-  {
-    name: '二维码生成器',
-    desc: '输入文本或网址，实时生成可下载的二维码。',
-    href: '/tools/qrcode',
-    icon: '▣',
-  },
-  {
-    name: '正则表达式测试',
-    desc: '在线测试正则表达式，支持实时匹配高亮与解释。',
-    href: '/tools/regex',
-    icon: '.*',
-  },
-  {
-    name: 'Base64 编解码',
-    desc: '文本与 Base64 互相编码/解码，支持 UTF-8。',
-    href: '/tools/base64',
-    icon: 'B64',
-  },
-  {
-    name: 'URL 编码解码',
-    desc: 'URL 编码与解码，将特殊字符转为 %XX 格式。',
-    href: '/tools/url-encode',
-    icon: '🔗',
-  },
-  {
-    name: '字数统计',
-    desc: '实时统计中文字符、英文单词、段落数、句子数。',
-    href: '/tools/word-count',
-    icon: '📝',
-  },
-  {
-    name: '哈希生成器',
-    desc: 'MD5、SHA-1、SHA-256、SHA-512 哈希值生成。',
-    href: '/tools/hash-generator',
-    icon: '#️⃣',
-  },
-  {
-    name: '颜色转换',
-    desc: 'HEX、RGB、HSL 三种颜色格式互相转换。',
-    href: '/tools/color-converter',
-    icon: '🎨',
-  },
-  {
-    name: 'UUID 生成器',
-    desc: '生成 UUID v4/v7，支持批量生成一键复制。',
-    href: '/tools/uuid-generator',
-    icon: '🆔',
-  },
-  {
-    name: '密码生成器',
-    desc: '生成安全随机密码，支持自定义长度与字符类型。',
-    href: '/tools/password-generator',
-    icon: '🔐',
-  },
-  {
-    name: 'HTML 实体编解码',
-    desc: 'HTML 特殊字符与实体互相转换，防 XSS。',
-    href: '/tools/html-entity',
-    icon: '🔣',
-  },
-  {
-    name: '文本去重排序',
-    desc: '按行去重、排序、反转、去空行。',
-    href: '/tools/text-dedup',
-    icon: '📋',
-  },
-  {
-    name: '大小写转换',
-    desc: '大写/小写/驼峰/蛇形等 9 种格式互转。',
-    href: '/tools/case-converter',
-    icon: 'Aa',
-  },
-  {
-    name: '图片压缩',
-    desc: '在线压缩 PNG/JPG/WebP，调节质量，实时预览。',
-    href: '/tools/image-compressor',
-    icon: '🖼️',
-  },
-  {
-    name: 'Markdown 编辑器',
-    desc: '实时预览 Markdown，导出 HTML 或 .md 文件。',
-    href: '/tools/markdown-editor',
-    icon: '📄',
-  },
-  {
-    name: 'CSS 格式化',
-    desc: 'CSS 美化与压缩，一键复制输出结果。',
-    href: '/tools/css-formatter',
-    icon: '🎨',
-  },
-  {
-    name: 'JWT 解码器',
-    desc: '在线解析 JWT Token，查看 Header/Payload/Signature。',
-    href: '/tools/jwt-decoder',
-    icon: '🔑',
-  },
-  {
-    name: 'XML 格式化',
-    desc: 'XML 格式化与压缩，支持自定义缩进。',
-    href: '/tools/xml-formatter',
-    icon: '<>',
-  },
-  {
-    name: 'JSON ↔ CSV 转换',
-    desc: 'JSON 与 CSV 格式互转，支持自定义分隔符。',
-    href: '/tools/json-to-csv',
-    icon: '⇄',
-  },
-  {
-    name: 'IP 地址查询',
-    desc: '查询公网 IP、地理位置、运营商和浏览器信息。',
-    href: '/tools/my-ip',
-    icon: '🌐',
-  },
-  {
-    name: 'YAML 格式化',
-    desc: 'YAML ↔ JSON 互转与格式验证，DevOps 必备。',
-    href: '/tools/yaml-formatter',
-    icon: 'Y↔J',
-  },
-  {
-    name: 'SQL 格式化',
-    desc: 'SQL 美化与压缩，支持多种数据库方言。',
-    href: '/tools/sql-formatter',
-    icon: '🛢️',
-  },
-  {
-    name: '文本差异对比',
-    desc: '在线 Diff Checker，可视化两个文本的行级差异。',
-    href: '/tools/diff-checker',
-    icon: '≠',
-  },
-  {
-    name: 'Cron 表达式生成器',
-    desc: '可视化生成 Cron 定时表达式，实时预览下次执行时间。',
-    href: '/tools/cron-generator',
-    icon: '⏱️',
-  },
-  {
-    name: '进制转换器',
-    desc: '二进制、八进制、十进制、十六进制等多种进制互转。',
-    href: '/tools/number-base',
-    icon: '🔢',
-  },
-  {
-    name: 'Lorem Ipsum 生成器',
-    desc: '生成中英文占位文本，支持自定义段落数，前端设计必备。',
-    href: '/tools/lorem-ipsum',
-    icon: '📃',
-  },
-  {
-    name: 'HTML 格式化',
-    desc: 'HTML 代码美化与压缩，支持自定义缩进。',
-    href: '/tools/html-formatter',
-    icon: '🔖',
-  },
-  {
-    name: 'JS 格式化',
-    desc: 'JavaScript 代码美化与压缩，前端开发调试必备。',
-    href: '/tools/js-formatter',
-    icon: '⚡',
-  },
-  {
-    name: 'Markdown 转 HTML',
-    desc: 'Markdown 转换为 HTML 代码，实时预览渲染效果。',
-    href: '/tools/markdown-to-html',
-    icon: '↗️',
-  },
-  {
-    name: 'Base64 图片互转',
-    desc: '图片与 Base64 编码互转，支持拖拽上传和粘贴截图。',
-    href: '/tools/base64-image',
-    icon: '🖼️',
-  },
-  {
-    name: 'Bcrypt 生成验证',
-    desc: '安全生成 Bcrypt 密码哈希，验证密码与哈希是否匹配。',
-    href: '/tools/bcrypt-generator',
-    icon: '🔒',
-  },
+  // 格式化
+  { name: 'JSON 格式化', desc: '格式化、压缩、验证 JSON 数据，支持语法高亮显示。', href: '/tools/json-formatter', icon: '{ }', category: '格式化' },
+  { name: 'XML 格式化', desc: 'XML 格式化与压缩，支持自定义缩进。', href: '/tools/xml-formatter', icon: '<>', category: '格式化' },
+  { name: 'CSS 格式化', desc: 'CSS 美化与压缩，一键复制输出结果。', href: '/tools/css-formatter', icon: '🎨', category: '格式化' },
+  { name: 'SQL 格式化', desc: 'SQL 美化与压缩，支持多种数据库方言。', href: '/tools/sql-formatter', icon: '🛢️', category: '格式化' },
+  { name: 'YAML 格式化', desc: 'YAML ↔ JSON 互转与格式验证，DevOps 必备。', href: '/tools/yaml-formatter', icon: 'Y↔J', category: '格式化' },
+  { name: 'HTML 格式化', desc: 'HTML 代码美化与压缩，支持自定义缩进。', href: '/tools/html-formatter', icon: '🔖', category: '格式化' },
+  { name: 'JS 格式化', desc: 'JavaScript 代码美化与压缩，前端开发调试必备。', href: '/tools/js-formatter', icon: '⚡', category: '格式化' },
+
+  // 编解码
+  { name: 'Base64 编解码', desc: '文本与 Base64 互相编码/解码，支持 UTF-8。', href: '/tools/base64', icon: 'B64', category: '编解码' },
+  { name: 'URL 编码解码', desc: 'URL 编码与解码，将特殊字符转为 %XX 格式。', href: '/tools/url-encode', icon: '🔗', category: '编解码' },
+  { name: 'HTML 实体编解码', desc: 'HTML 特殊字符与实体互相转换，防 XSS。', href: '/tools/html-entity', icon: '🔣', category: '编解码' },
+  { name: 'JWT 解码器', desc: '在线解析 JWT Token，查看 Header/Payload/Signature。', href: '/tools/jwt-decoder', icon: '🔑', category: '编解码' },
+  { name: 'Base64 图片互转', desc: '图片与 Base64 编码互转，支持拖拽上传和粘贴截图。', href: '/tools/base64-image', icon: '🖼️', category: '编解码' },
+
+  // 生成器
+  { name: '二维码生成器', desc: '输入文本或网址，实时生成可下载的二维码。', href: '/tools/qrcode', icon: '▣', category: '生成器' },
+  { name: 'UUID 生成器', desc: '生成 UUID v4/v7，支持批量生成一键复制。', href: '/tools/uuid-generator', icon: '🆔', category: '生成器' },
+  { name: '密码生成器', desc: '生成安全随机密码，支持自定义长度与字符类型。', href: '/tools/password-generator', icon: '🔐', category: '生成器' },
+  { name: '哈希生成器', desc: 'MD5、SHA-1、SHA-256、SHA-512 哈希值生成。', href: '/tools/hash-generator', icon: '#️⃣', category: '生成器' },
+  { name: 'Cron 表达式生成器', desc: '可视化生成 Cron 定时表达式，实时预览下次执行时间。', href: '/tools/cron-generator', icon: '⏱️', category: '生成器' },
+  { name: 'Lorem Ipsum 生成器', desc: '生成中英文占位文本，支持自定义段落数，前端设计必备。', href: '/tools/lorem-ipsum', icon: '📃', category: '生成器' },
+  { name: 'Bcrypt 生成验证', desc: '安全生成 Bcrypt 密码哈希，验证密码与哈希是否匹配。', href: '/tools/bcrypt-generator', icon: '🔒', category: '生成器' },
+
+  // 转换器
+  { name: '时间戳转换', desc: 'Unix 时间戳与日期时间互相转换，支持秒/毫秒。', href: '/tools/timestamp', icon: '🕐', category: '转换器' },
+  { name: '颜色转换', desc: 'HEX、RGB、HSL 三种颜色格式互相转换。', href: '/tools/color-converter', icon: '🎨', category: '转换器' },
+  { name: 'JSON ↔ CSV 转换', desc: 'JSON 与 CSV 格式互转，支持自定义分隔符。', href: '/tools/json-to-csv', icon: '⇄', category: '转换器' },
+  { name: '大小写转换', desc: '大写/小写/驼峰/蛇形等 9 种格式互转。', href: '/tools/case-converter', icon: 'Aa', category: '转换器' },
+  { name: '进制转换器', desc: '二进制、八进制、十进制、十六进制等多种进制互转。', href: '/tools/number-base', icon: '🔢', category: '转换器' },
+  { name: 'Markdown 转 HTML', desc: 'Markdown 转换为 HTML 代码，实时预览渲染效果。', href: '/tools/markdown-to-html', icon: '↗️', category: '转换器' },
+
+  // 文本工具
+  { name: '正则表达式测试', desc: '在线测试正则表达式，支持实时匹配高亮与解释。', href: '/tools/regex', icon: '.*', category: '文本工具' },
+  { name: '字数统计', desc: '实时统计中文字符、英文单词、段落数、句子数。', href: '/tools/word-count', icon: '📝', category: '文本工具' },
+  { name: '文本去重排序', desc: '按行去重、排序、反转、去空行。', href: '/tools/text-dedup', icon: '📋', category: '文本工具' },
+  { name: 'Markdown 编辑器', desc: '实时预览 Markdown，导出 HTML 或 .md 文件。', href: '/tools/markdown-editor', icon: '📄', category: '文本工具' },
+  { name: '文本差异对比', desc: '在线 Diff Checker，可视化两个文本的行级差异。', href: '/tools/diff-checker', icon: '≠', category: '文本工具' },
+
+  // 图像/其他
+  { name: '图片压缩', desc: '在线压缩 PNG/JPG/WebP，调节质量，实时预览。', href: '/tools/image-compressor', icon: '🖼️', category: '图像/其他' },
+  { name: 'IP 地址查询', desc: '查询公网 IP、地理位置、运营商和浏览器信息。', href: '/tools/my-ip', icon: '🌐', category: '查询工具' },
 ]
 
+const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '图像/其他']
+
+const categoryIcons: Record<string, string> = {
+  '全部': '🏠',
+  '格式化': '📐',
+  '编解码': '🔄',
+  '生成器': '⚙️',
+  '转换器': '🔀',
+  '文本工具': '📝',
+  '查询工具': '🔍',
+  '图像/其他': '🖼️',
+}
+
 export default function HomePage() {
+  const [search, setSearch] = useState('')
+  const [activeCategory, setActiveCategory] = useState('全部')
+  const [recentTools, setRecentTools] = useState<string[]>([])
+
+  // 从 sessionStorage 读取最近使用
+  useEffect(() => {
+    try {
+      const stored = sessionStorage.getItem('recent-tools')
+      if (stored) setRecentTools(JSON.parse(stored))
+    } catch {}
+  }, [])
+
+  // 搜索 + 分类过滤
+  const filteredTools = useMemo(() => {
+    let result = tools
+    if (activeCategory !== '全部') {
+      result = result.filter(t => t.category === activeCategory)
+    }
+    if (search.trim()) {
+      const q = search.toLowerCase()
+      result = result.filter(t =>
+        t.name.toLowerCase().includes(q) ||
+        t.desc.toLowerCase().includes(q) ||
+        t.href.toLowerCase().includes(q)
+      )
+    }
+    return result
+  }, [search, activeCategory])
+
+  // 最近使用的工具对象
+  const recentToolItems = useMemo(() => {
+    return recentTools
+      .map(href => tools.find(t => t.href === href))
+      .filter(Boolean)
+  }, [recentTools])
+
   return (
     <div>
       {/* Hero */}
-      <section className="text-center py-16 bg-gradient-to-b from-primary-50 to-white">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <section className="text-center py-12 md:py-16 bg-gradient-to-b from-primary-50 to-white">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
           在线开发者工具集合
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          免费、快速、无需注册。JSON 格式化、Cron 表达式、进制转换、JWT 解码、Bcrypt、HTML/JS 格式化……
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
+          免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
           32 款开发工具，一站式解决。
         </p>
-        <Link
-          href="/tools/json-formatter"
-          className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 no-underline"
-        >
-          开始使用 →
-        </Link>
+
+        {/* 搜索框 */}
+        <div className="max-w-lg mx-auto px-4">
+          <div className="relative">
+            <input
+              type="text"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="搜索工具，如：JSON、JWT、Base64..."
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 text-sm md:text-base"
+            />
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none">
+              🔍
+            </span>
+            {search && (
+              <button
+                onClick={() => setSearch('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-lg leading-none"
+                aria-label="清除搜索"
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
       </section>
 
-      {/* Tools Grid */}
-      <section className="py-12">
-        <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
-          所有工具
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {tools.map((tool) => (
-            <Link
-              key={tool.href}
-              href={tool.href}
-              className="tool-card block bg-white rounded-xl p-6 border border-gray-200 hover:border-primary-300 no-underline"
-            >
-              <div className="text-3xl mb-3">{tool.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {tool.name}
-              </h3>
-              <p className="text-sm text-gray-600">{tool.desc}</p>
-            </Link>
-          ))}
+      {/* 最近使用 */}
+      {recentToolItems.length > 0 && !search && (
+        <section className="py-6 border-b border-gray-100">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-sm font-medium text-gray-500 mb-3">最近使用</h2>
+            <div className="flex flex-wrap gap-2">
+              {recentToolItems.map(tool => (
+                <Link
+                  key={tool!.href}
+                  href={tool!.href}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-50 text-primary-700 text-sm hover:bg-primary-100 no-underline"
+                >
+                  <span>{tool!.icon}</span>
+                  <span>{tool!.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 分类标签 + 工具网格 */}
+      <section className="py-8 md:py-12">
+        {/* 分类标签 */}
+        <div className="max-w-6xl mx-auto px-4 mb-6">
+          <div className="flex flex-wrap gap-2">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                  activeCategory === cat
+                    ? 'bg-primary-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                <span className="mr-1">{categoryIcons[cat]}</span>
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* 搜索/筛选结果统计 */}
+        {(search || activeCategory !== '全部') && (
+          <div className="max-w-6xl mx-auto px-4 mb-4 text-sm text-gray-500">
+            找到 {filteredTools.length} 个工具
+            {search && <span> · 关键词：<strong>{search}</strong></span>}
+            {activeCategory !== '全部' && <span> · 分类：<strong>{activeCategory}</strong></span>}
+          </div>
+        )}
+
+        {/* 工具网格 */}
+        {filteredTools.length > 0 ? (
+          <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {filteredTools.map(tool => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="tool-card block bg-white rounded-xl p-5 border border-gray-200 hover:border-primary-300 hover:shadow-sm no-underline transition-all"
+              >
+                <div className="text-2xl mb-2">{tool.icon}</div>
+                <h3 className="text-base font-semibold text-gray-900 mb-1">
+                  {tool.name}
+                </h3>
+                <p className="text-xs text-gray-500 line-clamp-2">{tool.desc}</p>
+                <span className="inline-block mt-2 text-xs text-primary-600 bg-primary-50 px-2 py-0.5 rounded">
+                  {tool.category}
+                </span>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12 text-gray-400">
+            <div className="text-4xl mb-3">🔍</div>
+            <p>没有找到匹配的工具</p>
+            <button
+              onClick={() => { setSearch(''); setActiveCategory('全部') }}
+              className="mt-3 text-primary-600 hover:text-primary-700 text-sm"
+            >
+              清除筛选条件
+            </button>
+          </div>
+        )}
       </section>
 
       {/* Ads placeholder */}
       <section className="py-8 text-center">
-        <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6 text-gray-400 text-sm border-2 border-dashed border-gray-300">
+        <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6 text-gray-400 text-sm border-2 border-dashed border-gray-300 mx-4">
           [ Google AdSense 广告位 - 网站流量达标后申请接入 ]
         </div>
       </section>
