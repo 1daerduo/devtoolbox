@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import TimestampClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'Unix 时间戳在线转换工具 - DevToolbox',
-  description: 'Unix 时间戳与日期时间互相转换，支持秒/毫秒，实时显示当前时间。免费在线工具，无需注册。',
+  title: 'Unix 时间戳在线转换工具 | Unix Timestamp Converter - MoreToolbox',
+  description: 'Unix 时间戳与日期时间互相转换，支持秒/毫秒，实时显示当前时间。免费在线工具，无需注册。 | Free Unix timestamp converter. Seconds & milliseconds support. Real-time current time. Instant conversion between timestamp & datetime.',
   keywords: ['时间戳转换', 'Unix时间戳', '时间戳转日期', '日期转时间戳', 'timestamp converter'],
   alternates: { canonical: '/tools/timestamp' },
 }
@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "时间戳转换 - DevToolbox", "description": "Unix 时间戳与日期互转", "url": "https://moretoolbox.com/tools/timestamp", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "时间戳转换 - MoreToolbox", "description": "Unix 时间戳与日期互转 | Free Unix timestamp converter", "url": "https://moretoolbox.com/tools/timestamp", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <TimestampClient />

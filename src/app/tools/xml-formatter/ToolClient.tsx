@@ -130,7 +130,7 @@ export default function XmlFormatterClient() {
             className="w-full min-h-[180px] sm:min-h-[250px] lg:h-80 border rounded-lg p-3 font-mono text-sm bg-white border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
             value={input}
             onChange={e => setInput(e.target.value)}
-            placeholder='粘贴 XML 数据，例如：&lt;root&gt;&lt;name&gt;DevToolbox&lt;/name&gt;&lt;/root&gt;'
+            placeholder='粘贴 XML 数据，例如：&lt;root&gt;&lt;name&gt;MoreToolbox&lt;/name&gt;&lt;/root&gt;'
           />
         </div>
         <div>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import JsonFormatterClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'JSON 在线格式化工具 - DevToolbox',
-  description: '在线 JSON 数据格式化、压缩、验证工具，支持语法高亮显示和多种缩进模式。免费、无需注册，开发者必备。',
+  title: 'JSON 在线格式化工具 | JSON Formatter & Validator - MoreToolbox',
+  description: '在线 JSON 数据格式化、压缩、验证工具，支持语法高亮显示和多种缩进模式。免费、无需注册，开发者必备。 | Free online JSON formatter, beautifier & validator. Syntax highlighting, multiple indent modes. No upload, no registration.',
   keywords: ['JSON格式化', 'JSON压缩', 'JSON验证', '在线JSON工具', 'JSON formatter'],
   alternates: { canonical: '/tools/json-formatter' },
 }
@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON 格式化 - DevToolbox", "description": "格式化、压缩、验证 JSON 数据", "url": "https://moretoolbox.com/tools/json-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON 格式化 - MoreToolbox", "description": "格式化、压缩、验证 JSON 数据 | Free online JSON formatter, beautifier & validator", "url": "https://moretoolbox.com/tools/json-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <JsonFormatterClient />

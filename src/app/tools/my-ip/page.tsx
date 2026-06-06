@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import MyIpClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'IP 地址查询工具 - 我的IP是什么 - DevToolbox',
-  description: '免费在线查询本机公网 IP 地址、地理位置、ISP 运营商信息。支持 IPv4/IPv6 地址检测，查询当前网络信息。',
+  title: 'IP 地址查询工具 - 我的IP是什么 - MoreToolbox',
+  description: '免费在线查询本机公网 IP 地址、地理位置、ISP 运营商信息。支持 IPv4/IPv6 地址检测，查询当前网络信息。 | Free online IP address lookup. Public IP, geolocation, ISP info. IPv4 & IPv6 detection. Check your current network information.',
   keywords: ['IP查询', '我的IP', 'what is my ip', 'IP地址查询', '公网IP', '本机IP', 'IPv4', 'IPv6'],
   alternates: { canonical: 'https://moretoolbox.com/tools/my-ip' },
 }
@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "IP 地址查询 - DevToolbox", "description": "查询公网 IP 与位置", "url": "https://moretoolbox.com/tools/my-ip", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "IP 地址查询 - MoreToolbox", "description": "查询公网 IP 与位置 | Free online IP address lookup", "url": "https://moretoolbox.com/tools/my-ip", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <MyIpClient />

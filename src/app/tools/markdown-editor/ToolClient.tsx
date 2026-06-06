@@ -8,7 +8,7 @@ import RelatedTools from '@/components/RelatedTools'
 
 const DEFAULT_MD = `# Markdown 编辑器
 
-欢迎使用 **DevToolbox Markdown 编辑器**！
+欢迎使用 **Markdown 编辑器**！
 
 ## 功能列表
 
@@ -37,7 +37,7 @@ function hello(name) {
 
 ---
 
-[访问 DevToolbox](https://moretoolbox.com)
+[访问 MoreToolbox](https://moretoolbox.com)
 `
 
 type Tab = 'edit' | 'preview'

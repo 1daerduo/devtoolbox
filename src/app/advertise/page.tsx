@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '广告合作 - DevToolbox 开发者工具站',
-  description: 'DevToolbox 开发者工具站广告合作，支持 AdSense、赞助工具位、品牌定制等多种合作方式。精准触达开发者用户群体。',
+  title: 'Advertise - MoreToolbox 开发者工具站广告合作 | Advertising',
+  description: 'MoreToolbox 开发者工具站广告合作，支持 AdSense、赞助工具位、品牌定制等多种合作方式。精准触达开发者用户群体。 | Advertise with MoreToolbox. AdSense, sponsored tools, brand partnerships. Reach developer audience.',
   alternates: {
     canonical: 'https://moretoolbox.com/advertise/',
   },

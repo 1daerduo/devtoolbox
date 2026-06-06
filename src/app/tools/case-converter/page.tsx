@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import CaseConverterClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: '在线文本大小写转换工具 - 大写 小写 驼峰 蛇形等9种格式 - DevToolbox',
-  description: '在线文本大小写转换，支持大写、小写、首字母大写、句首大写、驼峰camelCase、帕斯卡PascalCase、蛇形snake_case、短横kebab-case、常量CONSTANT_CASE，输入即出。',
+  title: '在线文本大小写转换工具 - 大写 小写 驼峰 蛇形等9种格式 - MoreToolbox',
+  description: '在线文本大小写转换，支持大写、小写、首字母大写、句首大写、驼峰camelCase、帕斯卡PascalCase、蛇形snake_case、短横kebab-case、常量CONSTANT_CASE，输入即出。 | Free online text case converter. UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, sentence case.',
   keywords: ['大小写转换', '文本转换', '驼峰转换', '蛇形转换', 'camelCase', 'snake_case', '大写转小写', '小写转大写', '命名转换'],
   alternates: { canonical: 'https://moretoolbox.com/tools/case-converter' },
 }
@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "大小写转换 - DevToolbox", "description": "大写/小写/驼峰等9种格式", "url": "https://moretoolbox.com/tools/case-converter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "大小写转换 - MoreToolbox", "description": "大写/小写/驼峰等9种格式 | Free online text case converter", "url": "https://moretoolbox.com/tools/case-converter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <CaseConverterClient />

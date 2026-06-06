@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import SqlFormatterClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'SQL 在线格式化美化工具 - DevToolbox',
-  description: '免费在线 SQL 格式化、压缩、美化工具。支持 MySQL/PostgreSQL/SQLite/T-SQL 等多种方言，自定义缩进与大小写。开发者必备。',
+  title: 'SQL 在线格式化美化工具 | SQL Formatter & Beautifier - MoreToolbox',
+  description: '免费在线 SQL 格式化、压缩、美化工具。支持 MySQL/PostgreSQL/SQLite/T-SQL 等多种方言，自定义缩进与大小写。开发者必备。 | Free online SQL formatter, beautifier. Supports MySQL, PostgreSQL, SQLite, T-SQL dialects. Custom indentation & casing.',
   keywords: ['SQL格式化', 'SQL formatter', 'SQL美化', 'SQL beautifier', 'SQL压缩', '数据库工具', 'SQL格式化在线'],
   alternates: { canonical: 'https://moretoolbox.com/tools/sql-formatter' },
 }
@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SQL 格式化 - DevToolbox", "description": "SQL 美化与压缩", "url": "https://moretoolbox.com/tools/sql-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SQL 格式化 - MoreToolbox", "description": "SQL 美化与压缩 | Free online SQL formatter, beautifier", "url": "https://moretoolbox.com/tools/sql-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <SqlFormatterClient />
