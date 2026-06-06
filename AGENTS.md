@@ -55,8 +55,10 @@ tool-site/
 │   └── favicon.ico
 ├── package.json
 ├── tsconfig.json
-├── tailwind.config.ts
-└── next.config.mjs
+├── tailwind.config.js
+├── next.config.js              ← ⚠️ 仅有此一个 config，不可创建 .ts/.mjs 版本
+├── .node-version               ← Node 22（Cloudflare Pages 自动识别）
+└── postcss.config.js
 ```
 
 ---
@@ -191,13 +193,13 @@ cd tool-site && git add . && git commit -m "..." && git push
 - sitemap.xml（40 个工具页 + 首页 + 广告合作页）
 - Google Search Console 验证文件已部署
 - 所有工具页含 RelatedTools 内链（**每个工具 4 个推荐，消除 orphan 页面**）
-- Google Analytics 4 脚本框架已接入（通过 NEXT_PUBLIC_GA_MEASUREMENT_ID 配置）
-- AdSense 广告组件已就绪（AdBanner.tsx，通过 NEXT_PUBLIC_ADSENSE_PUBLISHER_ID 配置）
+- Google Analytics 4 **已激活** — 测量 ID: G-HYD79KJF3L，实时数据正常
+- AdSense 广告组件已就绪 — 发布商 ID: ca-pub-2041541281963495（等待审核）
 - **首页 metadata 优化（title/description/keywords 关键词密度提升）**
+- **Cloudflare Pages 自动构建** — 配置: Root=/, Build=npm ci && npm run build, Output=out
 
 ### 待完成 ❌
-- **Google Analytics 激活** — 设置真实 Measurement ID（需 Google 账号）
-- **AdSense 审核通过** — 需网站有真实流量后申请
+- **AdSense 审核中** — 需等待 Google 审核通过（几天到两周）
 - **外链建设**：GitHub README、社交媒体、技术博客
 - **性能优化**：Core Web Vitals（LCP、CLS、FID）
 - **qrcode.react** 未使用依赖，可清理减包
@@ -256,9 +258,12 @@ cd tool-site && git add . && git commit -m "..." && git push
 ## 八、已知问题 & 技术债务
 
 1. `qrcode.react` 未使用 — 可与 `qrcode` 包统一
-2. GA4 脚本框架已就绪，需设置真实 `NEXT_PUBLIC_GA_MEASUREMENT_ID` 环境变量
-3. AdSense 组件已就绪（AdBanner.tsx），需网站有流量后申请 AdSense 账号获取 `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID`
-4. 部分工具 ToolClient.tsx 无 loading/error 状态
+2. AdSense 审核中 — 发布商 ID ca-pub-2041541281963495，代码内联部署，待 Google 审核
+3. 部分工具 ToolClient.tsx 无 loading/error 状态
+4. 首页工具卡片按分类硬编码排序，非动态排序
+5. 无暗色模式支持
+6. 未配置 PWA/service worker
+7. ⚠️ 删除 next.config.ts 后不可再创建，防止与 next.config.js (output:export) 冲突
 5. 首页工具卡片按分类硬编码排序，非动态排序
 6. 无暗色模式支持
 7. 未配置 PWA/service worker
