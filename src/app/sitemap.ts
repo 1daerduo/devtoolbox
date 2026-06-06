@@ -44,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'css-gradient',
     'random-number',
     'svg-to-png',
+    // Round 4 (new)
+    'box-shadow-generator',
+    'html-playground',
+    'color-palette',
+    'password-strength',
+    'http-status-codes',
+    'url-parser',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

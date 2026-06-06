@@ -43,6 +43,13 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'css-gradient': { name: 'CSS 渐变生成器', desc: '可视化 CSS 渐变生成' },
   'random-number': { name: '随机数生成器', desc: '随机整数/小数批量生成' },
   'svg-to-png': { name: 'SVG 转 PNG', desc: 'SVG 矢量图转 PNG 位图' },
+  // Round 4 (new)
+  'box-shadow-generator': { name: 'CSS Box Shadow 生成器', desc: '可视化 CSS box-shadow 构建' },
+  'html-playground': { name: 'HTML/CSS/JS Playground', desc: '在线代码编辑器实时预览' },
+  'color-palette': { name: '颜色调色板生成器', desc: '一键生成和谐配色方案' },
+  'password-strength': { name: '密码强度检查器', desc: '检测密码安全性' },
+  'http-status-codes': { name: 'HTTP 状态码参考', desc: 'HTTP 响应状态码查询' },
+  'url-parser': { name: 'URL 解析器', desc: '解析 URL 各组件' },
 }
 
 const related: Record<string, string[]> = {
@@ -95,6 +102,13 @@ const related: Record<string, string[]> = {
   'image-compressor': ['image-converter', 'svg-to-png', 'base64-image', 'color-converter'],
   'image-converter': ['image-compressor', 'svg-to-png', 'base64-image', 'qrcode'],
   'svg-to-png': ['image-converter', 'image-compressor', 'base64-image', 'css-gradient'],
+  // Round 4 (new)
+  'box-shadow-generator': ['css-gradient', 'color-converter', 'css-formatter', 'color-palette'],
+  'html-playground': ['markdown-editor', 'html-formatter', 'js-formatter', 'css-formatter'],
+  'color-palette': ['color-converter', 'css-gradient', 'box-shadow-generator', 'css-formatter'],
+  'password-strength': ['password-generator', 'hash-generator', 'bcrypt-generator', 'random-number'],
+  'http-status-codes': ['url-parser', 'dns-lookup', 'email-validator', 'my-ip'],
+  'url-parser': ['url-encode', 'http-status-codes', 'my-ip', 'dns-lookup'],
 }
 
 interface Props {

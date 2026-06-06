@@ -61,9 +61,21 @@ const tools = [
 
   // SEO工具
   { name: 'Meta 标签生成器', desc: '生成 SEO Meta/OG/Twitter Card 标签，可视化预览。', href: '/tools/meta-tag', icon: '🏷️', category: 'SEO工具' },
+
+  // 设计工具
+  { name: 'CSS Box Shadow 生成器', desc: '可视化构建 CSS box-shadow，支持多层阴影、内阴影、颜色透明度调节。', href: '/tools/box-shadow-generator', icon: '🔲', category: '设计工具' },
+  { name: '颜色调色板生成器', desc: '一键生成和谐配色方案，支持类比/单色/互补等多种配色模式。', href: '/tools/color-palette', icon: '🎨', category: '设计工具' },
+
+  // 在线编辑器
+  { name: 'HTML/CSS/JS Playground', desc: '在线代码编辑器，实时预览 HTML/CSS/JavaScript 代码效果。', href: '/tools/html-playground', icon: '💻', category: '在线编辑器' },
+
+  // 安全/参考工具
+  { name: '密码强度检查器', desc: '在线检测密码安全性，计算熵值和预估破解时间，100%本地处理。', href: '/tools/password-strength', icon: '🛡️', category: '安全工具' },
+  { name: 'HTTP 状态码参考', desc: 'HTTP 响应状态码完整参考，支持搜索和分类筛选。', href: '/tools/http-status-codes', icon: '📡', category: '参考工具' },
+  { name: 'URL 解析器', desc: '解析 URL 各组成部分：协议、域名、端口、路径、查询参数、Hash。', href: '/tools/url-parser', icon: '🔗', category: '参考工具' },
 ]
 
-const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', 'SEO工具', '图像/其他']
+const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', 'SEO工具', '图像/其他', '设计工具', '在线编辑器', '安全工具', '参考工具']
 
 const categoryIcons: Record<string, string> = {
   '全部': '🏠',
@@ -76,6 +88,10 @@ const categoryIcons: Record<string, string> = {
   '网络工具': '🌍',
   'SEO工具': '🏷️',
   '图像/其他': '🖼️',
+  '设计工具': '🎯',
+  '在线编辑器': '💻',
+  '安全工具': '🛡️',
+  '参考工具': '📖',
 }
 
 export default function HomePage() {
@@ -124,7 +140,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          40 款开发工具，一站式解决。
+          46 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}
