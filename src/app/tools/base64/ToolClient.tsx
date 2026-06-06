@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import CopyButton from '@/components/CopyButton'
 import RelatedTools from '@/components/RelatedTools'
+import AdBanner from '@/components/AdBanner'
 
 export default function Base64Client() {
   const [input, setInput] = useState('')
@@ -116,6 +117,7 @@ export default function Base64Client() {
         支持 UTF-8 中文编码。Base64 是一种用 64 个字符表示二进制数据的方法，常用于邮件附件、API 传输等场景。
       </div>
 
+      <AdBanner dataAdFormat="horizontal" />
       <RelatedTools current="base64" />
     </div>
   )

@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import Link from 'next/link'
 import RecentToolsTracker from '@/components/RecentToolsTracker'
 
@@ -101,9 +102,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
         <footer className="border-t bg-white mt-16">
           <div className="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-            © 2026 DevToolbox. 免费在线开发者工具。
+            © 2026 DevToolbox. 免费在线开发者工具。{' '}
+            <Link href="/advertise/" className="text-gray-400 hover:text-primary-600 no-underline">
+              广告合作
+            </Link>
           </div>
         </footer>
+
+        {/* Google Analytics 4 — 通过 NEXT_PUBLIC_GA_MEASUREMENT_ID 环境变量配置 */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+
+        {/* Google AdSense — 通过 NEXT_PUBLIC_ADSENSE_PUBLISHER_ID 环境变量配置 */}
+        {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID !== 'ca-pub-XXXXXXXXXXXXXXXX' && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
+        )}
       </body>
     </html>
   )

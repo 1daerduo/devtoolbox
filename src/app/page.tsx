@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect, useMemo } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 const tools = [
   // 格式化
@@ -123,7 +124,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          32 款开发工具，一站式解决。
+          40 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}
@@ -238,12 +239,8 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Ads placeholder */}
-      <section className="py-8 text-center">
-        <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6 text-gray-400 text-sm border-2 border-dashed border-gray-300 mx-4">
-          [ Google AdSense 广告位 - 网站流量达标后申请接入 ]
-        </div>
-      </section>
+      {/* AdSense Banner */}
+      <AdBanner dataAdFormat="horizontal" />
     </div>
   )
 }

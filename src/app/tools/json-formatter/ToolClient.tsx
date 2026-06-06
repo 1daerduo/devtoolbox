@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import CopyButton from '@/components/CopyButton'
 import RelatedTools from '@/components/RelatedTools'
+import AdBanner from '@/components/AdBanner'
 
 export default function JsonFormatterClient() {
   const [input, setInput] = useState('')
@@ -95,6 +96,7 @@ export default function JsonFormatterClient() {
         </label>
       </div>
 
+      <AdBanner dataAdFormat="horizontal" />
       <RelatedTools current="json-formatter" />
     </div>
   )

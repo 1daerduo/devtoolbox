@@ -5,6 +5,7 @@ import QRCode from 'qrcode'
 import Breadcrumb from '@/components/Breadcrumb'
 import CopyButton from '@/components/CopyButton'
 import RelatedTools from '@/components/RelatedTools'
+import AdBanner from '@/components/AdBanner'
 
 export default function QrcodeClient() {
   const [text, setText] = useState('')
@@ -106,6 +107,7 @@ export default function QrcodeClient() {
         </div>
       </div>
 
+      <AdBanner dataAdFormat="horizontal" />
       <RelatedTools current="qrcode" />
     </div>
   )
