@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# playwright (本地测试工具，不推送到云端)
+/node_modules/playwright
+/node_modules/playwright-core
+/node_modules/.cache/ms-playwright*
+/scripts/node_modules/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

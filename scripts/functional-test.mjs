@@ -7,7 +7,6 @@
  * 耗时: ~2-3 分钟
  */
 
-import { chromium } from 'playwright';
 import { createServer } from 'http';
 import { readFileSync, existsSync, statSync } from 'fs';
 import { join, extname, dirname } from 'path';
@@ -15,6 +14,18 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, '..', 'out');
+
+// ────────────────────────────────────────────
+// 预检：Playwright 是否已本地安装
+// ────────────────────────────────────────────
+let chromium;
+try {
+  ({ chromium } = await import('playwright'));
+} catch {
+  console.log('❌ 未安装 Playwright（本地测试工具）');
+  console.log('   运行 npm run setup:test 一键安装 (~300MB)\n');
+  process.exit(1);
+}
 
 const PASS = '✅';
 const FAIL = '❌';

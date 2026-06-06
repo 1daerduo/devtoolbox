@@ -9,6 +9,7 @@
     "test:func": "node scripts/functional-test.mjs",
     "test:all": "npm test && npm run test:func",
     "build:test": "npm run build && npm run test:all",
+    "setup:test": "node scripts/setup-playwright.mjs",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,7 +27,6 @@
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.0",
-    "playwright": "^1.60.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
