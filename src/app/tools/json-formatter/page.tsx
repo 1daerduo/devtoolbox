@@ -9,5 +9,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <JsonFormatterClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "JSON 格式化", "item": "https://devtoolbox-61u.pages.dev/tools/json-formatter" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON 格式化 - DevToolbox", "description": "格式化、压缩、验证 JSON 数据", "url": "https://devtoolbox-61u.pages.dev/tools/json-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <JsonFormatterClient />
+      </>
+    )
 }

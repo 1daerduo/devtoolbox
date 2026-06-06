@@ -9,5 +9,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <EmailValidatorClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "邮箱验证器", "item": "https://devtoolbox-61u.pages.dev/tools/email-validator" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "邮箱验证器 - DevToolbox", "description": "邮箱格式在线验证", "url": "https://devtoolbox-61u.pages.dev/tools/email-validator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <EmailValidatorClient />
+      </>
+    )
 }

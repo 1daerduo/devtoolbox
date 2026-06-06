@@ -9,5 +9,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <UserAgentClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "User Agent 解析", "item": "https://devtoolbox-61u.pages.dev/tools/user-agent" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "User Agent 解析 - DevToolbox", "description": "浏览器 UA 字符串解析", "url": "https://devtoolbox-61u.pages.dev/tools/user-agent", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <UserAgentClient />
+      </>
+    )
 }

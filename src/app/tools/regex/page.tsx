@@ -9,5 +9,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <RegexClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "正则表达式测试", "item": "https://devtoolbox-61u.pages.dev/tools/regex" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "正则表达式测试 - DevToolbox", "description": "在线正则匹配与高亮", "url": "https://devtoolbox-61u.pages.dev/tools/regex", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <RegexClient />
+      </>
+    )
 }

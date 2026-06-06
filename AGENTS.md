@@ -183,22 +183,25 @@ cd tool-site && git add . && git commit -m "..." && git push
 
 ### 已完成 ✅
 - JSON-LD WebApplication schema（layout.tsx）
+- **JSON-LD BreadcrumbList + SoftwareApplication schema（全部 40 个工具页）**
 - Open Graph / Twitter Card 标签（layout.tsx）
 - 每个工具页独立 metadata + canonical URL
+- **keywords 统一为数组格式（27 页修复）**
 - robots.txt（允许全部爬虫）
 - sitemap.xml（40 个工具页 + 首页 + 广告合作页）
 - Google Search Console 验证文件已部署
-- 所有工具页含 RelatedTools 内链
+- 所有工具页含 RelatedTools 内链（**每个工具 4 个推荐，消除 orphan 页面**）
 - Google Analytics 4 脚本框架已接入（通过 NEXT_PUBLIC_GA_MEASUREMENT_ID 配置）
 - AdSense 广告组件已就绪（AdBanner.tsx，通过 NEXT_PUBLIC_ADSENSE_PUBLISHER_ID 配置）
+- **首页 metadata 优化（title/description/keywords 关键词密度提升）**
 
 ### 待完成 ❌
 - **Google Analytics 激活** — 设置真实 Measurement ID（需 Google 账号）
 - **AdSense 审核通过** — 需网站有真实流量后申请
-- **结构化数据完善**：FAQPage、HowTo、BreadcrumbList schema
 - **外链建设**：GitHub README、社交媒体、技术博客
 - **性能优化**：Core Web Vitals（LCP、CLS、FID）
 - **qrcode.react** 未使用依赖，可清理减包
+- FAQPage / HowTo schema（对特定工具如正则测试、Cron生成器更合适）
 
 ---
 

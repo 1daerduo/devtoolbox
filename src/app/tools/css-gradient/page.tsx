@@ -9,5 +9,21 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <CssGradientClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "CSS 渐变生成器", "item": "https://devtoolbox-61u.pages.dev/tools/css-gradient" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "CSS 渐变生成器 - DevToolbox", "description": "可视化 CSS 渐变生成", "url": "https://devtoolbox-61u.pages.dev/tools/css-gradient", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <CssGradientClient />
+      </>
+    )
 }
