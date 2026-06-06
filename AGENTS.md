@@ -93,9 +93,25 @@ tool-site/
 
 ### 构建命令
 ```bash
-cd tool-site && npm run build    # 先构建验证
+# Cloudflare 自动构建（远程）：仅构建，不含测试
+npm ci && npm run build
+
+# 本地完整流程：构建 + 测试
+cd tool-site && npm run build:test    # 构建 + 静态检查 + 功能测试
 cd tool-site && git add . && git commit -m "..." && git push
 ```
+
+### 测试体系
+```bash
+npm test            # 静态检查（<1s，7 项：结构/HTML/GA4/AdSense/大小/robots/sitemap）
+npm run test:func   # 功能测试（Playwright，~2min，39 工具浏览器验证）
+npm run test:all    # 静态 + 功能
+npm run build:test  # 构建 + 全部测试
+
+npm run setup:test  # 仅首次：本地安装 Playwright + Chromium（~300MB，不会被推送）
+```
+> **重要**：Playwright 已从 package.json 剥离，Cloudflare `npm ci` 不会安装它。
+> 本地首次运行前需执行 `npm run setup:test`。
 
 ---
 
