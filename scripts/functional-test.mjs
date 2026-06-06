@@ -346,7 +346,7 @@ async function testQrcode(page, baseURL) {
       log(FAIL, 'qrcode: 找不到输入框');
       return;
     }
-    await textarea.fill('https://devtoolbox-61u.pages.dev');
+    await textarea.fill('https://moretoolbox.com');
 
     // 点"生成二维码"按钮
     try {

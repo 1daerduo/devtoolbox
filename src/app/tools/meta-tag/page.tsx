@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "Meta 标签生成器", "item": "https://devtoolbox-61u.pages.dev/tools/meta-tag" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "Meta 标签生成器", "item": "https://moretoolbox.com/tools/meta-tag" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Meta 标签生成器 - DevToolbox", "description": "SEO/OG/Twitter 标签生成", "url": "https://devtoolbox-61u.pages.dev/tools/meta-tag", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Meta 标签生成器 - DevToolbox", "description": "SEO/OG/Twitter 标签生成", "url": "https://moretoolbox.com/tools/meta-tag", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <MetaTagClient />

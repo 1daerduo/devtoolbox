@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'JSON 转 CSV 在线转换工具 - DevToolbox',
   description: '免费在线 JSON 与 CSV 互相转换工具，支持嵌套 JSON 展开、自定义分隔符。开发者数据处理必备。',
   keywords: ['JSON转CSV', 'CSV转JSON', 'JSON to CSV', 'CSV to JSON', '数据格式转换', '在线转换工具'],
-  alternates: { canonical: 'https://devtoolbox-61u.pages.dev/tools/json-to-csv' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/json-to-csv' },
 }
 
 export default function Page() {
@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "JSON ↔ CSV", "item": "https://devtoolbox-61u.pages.dev/tools/json-to-csv" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "JSON ↔ CSV", "item": "https://moretoolbox.com/tools/json-to-csv" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON ↔ CSV - DevToolbox", "description": "JSON 与 CSV 互转", "url": "https://devtoolbox-61u.pages.dev/tools/json-to-csv", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON ↔ CSV - DevToolbox", "description": "JSON 与 CSV 互转", "url": "https://moretoolbox.com/tools/json-to-csv", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <JsonToCsvClient />

@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "随机数生成器", "item": "https://devtoolbox-61u.pages.dev/tools/random-number" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "随机数生成器", "item": "https://moretoolbox.com/tools/random-number" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "随机数生成器 - DevToolbox", "description": "随机整数/小数批量生成", "url": "https://devtoolbox-61u.pages.dev/tools/random-number", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "随机数生成器 - DevToolbox", "description": "随机整数/小数批量生成", "url": "https://moretoolbox.com/tools/random-number", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <RandomNumberClient />

@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "二维码生成器", "item": "https://devtoolbox-61u.pages.dev/tools/qrcode" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "二维码生成器", "item": "https://moretoolbox.com/tools/qrcode" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "二维码生成器 - DevToolbox", "description": "在线生成可下载的二维码", "url": "https://devtoolbox-61u.pages.dev/tools/qrcode", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "二维码生成器 - DevToolbox", "description": "在线生成可下载的二维码", "url": "https://moretoolbox.com/tools/qrcode", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <QrcodeClient />

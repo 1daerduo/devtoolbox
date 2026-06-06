@@ -37,7 +37,7 @@ function hello(name) {
 
 ---
 
-[访问 DevToolbox](https://devtoolbox-61u.pages.dev)
+[访问 DevToolbox](https://moretoolbox.com)
 `
 
 type Tab = 'edit' | 'preview'

@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "SVG 转 PNG", "item": "https://devtoolbox-61u.pages.dev/tools/svg-to-png" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "SVG 转 PNG", "item": "https://moretoolbox.com/tools/svg-to-png" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SVG 转 PNG - DevToolbox", "description": "SVG 矢量图转 PNG 位图", "url": "https://devtoolbox-61u.pages.dev/tools/svg-to-png", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SVG 转 PNG - DevToolbox", "description": "SVG 矢量图转 PNG 位图", "url": "https://moretoolbox.com/tools/svg-to-png", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <SvgToPngClient />

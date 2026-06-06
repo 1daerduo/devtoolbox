@@ -9,7 +9,7 @@
 | 属性 | 值 |
 |------|-----|
 | **名称** | DevToolbox（开发者工具箱） |
-| **域名** | devtoolbox-61u.pages.dev |
+| **域名** | moretoolbox.com |
 | **定位** | 免费在线开发者工具集合站，纯前端处理，数据不上传服务器 |
 | **目标** | 通过 SEO 自然流量吸引开发者用户 → AdSense 广告变现 |
 | **当前工具数** | 40 款 |
@@ -71,7 +71,7 @@ tool-site/
 // - 导出 metadata（title, description, keywords, alternates.canonical）
 // - 内嵌 JSON-LD WebApplication schema
 // - 渲染 <Breadcrumb> + <ToolClient>（动态导入可选）
-// - canonical URL: https://devtoolbox-61u.pages.dev/tools/{slug}
+// - canonical URL: https://moretoolbox.com/tools/{slug}
 
 // ToolClient.tsx — 客户端组件
 // - 必须以 'use client' 开头

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'HTML 格式化工具 - 在线 HTML 美化压缩 - DevToolbox',
   description: '免费在线 HTML 格式化工具，支持 HTML 美化与压缩，自定义缩进，一键复制。适用于前端开发调试与生产环境优化。',
   keywords: ['HTML格式化', 'HTML美化', 'HTML压缩', 'HTML formatter', 'HTML minifier', '代码美化', '在线HTML工具'],
-  alternates: { canonical: 'https://devtoolbox-61u.pages.dev/tools/html-formatter' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/html-formatter' },
 }
 
 export default function Page() {
@@ -14,13 +14,13 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://devtoolbox-61u.pages.dev" }, { "@type": "ListItem", "position": 2, "name": "HTML 格式化", "item": "https://devtoolbox-61u.pages.dev/tools/html-formatter" }] }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "HTML 格式化", "item": "https://moretoolbox.com/tools/html-formatter" }] }),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HTML 格式化 - DevToolbox", "description": "HTML 代码美化与压缩", "url": "https://devtoolbox-61u.pages.dev/tools/html-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HTML 格式化 - DevToolbox", "description": "HTML 代码美化与压缩", "url": "https://moretoolbox.com/tools/html-formatter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <HtmlFormatterClient />

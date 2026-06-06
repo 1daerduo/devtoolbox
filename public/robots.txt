@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://devtoolbox-61u.pages.dev/sitemap.xml
+Sitemap: https://moretoolbox.com/sitemap.xml
