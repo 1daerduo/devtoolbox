@@ -21,22 +21,19 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: tool-site/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: tool-site
 
       - name: Build static export
         run: npm run build
-        working-directory: tool-site
 
       - name: Verify build output
         run: |
           echo "=== 检查 GA4 脚本 ==="
-          grep -l "googletagmanager" tool-site/out/index.html && echo "✅ GA4 存在" || echo "❌ GA4 缺失"
+          grep -q "googletagmanager" out/index.html && echo "✅ GA4 存在" || echo "❌ GA4 缺失"
           echo "=== 检查 AdSense 脚本 ==="
-          grep -l "adsbygoogle" tool-site/out/index.html && echo "✅ AdSense 存在" || echo "❌ AdSense 缺失"
+          grep -q "adsbygoogle" out/index.html && echo "✅ AdSense 存在" || echo "❌ AdSense 缺失"
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
@@ -44,5 +41,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: devtoolbox
-          directory: tool-site/out
+          directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

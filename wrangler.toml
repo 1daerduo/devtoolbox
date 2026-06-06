@@ -1,7 +1,0 @@
-# Cloudflare Pages 项目配置
-# GitHub Action 自动部署时使用
-name = "devtoolbox"
-compatibility_date = "2025-01-01"
-
-[site]
-bucket = "./out"
