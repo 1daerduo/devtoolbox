@@ -86,12 +86,9 @@ export default function AdvertisePage() {
         </p>
         <div className="space-y-2 text-sm">
           <p>
-            📧 邮箱：<a href="mailto:ads@devtoolbox-61u.pages.dev" className="text-primary-600 hover:text-primary-700">
-              ads@devtoolbox-61u.pages.dev
+            📧 邮箱：<a href="mailto:daerduodaerdong@163.com" className="text-primary-600 hover:text-primary-700">
+              daerduodaerdong@163.com
             </a>
-          </p>
-          <p className="text-xs text-gray-400 mt-4">
-            注：以上邮箱为占位地址，请替换为实际联系邮箱。
           </p>
         </div>
       </section>
