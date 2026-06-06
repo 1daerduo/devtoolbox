@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import Link from 'next/link'
 import RecentToolsTracker from '@/components/RecentToolsTracker'
 
@@ -110,27 +109,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         {/* Google Analytics 4 — 测量 ID: G-HYD79KJF3L */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HYD79KJF3L"
-          strategy="afterInteractive"
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYD79KJF3L"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HYD79KJF3L', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HYD79KJF3L', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
 
-        {/* Google AdSense — 已验证发布商 ID: ca-pub-2041541281963495 */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2041541281963495"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
+        {/* Google AdSense — 发布商 ID: ca-pub-2041541281963495 */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2041541281963495" crossOrigin="anonymous"></script>
       </body>
     </html>
   )
