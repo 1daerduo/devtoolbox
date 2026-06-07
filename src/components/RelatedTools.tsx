@@ -50,6 +50,15 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'password-strength': { name: '密码强度检查器', desc: '检测密码安全性' },
   'http-status-codes': { name: 'HTTP 状态码参考', desc: 'HTTP 响应状态码查询' },
   'url-parser': { name: 'URL 解析器', desc: '解析 URL 各组件' },
+  // Round 5 (new)
+  'regex-tester': { name: '正则表达式测试器', desc: '在线 Regex 调试匹配替换' },
+  'json-schema-validator': { name: 'JSON Schema 验证器', desc: 'Schema 定义校验 JSON 结构' },
+  'image-resizer': { name: '图片尺寸调整', desc: '在线缩放裁剪图片尺寸' },
+  'uuid-decoder': { name: 'UUID 解码器', desc: '解析 UUID 版本时间戳' },
+  'csv-viewer': { name: 'CSV 表格查看器', desc: 'CSV/TSV 表格浏览搜索' },
+  'emoji-picker': { name: 'Emoji 选择器', desc: '浏览搜索复制 Emoji' },
+  'qr-scanner': { name: '二维码扫描器', desc: '图片扫码解码 QR Code' },
+  'ascii-art-generator': { name: 'ASCII 艺术字生成器', desc: '文字转 ASCII 字符画' },
 }
 
 const related: Record<string, string[]> = {
@@ -109,6 +118,15 @@ const related: Record<string, string[]> = {
   'password-strength': ['password-generator', 'hash-generator', 'bcrypt-generator', 'random-number'],
   'http-status-codes': ['url-parser', 'dns-lookup', 'email-validator', 'my-ip'],
   'url-parser': ['url-encode', 'http-status-codes', 'my-ip', 'dns-lookup'],
+  // Round 5 (new)
+  'regex-tester': ['regex', 'diff-checker', 'word-count', 'html-entity'],
+  'json-schema-validator': ['json-formatter', 'yaml-formatter', 'json-to-csv', 'csv-viewer'],
+  'image-resizer': ['image-compressor', 'image-converter', 'svg-to-png', 'base64-image'],
+  'uuid-decoder': ['uuid-generator', 'hash-generator', 'timestamp', 'cron-generator'],
+  'csv-viewer': ['json-to-csv', 'json-formatter', 'sql-formatter', 'number-base'],
+  'emoji-picker': ['text-dedup', 'markdown-editor', 'word-count', 'lorem-ipsum'],
+  'qr-scanner': ['qrcode', 'base64-image', 'image-converter', 'image-compressor'],
+  'ascii-art-generator': ['lorem-ipsum', 'markdown-to-html', 'text-dedup', 'markdown-editor'],
 }
 
 interface Props {

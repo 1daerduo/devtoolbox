@@ -73,6 +73,16 @@ const tools = [
   { name: '密码强度检查器', desc: '在线检测密码安全性，计算熵值和预估破解时间，100%本地处理。', href: '/tools/password-strength', icon: '🛡️', category: '安全工具' },
   { name: 'HTTP 状态码参考', desc: 'HTTP 响应状态码完整参考，支持搜索和分类筛选。', href: '/tools/http-status-codes', icon: '📡', category: '参考工具' },
   { name: 'URL 解析器', desc: '解析 URL 各组成部分：协议、域名、端口、路径、查询参数、Hash。', href: '/tools/url-parser', icon: '🔗', category: '参考工具' },
+
+  // Round 5 (new)
+  { name: '正则表达式测试器', desc: '在线 Regex 调试，实时匹配高亮、捕获组查看、替换功能、常用正则库。', href: '/tools/regex-tester', icon: '.*', category: '文本工具' },
+  { name: 'JSON Schema 验证器', desc: '通过 Schema 定义校验 JSON 数据结构，精准定位错误字段。', href: '/tools/json-schema-validator', icon: '📋✓', category: '格式化' },
+  { name: '图片尺寸调整', desc: '在线调整图片宽高，支持像素/百分比缩放，保持宽高比。', href: '/tools/image-resizer', icon: '📐', category: '图像/其他' },
+  { name: 'UUID 解码器', desc: '解析 UUID 结构，查看版本、变体、时间戳等详细信息。', href: '/tools/uuid-decoder', icon: '🆔→', category: '编解码' },
+  { name: 'CSV 表格查看器', desc: '在线浏览 CSV/TSV 表格数据，支持搜索筛选分页，自动检测分隔符。', href: '/tools/csv-viewer', icon: '📊', category: '转换器' },
+  { name: 'Emoji 选择器', desc: '浏览搜索 Emoji，一键复制字符/HTML实体/CSS代码。', href: '/tools/emoji-picker', icon: '😀', category: '文本工具' },
+  { name: '二维码扫描器', desc: '上传或粘贴二维码图片，在线解码识别 QR Code 内容。', href: '/tools/qr-scanner', icon: '📷', category: '图像/其他' },
+  { name: 'ASCII 艺术字生成器', desc: '文字转 ASCII 字符画，多字体风格，可复制到代码注释或社交媒体。', href: '/tools/ascii-art-generator', icon: '𝐀', category: '生成器' },
 ]
 
 const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', 'SEO工具', '图像/其他', '设计工具', '在线编辑器', '安全工具', '参考工具']
@@ -140,7 +150,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          46 款开发工具，一站式解决。
+          54 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}

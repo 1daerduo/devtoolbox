@@ -51,6 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'password-strength',
     'http-status-codes',
     'url-parser',
+    // Round 5 (new)
+    'regex-tester',
+    'json-schema-validator',
+    'image-resizer',
+    'uuid-decoder',
+    'csv-viewer',
+    'emoji-picker',
+    'qr-scanner',
+    'ascii-art-generator',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({
