@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import UrlParserClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'URL Parser - Online URL Analyzer & Query String Splitter - MoreToolbox',
-  description: 'Free online URL parser tool. Break down URLs into protocol, hostname, port, path, query parameters, and hash. Analyze and debug URLs instantly in your browser.',
+  title: 'URL 解析器 - Online URL Parser & Analyzer | MoreToolbox',
+  description: '免费在线 URL 解析工具。将 URL 拆解为协议、主机名、端口、路径、查询参数、Hash 等组件，方便分析和调试。 | Free online URL parser. Break down URLs into protocol, hostname, port, path, query parameters, and hash for analysis.',
   keywords: ['URL parser', 'URL analyzer', 'query string parser', 'URL breakdown', 'parse URL online', 'URL解析器', 'URL分析', '查询字符串解析'],
-  alternates: { canonical: '/tools/url-parser' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/url-parser' },
 }
 
 export default function Page() {

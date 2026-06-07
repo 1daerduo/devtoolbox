@@ -11,5 +11,21 @@ export const metadata: Metadata = {
 }
 
 export default function QrScannerPage() {
-  return <ToolClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "二维码扫描器", "item": "https://moretoolbox.com/tools/qr-scanner" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "二维码扫描器 - MoreToolbox", "description": "上传图片在线扫码解码 QR Code 内容，支持 URL/文本/名片解码 | Free online QR code scanner & decoder", "url": "https://moretoolbox.com/tools/qr-scanner", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <ToolClient />
+      </>
+    )
 }

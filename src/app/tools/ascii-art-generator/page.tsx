@@ -11,5 +11,21 @@ export const metadata: Metadata = {
 }
 
 export default function AsciiArtGeneratorPage() {
-  return <ToolClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "ASCII 艺术字生成器", "item": "https://moretoolbox.com/tools/ascii-art-generator" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ASCII 艺术字生成器 - MoreToolbox", "description": "将文字转换为 ASCII 字符画，支持多种 FIGlet 字体风格 | Free online ASCII art text generator", "url": "https://moretoolbox.com/tools/ascii-art-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <ToolClient />
+      </>
+    )
 }

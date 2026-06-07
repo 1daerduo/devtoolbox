@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import HttpStatusCodesClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'HTTP Status Code Reference - Complete Status Code Lookup - MoreToolbox',
-  description: 'Free online HTTP status code reference. Search and browse all HTTP response codes (1xx-5xx) with descriptions, use cases, and examples. Essential for web developers and API debugging.',
+  title: 'HTTP 状态码参考大全 - HTTP Status Code Reference | MoreToolbox',
+  description: '免费在线 HTTP 状态码参考大全。查询全部 HTTP 响应状态码(1xx-5xx)，含详细说明、使用场景和示例。Web 开发者和 API 调试必备。 | Free online HTTP status code reference. Search and browse all codes (1xx-5xx) with descriptions and examples.',
   keywords: ['HTTP status codes', 'status code reference', 'HTTP response codes', '404', '500', 'HTTP状态码', '状态码查询', 'HTTP响应码参考'],
-  alternates: { canonical: '/tools/http-status-codes' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/http-status-codes' },
 }
 
 export default function Page() {

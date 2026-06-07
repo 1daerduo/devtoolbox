@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import ColorPaletteClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'Color Palette Generator - Create Beautiful Color Schemes - MoreToolbox',
-  description: 'Free online color palette generator. Create harmonious color schemes with one click. Export as HEX, RGB, HSL. Perfect for designers and developers.',
+  title: '颜色调色板生成器 - Color Palette Generator | MoreToolbox',
+  description: '免费在线配色方案生成器。一键生成协调的配色方案，输出 HEX/RGB/HSL 格式。适合设计师和前端开发者使用。 | Free online color palette generator. Create harmonious color schemes with one click.',
   keywords: ['color palette generator', 'color scheme', 'color combination', 'palette maker', '调色板生成器', '配色方案', '颜色组合', '色彩搭配'],
-  alternates: { canonical: '/tools/color-palette' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/color-palette' },
 }
 
 export default function Page() {

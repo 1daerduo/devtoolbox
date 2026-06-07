@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import HtmlPlaygroundClient from './ToolClient'
 
 export const metadata: Metadata = {
-  title: 'HTML/CSS/JS Playground - Online Code Editor with Live Preview - MoreToolbox',
-  description: 'Free online HTML, CSS, and JavaScript playground with live preview. Write, edit, and run web code in your browser instantly. No setup required.',
+  title: 'HTML/CSS/JS 在线编辑器 - 代码实时预览 Playground | MoreToolbox',
+  description: '免费在线 HTML/CSS/JS 代码编辑器，支持实时预览。在浏览器中编写和运行前端代码，无需任何配置安装。 | Free online HTML, CSS, JavaScript playground with live preview. Write, edit, and run web code instantly.',
   keywords: ['HTML playground', 'CSS playground', 'JavaScript playground', 'online code editor', 'live preview', 'HTML编辑器', '在线代码编辑器', 'HTML预览'],
-  alternates: { canonical: '/tools/html-playground' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/html-playground' },
 }
 
 export default function Page() {

@@ -11,5 +11,21 @@ export const metadata: Metadata = {
 }
 
 export default function EmojiPickerPage() {
-  return <ToolClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "Emoji 选择器", "item": "https://moretoolbox.com/tools/emoji-picker" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Emoji 选择器 - MoreToolbox", "description": "分类浏览搜索 Emoji，支持字符/HTML/CSS 多种复制格式 | Free online emoji picker with search", "url": "https://moretoolbox.com/tools/emoji-picker", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <ToolClient />
+      </>
+    )
 }

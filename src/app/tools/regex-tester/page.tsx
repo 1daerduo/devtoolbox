@@ -11,5 +11,21 @@ export const metadata: Metadata = {
 }
 
 export default function RegexTesterPage() {
-  return <ToolClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "正则表达式测试器", "item": "https://moretoolbox.com/tools/regex-tester" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "正则表达式测试器 - MoreToolbox", "description": "在线正则表达式测试调试工具，实时匹配高亮与捕获组 | Free online regex tester with real-time matching", "url": "https://moretoolbox.com/tools/regex-tester", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <ToolClient />
+      </>
+    )
 }

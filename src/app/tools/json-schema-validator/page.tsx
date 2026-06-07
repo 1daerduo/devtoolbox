@@ -11,5 +11,21 @@ export const metadata: Metadata = {
 }
 
 export default function JsonSchemaValidatorPage() {
-  return <ToolClient />
+  return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://moretoolbox.com" }, { "@type": "ListItem", "position": 2, "name": "JSON Schema 验证器", "item": "https://moretoolbox.com/tools/json-schema-validator" }] }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON Schema 验证器 - MoreToolbox", "description": "Draft-07 JSON Schema 在线校验，精准定位字段错误 | Free online JSON Schema validator", "url": "https://moretoolbox.com/tools/json-schema-validator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
+          }}
+        />
+        <ToolClient />
+      </>
+    )
 }
