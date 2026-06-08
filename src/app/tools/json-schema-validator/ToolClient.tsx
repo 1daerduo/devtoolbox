@@ -154,6 +154,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">JSON Schema 验证器</h1>
       <p className="text-gray-600 mb-6">通过 JSON Schema 定义校验 JSON 数据结构的正确性</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">Schema 验证规则</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持 Draft-07 标准规范，可校验 type（类型）、required（必填字段）、properties（属性定义）、items（数组元素）、pattern（正则匹配）、enum（枚举值）等关键字，精准定位错误字段。</p>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">JSON Schema 定义</label>

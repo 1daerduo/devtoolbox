@@ -108,6 +108,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">图片尺寸调整</h1>
       <p className="text-gray-600 mb-6">在线调整图片尺寸，支持像素/百分比缩放，纯浏览器端处理</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">缩放方式</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持按像素精确指定宽高或按百分比等比例缩放，可锁定宽高比防止图片变形。适合社交媒体配图、网页素材、电商产品图等场景。输出支持 PNG/JPEG/WebP 格式。</p>
+
       <div
         className={`border-2 border-dashed rounded-lg p-8 text-center mb-6 transition-colors cursor-pointer
           ${dragOver ? 'border-blue-500 bg-blue-50' : image ? 'border-green-300 bg-green-50' : 'border-gray-300 hover:border-gray-400'}`}

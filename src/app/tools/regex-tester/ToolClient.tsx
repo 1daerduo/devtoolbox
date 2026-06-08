@@ -82,6 +82,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">正则表达式测试器</h1>
       <p className="text-gray-600 mb-6">在线正则表达式调试工具，实时查看匹配结果和捕获组</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">常用正则模板</h2>
+      <p className="text-gray-600 mb-4 text-sm">内置 8 个常用正则表达式模板：邮箱、URL、手机号、IP 地址、日期（YYYY-MM-DD）、十六进制颜色、HTML 标签、中文字符，点击即可应用测试。</p>
+
       <div className="bg-gray-50 rounded-lg p-4 mb-4">
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           <span className="text-sm font-medium text-gray-700">常用正则：</span>

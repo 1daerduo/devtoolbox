@@ -152,6 +152,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">ASCII 艺术字生成器</h1>
       <p className="text-gray-600 mb-6">将文字转换为 ASCII 字符画，支持多种字体风格</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">字体风格</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持 Standard（标准）、Blocks（方块）、Simple（简约）三种 FIGlet 字体风格，可调节字符间距，生成不同视觉效果的艺术字。适合代码注释、README 文档、社交媒体配文等场景。</p>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         <div className="md:col-span-2">
           <label className="block text-sm font-medium text-gray-700 mb-1">输入文字</label>

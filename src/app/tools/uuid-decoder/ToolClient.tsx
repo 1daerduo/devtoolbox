@@ -81,6 +81,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">UUID 解码器</h1>
       <p className="text-gray-600 mb-6">解析 UUID 结构，查看版本、变体、时间戳等详细信息</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">UUID 版本说明</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持 UUID v1-v7 全部版本解析。v1 基于时间+MAC 地址、v4 纯随机、v7 按时间排序。可解析出版本号、变体类型、时间戳、时钟序列、节点 ID 等内部结构信息，适合后端调试和分布式系统排查。</p>
+
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-1">输入 UUID</label>
         <div className="flex gap-2">

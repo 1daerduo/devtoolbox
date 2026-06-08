@@ -201,14 +201,14 @@ npm run setup:test  # 仅首次：本地安装 Playwright + Chromium（~300MB，
 
 ### 已完成 ✅
 - JSON-LD WebApplication schema（layout.tsx）
-- **JSON-LD BreadcrumbList + SoftwareApplication schema（全部 40 个工具页）**
+- **JSON-LD BreadcrumbList + SoftwareApplication schema（全部 54 个工具页）**
 - Open Graph / Twitter Card 标签（layout.tsx）
 - 每个工具页独立 metadata + canonical URL
 - **keywords 统一为数组格式（27 页修复）**
 - robots.txt（允许全部爬虫）
-- sitemap.xml（40 个工具页 + 首页 + 广告合作页）
+- sitemap.xml（54 个工具页 + 首页 + 广告合作页）
 - Google Search Console 验证文件已部署
-- 所有工具页含 RelatedTools 内链（**每个工具 4 个推荐，消除 orphan 页面**）
+- 所有工具页含 RelatedTools 内链（**54 工具全覆盖，入链分布 Min=2/Max=7/Avg=4.0，0 个 orphan 页面**）
 - Google Analytics 4 **已激活** — 测量 ID: G-HYD79KJF3L，实时数据正常
 - AdSense 广告组件已就绪 — 发布商 ID: ca-pub-2041541281963495（等待审核）
 - **首页 metadata 优化（title/description/keywords 关键词密度提升）**

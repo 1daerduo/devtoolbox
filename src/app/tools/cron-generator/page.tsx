@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Cron 表达式生成器 - MoreToolbox", "description": "可视化生成 Cron 定时表达式 | Free online Cron expression generator", "url": "https://moretoolbox.com/tools/cron-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "Cron 表达式是什么？", "acceptedAnswer": { "@type": "Answer", "text": "Cron 表达式是由 5-6 个用空格分隔的字段组成的字符串，用于定义定时任务的执行时间规则。字段依次为：秒 分 时 日 月 周。广泛应用于 Linux crontab、Spring @Scheduled、Quartz 等定时任务框架。" } }, { "@type": "Question", "name": "如何看懂 Cron 表达式的各个字段？", "acceptedAnswer": { "@type": "Answer", "text": "*（星号）表示任意值，匹配所有；*/N 表示每隔 N 个单位执行；M-N 表示从 M 到 N 的范围；M,N,O 表示枚举多个值。例如 '0 8 * * 1-5' 表示每个工作日早上8点执行。" } }, { "@type": "Question", "name": "生成的 Cron 表达式兼容哪些平台？", "acceptedAnswer": { "@type": "Answer", "text": "兼容标准 Linux crontab（5字段格式）、Spring Framework @Scheduled 注解（6字段含秒）、Quartz Scheduler、Kubernetes CronJob、Node.js node-cron 等主流定时任务平台。" } }] }),
+          }}
+        />
         <CronGeneratorClient />
       </>
     )

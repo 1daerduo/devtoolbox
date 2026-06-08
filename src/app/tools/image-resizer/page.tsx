@@ -3,7 +3,7 @@ import ToolClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: '图片尺寸调整 - 在线图片缩放裁剪工具 | MoreToolbox',
-  description: '免费在线图片尺寸调整工具，支持像素/百分比缩放、保持宽高比、多种输出格式(PNG/JPEG/WebP)、批量预览。纯浏览器端处理，图片不上传服务器。',
+  description: '免费在线图片尺寸调整与缩放工具，支持按像素精确指定宽高或按百分比缩放，可锁定宽高比防止变形。输出格式支持 PNG/JPEG/WebP，适合社交媒体配图、网页素材、电商产品图等场景。纯浏览器端 Canvas 处理，图片不会上传服务器，保护隐私安全。 | Free online image resizer. Resize by pixels or percentage, lock aspect ratio. Output PNG/JPEG/WebP. Perfect for social media, web assets. 100% browser-side, private & secure.',
   keywords: ['图片尺寸调整', '图片缩放', '在线图片裁剪', 'image resizer', '在线改图片大小', '图片压缩尺寸', 'image resize online', '免费图片工具'],
   alternates: {
     canonical: 'https://moretoolbox.com/tools/image-resizer',

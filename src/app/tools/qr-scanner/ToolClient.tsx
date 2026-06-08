@@ -96,6 +96,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">二维码扫描器</h1>
       <p className="text-gray-600 mb-6">上传二维码图片或粘贴截图，在线识别解码 QR Code 内容</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">支持的二维码类型</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持解码 URL 链接、纯文本、名片 vCard、WiFi 密码、邮箱地址等多种 QR Code 格式。无需安装 App，电脑端手机端均可使用，图片不上传服务器。</p>
+
       <div
         className={`border-2 border-dashed rounded-lg p-8 text-center mb-6 transition-colors cursor-pointer
           ${dragOver ? 'border-blue-500 bg-blue-50' : preview ? 'border-green-300 bg-green-50' : 'border-gray-300 hover:border-gray-400'}`}

@@ -84,6 +84,9 @@ export default function ToolClient() {
       <h1 className="text-3xl font-bold mt-4 mb-2">CSV 表格查看器</h1>
       <p className="text-gray-600 mb-6">在线浏览 CSV/TSV 表格数据，支持搜索筛选和排序</p>
 
+      <h2 className="text-xl font-semibold mt-8 mb-3">功能介绍</h2>
+      <p className="text-gray-600 mb-4 text-sm">支持粘贴 CSV/TSV 文本或拖拽上传文件，自动检测逗号、制表符、分号等分隔符。内置搜索筛选、列排序、分页浏览功能，轻松处理大数据量表格。</p>
+
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-4">
         <div className="lg:col-span-2">
           <div className="flex items-center justify-between mb-1">

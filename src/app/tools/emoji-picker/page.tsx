@@ -3,7 +3,7 @@ import ToolClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: 'Emoji 选择器 - 在线 Emoji 搜索复制工具 | MoreToolbox',
-  description: '免费在线 Emoji 选择器，支持分类浏览、关键词搜索、一键复制。包含全部 Unicode Emoji，提供字符/HTML实体/CSS代码多种复制格式。纯浏览器端。',
+  description: '免费在线 Emoji 选择器与表情符号搜索工具，6 大分类浏览（笑脸/手势/动物/食物/交通/符号），关键词快速搜索，一键复制 Emoji 字符、HTML 实体代码或 CSS content 代码。适合开发者、社交媒体运营、内容创作者日常使用。 | Free online emoji picker with search and category browsing. Copy emoji as character, HTML entity or CSS code. Perfect for developers and content creators.',
   keywords: ['Emoji 选择器', 'Emoji 搜索', 'emoji picker', '在线表情符号', 'emoji 复制', 'Unicode emoji', 'emoji search copy', '表情符号工具'],
   alternates: {
     canonical: 'https://moretoolbox.com/tools/emoji-picker',
