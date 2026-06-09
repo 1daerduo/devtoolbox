@@ -113,9 +113,20 @@ npm run setup:test  # 仅首次：本地安装 Playwright + Chromium（~300MB，
 > **重要**：Playwright 已从 package.json 剥离，Cloudflare `npm ci` 不会安装它。
 > 本地首次运行前需执行 `npm run setup:test`。
 
+### 流量分析（Cloudflare GraphQL API）
+
+```bash
+bash scripts/cf-analytics.sh [--days 30]
+```
+
+- 查询过去 N 天每日 PV、请求数、带宽、独立访客
+- 输出日均指标、人均 PV、日环比趋势
+- Token: Zone Analytics Read 权限
+- 依赖：curl + python3（Git Bash 环境）
+
 ---
 
-## 四、完整工具清单（40 个）
+## 四、完整工具清单（54 个）
 
 ### 格式化类（6）
 | 工具 | slug | 关键词（SEO） |

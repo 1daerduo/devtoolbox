@@ -43,6 +43,9 @@ yarn-error.log*
 /node_modules/.cache/ms-playwright*
 /scripts/node_modules/
 
+# analytics cache
+/scripts/.cf-analytics-cache.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

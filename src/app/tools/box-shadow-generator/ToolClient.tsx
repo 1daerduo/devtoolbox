@@ -76,7 +76,7 @@ export default function BoxShadowClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'CSS Box Shadow Generator' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">CSS Box Shadow Generator</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">CSS Box Shadow 阴影生成器</h1>
       <p className="text-sm text-gray-500 mb-6">Visual builder for CSS box-shadow. Add multiple layers, adjust parameters, and copy the CSS code instantly.</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

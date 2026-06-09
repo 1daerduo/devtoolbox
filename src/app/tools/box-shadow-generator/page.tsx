@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "CSS Box Shadow Generator - MoreToolbox", "description": "Visual CSS box-shadow builder with multi-layer support", "url": "https://moretoolbox.com/tools/box-shadow-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "CSS Box Shadow Generator - MoreToolbox", "description": "Visual CSS box-shadow builder with multi-layer support", "url": "https://moretoolbox.com/tools/box-shadow-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <BoxShadowClient />

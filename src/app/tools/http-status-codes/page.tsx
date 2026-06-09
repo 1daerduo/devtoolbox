@@ -20,7 +20,7 @@ export default function Page() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HTTP Status Code Reference - MoreToolbox", "description": "Complete HTTP status code lookup and reference guide", "url": "https://moretoolbox.com/tools/http-status-codes", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }),
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HTTP Status Code Reference - MoreToolbox", "description": "Complete HTTP status code lookup and reference guide", "url": "https://moretoolbox.com/tools/http-status-codes", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
         <HttpStatusCodesClient />
