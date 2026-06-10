@@ -1,0 +1,21 @@
+{
+  "name": "MoreToolbox - 在线开发者工具",
+  "short_name": "MoreToolbox",
+  "description": "54+款免费在线开发者工具：JSON格式化、正则测试、CSS渐变、二维码、Base64编解码等。纯前端处理，数据安全。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

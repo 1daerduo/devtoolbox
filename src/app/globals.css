@@ -2,39 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Anti-FOUC: apply dark class before hydration */
+html.dark {
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Base styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-50 text-gray-900;
+  @apply dark:bg-gray-900 dark:text-gray-100;
 }
 
+/* Dark mode transitions on interactive elements */
+a, button, input, textarea, select {
+  @apply transition-colors duration-150;
+}
+
+/* Form inputs — dark mode */
 textarea, input, select {
-  color: #111 !important;
-  background-color: #fff !important;
+  @apply text-gray-900 bg-white border-gray-300;
+  @apply dark:text-gray-100 dark:bg-gray-800 dark:border-gray-600;
 }
 
+/* White cards & panels */
+.bg-white {
+  @apply dark:bg-gray-800;
+}
+
+.bg-gray-50 {
+  @apply dark:bg-gray-900;
+}
+
+.bg-gray-100 {
+  @apply dark:bg-gray-700;
+}
+
+.shadow-sm {
+  @apply dark:shadow-gray-900/50;
+}
+
+.border-t, .border-b, .border-l, .border-r {
+  @apply dark:border-gray-700;
+}
+
+/* Nav & footer text */
+.text-gray-500 {
+  @apply dark:text-gray-400;
+}
+.text-gray-600 {
+  @apply dark:text-gray-300;
+}
+.text-gray-700 {
+  @apply dark:text-gray-200;
+}
+
+/* Links */
+.text-primary-600 {
+  @apply dark:text-primary-400;
+}
+.hover\:text-primary-600:hover {
+  @apply dark:hover:text-primary-300;
+}
+
+/* Tool cards */
 .tool-card {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .tool-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  @apply shadow-lg;
+}
+
+/* Code / pre blocks */
+pre, code {
+  @apply dark:bg-gray-800 dark:text-gray-200;
+}
+
+/* Tables */
+table {
+  @apply dark:border-gray-700;
+}
+th {
+  @apply dark:bg-gray-700 dark:text-gray-200;
+}
+td {
+  @apply dark:border-gray-700;
 }
