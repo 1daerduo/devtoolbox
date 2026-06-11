@@ -59,6 +59,13 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'emoji-picker': { name: 'Emoji 选择器', desc: '浏览搜索复制 Emoji' },
   'qr-scanner': { name: '二维码扫描器', desc: '图片扫码解码 QR Code' },
   'ascii-art-generator': { name: 'ASCII 艺术字生成器', desc: '文字转 ASCII 字符画' },
+  // Favicon 工具套件 (Round 6)
+  'favicon-generator': { name: 'Favicon 生成器', desc: '上传图片生成全尺寸 Favicon' },
+  'favicon-text': { name: '文字 Favicon 生成器', desc: '文字生成字母 Favicon' },
+  'favicon-emoji': { name: 'Emoji Favicon 生成器', desc: 'Emoji 生成透明 Favicon' },
+  'favicon-extractor': { name: 'Favicon 提取器', desc: '提取网站 Favicon 图标' },
+  'favicon-validator': { name: 'Favicon 校验器', desc: '检测 Favicon 配置完整性' },
+  'web-manifest': { name: 'Web Manifest 生成器', desc: '生成 PWA manifest.json' },
 }
 
 const related: Record<string, string[]> = {
@@ -127,6 +134,13 @@ const related: Record<string, string[]> = {
   'emoji-picker': ['text-dedup', 'markdown-editor', 'word-count', 'lorem-ipsum'],
   'qr-scanner': ['qrcode', 'base64-image', 'image-converter', 'image-compressor'],
   'ascii-art-generator': ['lorem-ipsum', 'markdown-to-html', 'text-dedup', 'markdown-editor'],
+  // Favicon 工具套件 (Round 6)
+  'favicon-generator': ['favicon-text', 'favicon-emoji', 'favicon-extractor', 'image-converter'],
+  'favicon-text': ['favicon-generator', 'favicon-emoji', 'color-converter', 'css-gradient'],
+  'favicon-emoji': ['favicon-generator', 'favicon-text', 'emoji-picker', 'image-converter'],
+  'favicon-extractor': ['favicon-validator', 'favicon-generator', 'meta-tag', 'dns-lookup'],
+  'favicon-validator': ['favicon-extractor', 'favicon-generator', 'meta-tag', 'web-manifest'],
+  'web-manifest': ['favicon-generator', 'favicon-validator', 'meta-tag', 'color-converter'],
 }
 
 interface Props {
