@@ -66,6 +66,13 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'favicon-extractor': { name: 'Favicon 提取器', desc: '提取网站 Favicon 图标' },
   'favicon-validator': { name: 'Favicon 校验器', desc: '检测 Favicon 配置完整性' },
   'web-manifest': { name: 'Web Manifest 生成器', desc: '生成 PWA manifest.json' },
+  // Minifier 压缩工具 (Round 7)
+  'json-minifier': { name: 'JSON 压缩', desc: '在线压缩 JSON 数据' },
+  'css-minifier': { name: 'CSS 压缩', desc: '在线压缩 CSS 代码' },
+  'js-minifier': { name: 'JS 压缩', desc: '在线压缩 JavaScript 代码' },
+  'html-minifier': { name: 'HTML 压缩', desc: '在线压缩 HTML 代码' },
+  // 网络开发工具 (Round 7)
+  'curl-to-code': { name: 'cURL 转代码', desc: 'cURL 命令转 Python/JS/PHP/Go' },
 }
 
 const related: Record<string, string[]> = {
@@ -141,6 +148,13 @@ const related: Record<string, string[]> = {
   'favicon-extractor': ['favicon-validator', 'favicon-generator', 'meta-tag', 'dns-lookup'],
   'favicon-validator': ['favicon-extractor', 'favicon-generator', 'meta-tag', 'web-manifest'],
   'web-manifest': ['favicon-generator', 'favicon-validator', 'meta-tag', 'color-converter'],
+  // Minifier 压缩工具 (Round 7)
+  'json-minifier': ['json-formatter', 'css-minifier', 'js-minifier', 'base64'],
+  'css-minifier': ['css-formatter', 'json-minifier', 'js-minifier', 'html-minifier'],
+  'js-minifier': ['js-formatter', 'json-minifier', 'css-minifier', 'html-minifier'],
+  'html-minifier': ['html-formatter', 'css-minifier', 'js-minifier', 'meta-tag'],
+  // 网络开发工具 (Round 7)
+  'curl-to-code': ['http-status-codes', 'url-parser', 'jwt-decoder', 'my-ip'],
 }
 
 interface Props {

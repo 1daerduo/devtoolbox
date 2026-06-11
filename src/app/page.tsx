@@ -83,6 +83,13 @@ const tools = [
   { name: 'Emoji 选择器', desc: '浏览搜索 Emoji，一键复制字符/HTML实体/CSS代码。', href: '/tools/emoji-picker', icon: '😀', category: '文本工具' },
   { name: '二维码扫描器', desc: '上传或粘贴二维码图片，在线解码识别 QR Code 内容。', href: '/tools/qr-scanner', icon: '📷', category: '图像/其他' },
   { name: 'ASCII 艺术字生成器', desc: '文字转 ASCII 字符画，多字体风格，可复制到代码注释或社交媒体。', href: '/tools/ascii-art-generator', icon: '𝐀', category: '生成器' },
+  // Minifier 压缩工具 (Round 7)
+  { name: 'JSON 压缩', desc: '在线压缩 JSON 数据，去除空白符和换行，显示压缩率。', href: '/tools/json-minifier', icon: '📦', category: '压缩工具' },
+  { name: 'CSS 压缩', desc: '在线压缩 CSS 代码，去除注释和空白符，减小文件体积。', href: '/tools/css-minifier', icon: '📦', category: '压缩工具' },
+  { name: 'JS 压缩', desc: '在线压缩 JavaScript 代码，去除注释和空白符，优化加载速度。', href: '/tools/js-minifier', icon: '📦', category: '压缩工具' },
+  { name: 'HTML 压缩', desc: '在线压缩 HTML 代码，去除注释和空白符，减小页面体积。', href: '/tools/html-minifier', icon: '📦', category: '压缩工具' },
+  // 网络开发工具 (Round 7)
+  { name: 'cURL 转代码', desc: '将 cURL 命令转换为 Python/JS/PHP/Go 代码，自动解析请求头和请求体。', href: '/tools/curl-to-code', icon: '🔄', category: '网络开发' },
   // Favicon 工具套件 (Round 6)
   { name: 'Favicon 生成器', desc: '上传图片生成全尺寸 Favicon（ICO + PNG 16/32/48/64/128/256px），一键下载。', href: '/tools/favicon-generator', icon: '🔖', category: 'Favicon工具' },
   { name: '文字 Favicon 生成器', desc: '输入文字，选择字体/颜色/背景，生成字母 Favicon，实时预览。', href: '/tools/favicon-text', icon: 'Aa', category: 'Favicon工具' },
@@ -92,17 +99,19 @@ const tools = [
   { name: 'Web Manifest 生成器', desc: '可视化生成 PWA manifest.json，配置图标/名称/主题色/显示模式。', href: '/tools/web-manifest', icon: '📱', category: 'Favicon工具' },
 ]
 
-const categories = ['全部', '格式化', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', 'SEO工具', '图像/其他', '设计工具', '在线编辑器', 'Favicon工具', '安全工具', '参考工具']
+const categories = ['全部', '格式化', '压缩工具', '编解码', '生成器', '转换器', '文本工具', '查询工具', '网络工具', '网络开发', 'SEO工具', '图像/其他', '设计工具', '在线编辑器', 'Favicon工具', '安全工具', '参考工具']
 
 const categoryIcons: Record<string, string> = {
   '全部': '🏠',
   '格式化': '📐',
+  '压缩工具': '📦',
   '编解码': '🔄',
   '生成器': '⚙️',
   '转换器': '🔀',
   '文本工具': '📝',
   '查询工具': '🔍',
   '网络工具': '🌍',
+  '网络开发': '🌐',
   'SEO工具': '🏷️',
   '图像/其他': '🖼️',
   '设计工具': '🎯',
@@ -158,7 +167,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          54 款开发工具，一站式解决。
+          65 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}

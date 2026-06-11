@@ -60,6 +60,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'emoji-picker',
     'qr-scanner',
     'ascii-art-generator',
+    // Favicon 工具套件 (Round 6)
+    'favicon-generator',
+    'favicon-text',
+    'favicon-emoji',
+    'favicon-extractor',
+    'favicon-validator',
+    'web-manifest',
+    // Minifier 压缩工具 + 网络开发 (Round 7)
+    'json-minifier',
+    'css-minifier',
+    'js-minifier',
+    'html-minifier',
+    'curl-to-code',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({
