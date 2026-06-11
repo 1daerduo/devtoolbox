@@ -144,7 +144,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="text-center py-12 md:py-16 bg-gradient-to-b from-primary-50 to-white">
+      <section className="text-center py-12 md:py-16 bg-gradient-to-b from-primary-50 to-white dark:from-gray-900 dark:to-gray-800">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
           在线开发者工具集合
         </h1>
@@ -161,7 +161,7 @@ export default function HomePage() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="搜索工具，如：JSON、JWT、Base64..."
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 text-sm md:text-base"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 placeholder-gray-400 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 text-sm md:text-base"
             />
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none">
               🔍

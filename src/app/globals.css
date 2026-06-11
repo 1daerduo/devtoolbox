@@ -45,9 +45,12 @@ textarea, input, select {
   @apply dark:border-gray-700;
 }
 
-/* Nav & footer text */
+/* Nav & footer text — dark mode adjustments for contrast */
+.text-gray-400 {
+  @apply dark:text-gray-500;
+}
 .text-gray-500 {
-  @apply dark:text-gray-400;
+  @apply dark:text-gray-300;
 }
 .text-gray-600 {
   @apply dark:text-gray-300;
@@ -55,12 +58,38 @@ textarea, input, select {
 .text-gray-700 {
   @apply dark:text-gray-200;
 }
+.text-gray-800 {
+  @apply dark:text-gray-200;
+}
+.text-gray-900 {
+  @apply dark:text-gray-100;
+}
+.text-black {
+  @apply dark:text-white;
+}
+.placeholder-gray-400::placeholder {
+  @apply dark:text-gray-500;
+}
 
-/* Links */
+/* Primary color backgrounds */
+.bg-primary-50 {
+  @apply dark:bg-primary-900/20;
+}
+.bg-primary-100 {
+  @apply dark:bg-primary-900/30;
+}
+
+/* Links & primary text */
 .text-primary-600 {
   @apply dark:text-primary-400;
 }
+.text-primary-700 {
+  @apply dark:text-primary-300;
+}
 .hover\:text-primary-600:hover {
+  @apply dark:hover:text-primary-300;
+}
+.hover\:text-primary-700:hover {
   @apply dark:hover:text-primary-300;
 }
 

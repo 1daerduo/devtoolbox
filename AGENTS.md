@@ -229,7 +229,6 @@ bash scripts/cf-analytics.sh [--days 30]
 - **AdSense 审核中** — 需等待 Google 审核通过（几天到两周）
 - **外链建设**：GitHub README、社交媒体、技术博客
 - **性能优化**：Core Web Vitals（LCP、CLS、FID）
-- **qrcode.react** 未使用依赖，可清理减包
 - FAQPage / HowTo schema（对特定工具如正则测试、Cron生成器更合适）
 
 ---
@@ -284,13 +283,8 @@ bash scripts/cf-analytics.sh [--days 30]
 
 ## 八、已知问题 & 技术债务
 
-1. `qrcode.react` 未使用 — 可与 `qrcode` 包统一
-2. AdSense 审核中 — 发布商 ID ca-pub-2041541281963495，代码内联部署，待 Google 审核
-3. 部分工具 ToolClient.tsx 无 loading/error 状态
-4. 首页工具卡片按分类硬编码排序，非动态排序
-5. 无暗色模式支持
-6. 未配置 PWA/service worker
-7. ⚠️ 删除 next.config.ts 后不可再创建，防止与 next.config.js (output:export) 冲突
-5. 首页工具卡片按分类硬编码排序，非动态排序
-6. 无暗色模式支持
-7. 未配置 PWA/service worker
+1. AdSense 审核中 — 发布商 ID ca-pub-2041541281963495，代码内联部署，待 Google 审核
+2. 部分工具 ToolClient.tsx 无 loading/error 状态
+3. 首页工具卡片按分类硬编码排序，非动态排序
+4. ⚠️ 删除 next.config.ts 后不可再创建，防止与 next.config.js (output:export) 冲突
+5. PWA icons 为纯色占位图，可替换为设计稿
