@@ -1,4 +1,4 @@
 import type { Metadata } from 'next'
 import WebManifestClient from './ToolClient'
-export const metadata: Metadata = { title: 'Web Manifest 生成器 | PWA 配置生成 - MoreToolbox', description: '可视化生成 PWA manifest.json，配置图标/名称/主题色/显示模式，一键下载配置文件。', keywords: ['web manifest', 'PWA manifest', 'manifest.json 生成'], alternates: { canonical: '/tools/web-manifest' } }
+export const metadata: Metadata = { title: 'Web Manifest 生成器 | PWA 配置生成 - MoreToolbox', description: '可视化生成 PWA manifest.json，配置图标/名称/主题色/显示模式，一键下载配置文件。', keywords: ['web manifest', 'PWA manifest', 'manifest.json 生成'], alternates: { canonical: 'https://moretoolbox.com/tools/web-manifest' } }
 export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Web Manifest 生成器", "url": "https://moretoolbox.com/tools/web-manifest", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" } }) }} /><WebManifestClient /></> }

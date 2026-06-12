@@ -3,9 +3,9 @@ import CssMinifierClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: 'CSS 在线压缩工具 | CSS Minifier - MoreToolbox',
-  description: '在线 CSS 压缩/Minify 工具，一键去除注释、空白符和换行，压缩 CSS 代码体积。显示压缩率和字节数。免费、无需注册。 | Free online CSS minifier. Remove comments & whitespace, compress CSS instantly.',
-  keywords: ['CSS压缩', 'CSS Minify', 'CSS压缩工具', '在线CSS压缩', 'CSS minifier'],
-  alternates: { canonical: '/tools/css-minifier' },
+  description: '免费在线 CSS 压缩/Minify 工具，一键去除 CSS 代码中的注释、空白符、换行符和冗余分号，大幅压缩 CSS 文件体积。实时显示压缩前后大小对比和压缩率百分比，支持粘贴输入和上传 .css 文件。前端开发优化页面加载速度、减少 CSS 传输带宽的必备工具。 | Free online CSS minifier & compressor. Remove comments, whitespace & redundancies from CSS instantly. Shows compression ratio & saved bytes. Essential for frontend optimization.',
+  keywords: ['CSS压缩', 'CSS Minify', 'CSS压缩工具', '在线CSS压缩', 'CSS minifier', 'CSS最小化', 'CSS compressor'],
+  alternates: { canonical: 'https://moretoolbox.com/tools/css-minifier' },
 }
 
 export default function Page() {

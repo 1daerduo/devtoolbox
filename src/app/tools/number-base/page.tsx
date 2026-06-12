@@ -3,8 +3,8 @@ import NumberBaseClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: '进制转换器 - 二进制八进制十进制十六进制互转 - MoreToolbox',
-  description: '免费在线进制转换工具，支持二进制、八进制、十进制、十六进制等多种进制互转，实时计算，开发者必备。 | Free online number base converter. Binary, octal, decimal, hexadecimal conversion. Real-time calculation. Developer essential.',
-  keywords: ['进制转换', '二进制转十进制', '十六进制转十进制', '八进制', 'number base converter', '进制计算器', 'bin dec hex oct'],
+  description: '免费在线进制转换计算器，支持二进制(Bin)、八进制(Oct)、十进制(Dec)、十六进制(Hex)等多种进制之间互转。实时同步计算，输入任意进制数值自动转换，支持自定义进制(2-36)，附带进制对照速查表。程序员开发调试、计算机基础学习必备工具。 | Free online number base converter. Binary, octal, decimal, hexadecimal & custom bases (2-36). Real-time synchronous conversion. Essential for programmers & CS students.',
+  keywords: ['进制转换', '二进制转十进制', '十六进制转十进制', '八进制', 'number base converter', '进制计算器', 'bin dec hex oct', '进制互转'],
   alternates: { canonical: 'https://moretoolbox.com/tools/number-base' },
 }
 

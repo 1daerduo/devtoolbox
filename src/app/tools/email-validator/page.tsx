@@ -3,9 +3,9 @@ import EmailValidatorClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: '邮箱地址在线验证器 | Email Validator Online - MoreToolbox',
-  description: '在线验证邮箱地址格式，检测常见拼写错误、域名有效性，支持批量邮箱验证，数据本地处理保护隐私。 | Free online email validator. Check format, detect common typos, domain validity. Batch email verification, local processing for privacy.',
-  keywords: ['邮箱验证', 'Email验证', '邮箱格式检查', '邮箱校验', 'email validator', '邮件地址验证'],
-  alternates: { canonical: '/tools/email-validator' },
+  description: '免费在线邮箱地址格式验证器，支持单个和批量邮箱校验。自动检测邮箱格式错误、常见拼写错误（如 @gmial.com → @gmail.com）、域名 MX 记录有效性。支持 CSV 导入导出批量验证结果，数据完全在浏览器本地处理，保护隐私安全。开发者、运营人员邮件列表清洗必备工具。 | Free online email validator. Single & batch email verification. Detects format errors, common typos & domain validity. CSV import/export supported. 100% local processing for privacy.',
+  keywords: ['邮箱验证', 'Email验证', '邮箱格式检查', '邮箱校验', 'email validator', '邮件地址验证', '批量邮箱验证', '邮箱清洗'],
+  alternates: { canonical: 'https://moretoolbox.com/tools/email-validator' },
 }
 
 export default function Page() {

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Base64 在线编解码工具 | Base64 Encoder & Decoder - MoreToolbox',
   description: '在线 Base64 编码解码工具，支持 UTF-8 中文，一键交换输入输出。免费、无需注册，数据纯前端处理，安全放心。 | Free online Base64 encoder & decoder. UTF-8 Chinese support, one-click swap input/output. 100% browser-side, secure & private.',
   keywords: ['Base64编码', 'Base64解码', '在线Base64', 'Base64转换', 'base64 encoder', 'base64 decoder'],
-  alternates: { canonical: '/tools/base64' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/base64' },
 }
 
 export default function Page() {

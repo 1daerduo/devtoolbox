@@ -3,9 +3,9 @@ import CurlToCodeClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: 'cURL 转代码工具 | cURL to Code Converter - MoreToolbox',
-  description: '在线将 cURL 命令转换为 Python、JavaScript、PHP、Go 等语言代码。支持 GET/POST/PUT/DELETE，自动解析请求头和请求体。免费、无需注册。 | Convert cURL commands to Python, JS, PHP, Go code. Parse headers & body automatically.',
-  keywords: ['cURL转代码', 'cURL to code', 'cURL converter', 'cURL转Python', 'cURL转JavaScript', 'curlconverter'],
-  alternates: { canonical: '/tools/curl-to-code' },
+  description: '免费在线 cURL 命令转代码工具，一键将 cURL 命令转换为 Python (requests/urllib)、JavaScript (fetch/axios)、PHP (curl)、Go (net/http)、Java (OkHttp) 等多语言可执行代码。自动解析 HTTP 请求方法、请求头、请求体和 Cookie，支持 GET/POST/PUT/PATCH/DELETE。API 调试和代码迁移必备工具。 | Free online cURL to code converter. Convert cURL commands to Python, JavaScript, PHP, Go, Java code instantly. Auto-parses headers, body & cookies. Essential for API migration.',
+  keywords: ['cURL转代码', 'cURL to code', 'cURL converter', 'cURL转Python', 'cURL转JavaScript', 'curlconverter', 'cURL转PHP', 'cURL转Go'],
+  alternates: { canonical: 'https://moretoolbox.com/tools/curl-to-code' },
 }
 
 export default function Page() {

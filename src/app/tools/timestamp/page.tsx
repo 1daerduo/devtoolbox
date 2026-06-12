@@ -3,9 +3,9 @@ import TimestampClient from './ToolClient'
 
 export const metadata: Metadata = {
   title: 'Unix 时间戳在线转换工具 | Unix Timestamp Converter - MoreToolbox',
-  description: 'Unix 时间戳与日期时间互相转换，支持秒/毫秒，实时显示当前时间。免费在线工具，无需注册。 | Free Unix timestamp converter. Seconds & milliseconds support. Real-time current time. Instant conversion between timestamp & datetime.',
-  keywords: ['时间戳转换', 'Unix时间戳', '时间戳转日期', '日期转时间戳', 'timestamp converter'],
-  alternates: { canonical: '/tools/timestamp' },
+  description: '免费在线 Unix 时间戳转换工具，支持秒级和毫秒级时间戳与日期时间互相转换。实时显示当前 Unix 时间戳和 UTC/本地时间，支持批量时间戳转换、时区自动识别、历史时间戳查询。程序员开发调试、日志分析、API 对接必备。 | Free online Unix timestamp converter. Seconds & milliseconds support. Real-time current timestamp display. Batch conversion, timezone-aware. Essential for debugging & API development.',
+  keywords: ['时间戳转换', 'Unix时间戳', '时间戳转日期', '日期转时间戳', 'timestamp converter', '毫秒时间戳', '在线时间戳'],
+  alternates: { canonical: 'https://moretoolbox.com/tools/timestamp' },
 }
 
 export default function Page() {

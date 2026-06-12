@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'User Agent 在线解析器 | User Agent Parser Online - MoreToolbox',
   description: '在线解析浏览器 User Agent 字符串，识别浏览器类型、版本、操作系统、设备类型、渲染引擎等详细信息。 | Free online User-Agent string parser. Identify browser, version, OS, device type, rendering engine. Developer debugging tool.',
   keywords: ['User Agent解析', 'UA解析', '浏览器识别', 'UserAgent', '浏览器检测', '设备检测'],
-  alternates: { canonical: '/tools/user-agent' },
+  alternates: { canonical: 'https://moretoolbox.com/tools/user-agent' },
 }
 
 export default function Page() {
