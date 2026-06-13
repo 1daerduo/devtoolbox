@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import CopyButton from '@/components/CopyButton'
 import RelatedTools from '@/components/RelatedTools'
@@ -112,7 +112,7 @@ export default function ColorConverterClient() {
   }, [])
 
   // Auto convert on mount
-  useState(() => { convert(value); return null })
+  useEffect(() => { convert(value) }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -80,11 +80,11 @@ const related: Record<string, string[]> = {
   'json-formatter': ['xml-formatter', 'hash-generator', 'color-converter', 'base64'],
   'xml-formatter': ['json-schema-validator', 'sql-formatter', 'yaml-formatter', 'html-formatter'],
   'sql-formatter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'diff-checker'],
-  'css-formatter': ['css-gradient', 'color-converter', 'html-playground', 'js-formatter'],
+  'css-formatter': ['css-gradient', 'color-converter', 'html-playground', 'css-minifier'],
   'html-formatter': ['css-formatter', 'js-formatter', 'html-playground', 'meta-tag'],
   'js-formatter': ['regex-tester', 'html-formatter', 'css-formatter', 'sql-formatter'],
   // 编解码类
-  'base64': ['url-encode', 'hash-generator', 'html-entity', 'jwt-decoder'],
+  'base64': ['url-encode', 'hash-generator', 'html-entity', 'base64-image'],
   'url-encode': ['html-entity', 'base64', 'url-parser', 'my-ip'],
   'html-entity': ['url-encode', 'base64', 'jwt-decoder', 'markdown-to-html'],
   'jwt-decoder': ['base64', 'hash-generator', 'json-schema-validator', 'url-encode'],
@@ -102,7 +102,7 @@ const related: Record<string, string[]> = {
   'random-number': ['password-generator', 'uuid-generator', 'number-base', 'password-strength'],
   // 转换类
   'timestamp': ['uuid-generator', 'cron-generator', 'uuid-decoder', 'number-base'],
-  'color-converter': ['css-gradient', 'qrcode', 'css-formatter', 'color-palette'],
+  'color-converter': ['css-gradient', 'qrcode', 'color-palette', 'box-shadow-generator'],
   'json-to-csv': ['json-formatter', 'sql-formatter', 'csv-viewer', 'number-base'],
   'yaml-formatter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'diff-checker'],
   'case-converter': ['text-dedup', 'word-count', 'markdown-editor', 'css-formatter'],
@@ -110,28 +110,28 @@ const related: Record<string, string[]> = {
   'markdown-to-html': ['markdown-editor', 'html-formatter', 'ascii-art-generator', 'html-entity'],
   'css-gradient': ['color-converter', 'css-formatter', 'box-shadow-generator', 'image-converter'],
   // 文本工具
-  'word-count': ['case-converter', 'markdown-editor', 'emoji-picker', 'lorem-ipsum'],
+  'word-count': ['case-converter', 'markdown-editor', 'emoji-picker', 'csv-viewer'],
   'text-dedup': ['word-count', 'case-converter', 'emoji-picker', 'regex-tester'],
   'diff-checker': ['regex', 'word-count', 'regex-tester', 'case-converter'],
   // 查询工具
   'my-ip': ['dns-lookup', 'user-agent', 'url-parser', 'email-validator'],
-  'user-agent': ['my-ip', 'dns-lookup', 'http-status-codes', 'meta-tag'],
+  'user-agent': ['my-ip', 'dns-lookup', 'http-status-codes', 'web-manifest'],
   'email-validator': ['user-agent', 'my-ip', 'http-status-codes', 'password-generator'],
   // 网络工具
   'dns-lookup': ['my-ip', 'user-agent', 'http-status-codes', 'url-parser'],
   // SEO工具
-  'meta-tag': ['html-formatter', 'user-agent', 'html-playground', 'url-encode'],
+  'meta-tag': ['html-formatter', 'user-agent', 'html-playground', 'web-manifest'],
   // 图像/其他
   'image-compressor': ['image-converter', 'image-resizer', 'qr-scanner', 'color-converter'],
-  'image-converter': ['image-compressor', 'image-resizer', 'qr-scanner', 'qrcode'],
-  'svg-to-png': ['image-converter', 'image-compressor', 'image-resizer', 'css-gradient'],
+  'image-converter': ['image-compressor', 'image-resizer', 'qr-scanner', 'svg-to-png'],
+  'svg-to-png': ['image-converter', 'image-compressor', 'image-resizer', 'qr-scanner'],
   // Round 4 (new)
   'box-shadow-generator': ['css-gradient', 'color-converter', 'css-formatter', 'color-palette'],
   'html-playground': ['markdown-editor', 'html-formatter', 'js-formatter', 'css-formatter'],
   'color-palette': ['color-converter', 'css-gradient', 'box-shadow-generator', 'css-formatter'],
   'password-strength': ['password-generator', 'hash-generator', 'bcrypt-generator', 'random-number'],
-  'http-status-codes': ['url-parser', 'dns-lookup', 'email-validator', 'my-ip'],
-  'url-parser': ['url-encode', 'http-status-codes', 'my-ip', 'dns-lookup'],
+  'http-status-codes': ['url-parser', 'dns-lookup', 'email-validator', 'curl-to-code'],
+  'url-parser': ['url-encode', 'http-status-codes', 'my-ip', 'curl-to-code'],
   // Round 5 (new)
   'regex-tester': ['regex', 'diff-checker', 'word-count', 'html-entity'],
   'json-schema-validator': ['json-formatter', 'yaml-formatter', 'json-to-csv', 'csv-viewer'],
@@ -154,7 +154,7 @@ const related: Record<string, string[]> = {
   'js-minifier': ['js-formatter', 'json-minifier', 'css-minifier', 'html-minifier'],
   'html-minifier': ['html-formatter', 'css-minifier', 'js-minifier', 'meta-tag'],
   // 网络开发工具 (Round 7)
-  'curl-to-code': ['http-status-codes', 'url-parser', 'jwt-decoder', 'my-ip'],
+  'curl-to-code': ['http-status-codes', 'url-parser', 'jwt-decoder', 'json-formatter'],
 }
 
 interface Props {

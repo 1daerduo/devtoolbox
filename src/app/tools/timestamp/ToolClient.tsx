@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import CopyButton from '@/components/CopyButton'
 import RelatedTools from '@/components/RelatedTools'
@@ -13,10 +13,10 @@ export default function TimestampClient() {
   const [now, setNow] = useState(Date.now())
 
   // Auto-refresh current time
-  useState(() => {
+  useEffect(() => {
     const timer = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(timer)
-  })
+  }, [])
 
   const tsToDate = useCallback(() => {
     const ts = Number(tsInput.trim())
