@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "图片压缩 - MoreToolbox", "description": "在线压缩 PNG/JPG/WebP | Free online image compressor", "url": "https://moretoolbox.com/tools/image-compressor", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "在线图片压缩会降低画质吗？", "acceptedAnswer": { "@type": "Answer", "text": "取决于压缩方式。PNG 使用无损压缩，不会降低画质但压缩率有限。JPG 和 WebP 使用有损压缩，质量设置越低文件越小但画质损失越明显。建议质量设为 80-90 之间，可在保持良好画质的同时显著减小文件体积。" } }, { "@type": "Question", "name": "图片压缩后能恢复原状吗？", "acceptedAnswer": { "@type": "Answer", "text": "PNG 无损压缩可以恢复原始数据。JPG/WebP 有损压缩是不可逆的，压缩后无法恢复丢弃的图像信息。建议压缩前保留原图备份，或下载时使用不同的文件名保存。" } }, { "@type": "Question", "name": "为什么上传图片后没有反应？", "acceptedAnswer": { "@type": "Answer", "text": "请确保图片格式为 PNG、JPG 或 WebP。单张图片最大支持 50MB。如果图片过大，浏览器可能需要较长时间处理，请耐心等待。所有处理在本地完成，不会上传到服务器。" } }] }),
+          }}
+        />
         <ImageCompressorClient />
       </>
     )

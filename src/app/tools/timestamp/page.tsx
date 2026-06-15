@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "时间戳转换 - MoreToolbox", "description": "Unix 时间戳与日期互转 | Free Unix timestamp converter", "url": "https://moretoolbox.com/tools/timestamp", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "什么是 Unix 时间戳？", "acceptedAnswer": { "@type": "Answer", "text": "Unix 时间戳是从 1970 年 1 月 1 日 00:00:00 UTC 到指定时间的总秒数（也叫 Epoch 时间）。它是跨平台、跨语言通用的标准时间表示方式，广泛用于数据库、API、日志系统中。" } }, { "@type": "Question", "name": "秒级时间戳和毫秒级时间戳有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "秒级时间戳是 10 位数字（如 1700000000），毫秒级是 13 位（如 1700000000000）。JavaScript Date.getTime() 返回毫秒级，Unix date 命令默认返回秒级。使用时需注意区分，否则转换结果会差 1000 倍。" } }, { "@type": "Question", "name": "时间戳 2038 年问题是什么？", "acceptedAnswer": { "@type": "Answer", "text": "32 位有符号整数最大值为 2147483647，对应 UTC 时间 2038-01-19 03:14:07。超过此时间后 32 位系统的时间戳会溢出变为负数。64 位系统不受此影响，本工具使用 64 位处理，无 2038 限制。" } }] }),
+          }}
+        />
         <TimestampClient />
       </>
     )

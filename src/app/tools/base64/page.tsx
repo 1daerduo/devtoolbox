@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Base64 编解码 - MoreToolbox", "description": "文本与 Base64 互转 | Free online Base64 encoder & decoder", "url": "https://moretoolbox.com/tools/base64", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "Base64 编码有什么用？", "acceptedAnswer": { "@type": "Answer", "text": "Base64 编码常用于在文本协议（如 HTTP、Email、JSON）中传输二进制数据。典型场景包括：邮件附件（MIME）、Data URL 嵌入图片、API 认证令牌（Basic Auth）、JWT Payload 编码等。Base64 不是加密，仅是编码转换。" } }, { "@type": "Question", "name": "Base64 编码后数据会变大吗？", "acceptedAnswer": { "@type": "Answer", "text": "是的。Base64 编码会将每 3 个字节转换为 4 个字符，因此编码后体积约为原始数据的 133%（增加约 1/3）。对于大文件建议使用压缩后再编码。" } }, { "@type": "Question", "name": "Base64 编码安全吗？可以用来加密吗？", "acceptedAnswer": { "@type": "Answer", "text": "Base64 不是加密算法，任何人都可以解码，没有保密性。如果需要保护数据安全，应使用 AES 等加密算法。Base64 的目的是编码转换而非信息安全。" } }] }),
+          }}
+        />
         <Base64Client />
       </>
     )
