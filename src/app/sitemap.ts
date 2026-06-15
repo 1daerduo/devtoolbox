@@ -73,6 +73,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'js-minifier',
     'html-minifier',
     'curl-to-code',
+    // 代码转换 + 生成器 + 参考 (Round 8)
+    'json-to-typescript',
+    'api-key-generator',
+    'slug-generator',
+    'chmod-calculator',
+    'html-to-markdown',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

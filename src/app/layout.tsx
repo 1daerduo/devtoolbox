@@ -12,11 +12,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://moretoolbox.com'),
   title: 'MoreToolbox - 免费在线开发者工具集合 | JSON格式化、正则测试、二维码生成、Base64编解码',
-  description: 'MoreToolbox 提供65+款免费在线开发者工具：JSON格式化/压缩、CSS/JS/HTML压缩、cURL转代码、正则测试器、CSS渐变生成、Box Shadow生成、颜色调色板、HTML Playground、图片尺寸调整、CSV查看器、Emoji选择器、二维码扫描、ASCII艺术字、UUID解码器、JSON Schema验证、DNS查询、Meta标签生成、JWT解码、密码强度检查、HTTP状态码参考、URL解析、Cron表达式生成器、进制转换器、Bcrypt密码哈希、SQL格式化、时间戳转换、二维码生成、IP查询、Base64编解码、HTML/JS格式化等。全部在浏览器本地处理，数据安全，无需注册。 | 65+ free online developer tools: JSON formatter/minifier, CSS/JS/HTML minifier, cURL to code, regex tester, CSS gradient, box shadow, color palette, HTML playground, image resizer, CSV viewer, emoji picker, QR scanner, ASCII art, UUID decoder, JSON schema validator, DNS lookup, JWT decoder, QR code generator & more. All browser-side, secure, no registration.',
-  keywords: ['在线工具', '开发者工具', '免费在线工具', 'JSON格式化', 'JSON压缩', 'CSS压缩', 'JS压缩', 'HTML压缩', 'cURL转代码', '正则测试器', '正则表达式', 'JSON Schema验证', '图片尺寸调整', 'UUID解码器', 'CSV查看器', 'Emoji选择器', '二维码扫描', 'ASCII艺术字', 'CSS渐变生成', 'Box Shadow生成', '颜色调色板', 'HTML Playground', '图片格式转换', 'DNS查询', 'Meta标签生成', '密码强度检查', 'HTTP状态码', 'URL解析', 'User Agent解析', 'SVG转PNG', 'JWT解码器', 'Cron表达式', '进制转换', 'Bcrypt', 'SQL格式化', '时间戳转换', '二维码生成', 'Base64编解码', 'IP地址查询', 'XML格式化', 'YAML格式化', 'HTML格式化', 'JS格式化', 'CSV转JSON', 'UUID生成器', '密码生成器', '文本对比', '邮箱验证', '在线前端工具'],
+  description: 'MoreToolbox 提供70+款免费在线开发者工具：JSON格式化/压缩、JSON转TypeScript、CSS/JS/HTML压缩、cURL转代码、API Key生成、Slug生成、Chmod计算器、正则测试器、CSS渐变生成、Box Shadow生成、颜色调色板、HTML Playground、HTML转Markdown、图片尺寸调整、CSV查看器、Emoji选择器、二维码扫描、ASCII艺术字、UUID解码器、JSON Schema验证、DNS查询、Meta标签生成、JWT解码、密码强度检查、HTTP状态码参考、URL解析、Cron表达式生成器、进制转换器、Bcrypt密码哈希、SQL格式化、时间戳转换、二维码生成、IP查询、Base64编解码、HTML/JS格式化等。全部在浏览器本地处理，数据安全，无需注册。 | 70+ free online developer tools: JSON formatter/minifier, JSON to TypeScript, CSS/JS/HTML minifier, cURL to code, API key generator, slug generator, chmod calculator, regex tester, CSS gradient, box shadow, color palette, HTML playground, HTML to Markdown, image resizer, CSV viewer, emoji picker, QR scanner, ASCII art, UUID decoder, JSON schema validator, DNS lookup, JWT decoder, QR code generator & more. All browser-side, secure, no registration.',
+  keywords: ['在线工具', '开发者工具', '免费在线工具', 'JSON格式化', 'JSON压缩', 'JSON转TypeScript', 'API Key生成器', 'Slug生成器', 'Chmod计算器', 'CSS压缩', 'JS压缩', 'HTML压缩', 'cURL转代码', '正则测试器', '正则表达式', 'JSON Schema验证', 'HTML转Markdown', '图片尺寸调整', 'UUID解码器', 'CSV查看器', 'Emoji选择器', '二维码扫描', 'ASCII艺术字', 'CSS渐变生成', 'Box Shadow生成', '颜色调色板', 'HTML Playground', '图片格式转换', 'DNS查询', 'Meta标签生成', '密码强度检查', 'HTTP状态码', 'URL解析', 'User Agent解析', 'SVG转PNG', 'JWT解码器', 'Cron表达式', '进制转换', 'Bcrypt', 'SQL格式化', '时间戳转换', '二维码生成', 'Base64编解码', 'IP地址查询', 'XML格式化', 'YAML格式化', 'HTML格式化', 'JS格式化', 'CSV转JSON', 'UUID生成器', '密码生成器', '文本对比', '邮箱验证', '在线前端工具'],
   openGraph: {
     title: 'MoreToolbox - 免费在线开发者工具集合 | JSON格式化、二维码、Base64',
-    description: '65+款免费在线开发者工具，JSON/CSS/JS/HTML压缩、cURL转代码、正则测试、Box Shadow、颜色调色板、HTML Playground、图片调整、Emoji选择器、ASCII艺术字、UUID解码、JSON Schema验证等。 | 65+ free online dev tools. No registration.',
+    description: '70+款免费在线开发者工具，JSON转TypeScript、API Key生成、Slug生成、Chmod计算、HTML转Markdown、JSON/CSS/JS/HTML压缩、cURL转代码、正则测试、Box Shadow、颜色调色板、HTML Playground、图片调整、Emoji选择器、ASCII艺术字、UUID解码、JSON Schema验证等。 | 70+ free online dev tools. No registration.',
     url: 'https://moretoolbox.com',
     siteName: 'MoreToolbox',
     locale: 'zh_CN',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'MoreToolbox - 在线开发者工具集合',
-    description: '65+款免费在线开发者工具，JSON/CSS/JS/HTML压缩、cURL转代码、正则测试、Box Shadow、颜色调色板、HTML Playground、图片调整、Emoji选择器、ASCII艺术字、UUID解码、JSON Schema验证等。 | 65+ free online dev tools. No registration.',
+    description: '70+款免费在线开发者工具，JSON转TypeScript、API Key生成、Slug生成、Chmod计算、HTML转Markdown、JSON/CSS/JS/HTML压缩、cURL转代码、正则测试、Box Shadow、颜色调色板、HTML Playground、图片调整、Emoji选择器、ASCII艺术字、UUID解码、JSON Schema验证等。 | 70+ free online dev tools. No registration.',
   },
   robots: {
     index: true,

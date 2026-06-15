@@ -73,6 +73,12 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'html-minifier': { name: 'HTML 压缩', desc: '在线压缩 HTML 代码' },
   // 网络开发工具 (Round 7)
   'curl-to-code': { name: 'cURL 转代码', desc: 'cURL 命令转 Python/JS/PHP/Go' },
+  // Round 8 (new)
+  'json-to-typescript': { name: 'JSON 转 TypeScript', desc: 'JSON 转 TypeScript 接口定义' },
+  'api-key-generator': { name: 'API Key 生成器', desc: '生成随机 API 密钥和令牌' },
+  'slug-generator': { name: 'Slug 生成器', desc: '标题转 SEO 友好 URL Slug' },
+  'chmod-calculator': { name: 'Chmod 计算器', desc: 'Linux 文件权限计算器' },
+  'html-to-markdown': { name: 'HTML 转 Markdown', desc: 'HTML 代码转 Markdown 格式' },
 }
 
 const related: Record<string, string[]> = {
@@ -155,6 +161,12 @@ const related: Record<string, string[]> = {
   'html-minifier': ['html-formatter', 'xml-formatter', 'js-minifier', 'html-playground'],
   // 网络开发工具 (Round 7)
   'curl-to-code': ['http-status-codes', 'url-parser', 'jwt-decoder', 'json-formatter'],
+  // Round 8 (new)
+  'json-to-typescript': ['json-formatter', 'json-schema-validator', 'json-to-csv', 'json-minifier'],
+  'api-key-generator': ['password-generator', 'uuid-generator', 'hash-generator', 'bcrypt-generator'],
+  'slug-generator': ['url-encode', 'url-parser', 'meta-tag', 'case-converter'],
+  'chmod-calculator': ['number-base', 'http-status-codes', 'url-parser', 'dns-lookup'],
+  'html-to-markdown': ['markdown-to-html', 'markdown-editor', 'html-formatter', 'html-minifier'],
 }
 
 interface Props {

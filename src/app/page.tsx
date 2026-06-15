@@ -90,6 +90,14 @@ const tools = [
   { name: 'HTML 压缩', desc: '在线压缩 HTML 代码，去除注释和空白符，减小页面体积。', href: '/tools/html-minifier', icon: '📦', category: '压缩工具' },
   // 网络开发工具 (Round 7)
   { name: 'cURL 转代码', desc: '将 cURL 命令转换为 Python/JS/PHP/Go 代码，自动解析请求头和请求体。', href: '/tools/curl-to-code', icon: '🔄', category: '网络开发' },
+  // 代码转换工具 (Round 8)
+  { name: 'JSON 转 TypeScript', desc: '将 JSON 数据一键转为 TypeScript 接口定义，支持嵌套对象和数组。', href: '/tools/json-to-typescript', icon: 'TS', category: '转换器' },
+  { name: 'HTML 转 Markdown', desc: '将 HTML 代码转换为 Markdown 格式，支持表格、代码块、列表等元素。', href: '/tools/html-to-markdown', icon: '↙️', category: '转换器' },
+  // 生成器工具 (Round 8)
+  { name: 'API Key 生成器', desc: '生成随机 API 密钥、Access Token、Secret Key，自定义长度和字符集。', href: '/tools/api-key-generator', icon: '🗝️', category: '生成器' },
+  { name: 'Slug 生成器', desc: '将标题转为 SEO 友好的 URL Slug，支持中文拼音自动转换。', href: '/tools/slug-generator', icon: '🔗', category: '生成器' },
+  // 参考工具 (Round 8)
+  { name: 'Chmod 计算器', desc: 'Linux/Unix 文件权限计算器，数字与符号表示法互转，可视化勾选。', href: '/tools/chmod-calculator', icon: '🐧', category: '参考工具' },
   // Favicon 工具套件 (Round 6)
   { name: 'Favicon 生成器', desc: '上传图片生成全尺寸 Favicon（ICO + PNG 16/32/48/64/128/256px），一键下载。', href: '/tools/favicon-generator', icon: '🔖', category: 'Favicon工具' },
   { name: '文字 Favicon 生成器', desc: '输入文字，选择字体/颜色/背景，生成字母 Favicon，实时预览。', href: '/tools/favicon-text', icon: 'Aa', category: 'Favicon工具' },
@@ -167,7 +175,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          65 款开发工具，一站式解决。
+          70 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}
