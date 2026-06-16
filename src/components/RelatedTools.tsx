@@ -83,37 +83,37 @@ const toolMap: Record<string, { name: string; desc: string }> = {
 
 const related: Record<string, string[]> = {
   // 格式化类
-  'json-formatter': ['xml-formatter', 'hash-generator', 'color-converter', 'base64'],
+  'json-formatter': ['xml-formatter', 'hash-generator', 'json-to-typescript', 'base64'],
   'xml-formatter': ['json-schema-validator', 'sql-formatter', 'yaml-formatter', 'html-formatter'],
   'sql-formatter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'diff-checker'],
   'css-formatter': ['css-gradient', 'color-palette', 'html-playground', 'css-minifier'],
-  'html-formatter': ['css-formatter', 'js-formatter', 'html-playground', 'meta-tag'],
+  'html-formatter': ['css-formatter', 'js-formatter', 'html-to-markdown', 'html-playground'],
   'js-formatter': ['regex-tester', 'html-formatter', 'css-formatter', 'sql-formatter'],
   // 编解码类
   'base64': ['url-encode', 'hash-generator', 'html-entity', 'base64-image'],
-  'url-encode': ['html-entity', 'base64', 'url-parser', 'my-ip'],
+  'url-encode': ['html-entity', 'base64', 'slug-generator', 'url-parser'],
   'html-entity': ['url-encode', 'base64', 'jwt-decoder', 'markdown-to-html'],
   'jwt-decoder': ['base64', 'hash-generator', 'json-schema-validator', 'url-encode'],
   'base64-image': ['base64', 'image-converter', 'jwt-decoder', 'qrcode'],
-  'hash-generator': ['password-generator', 'bcrypt-generator', 'uuid-generator', 'base64'],
-  'bcrypt-generator': ['password-strength', 'password-generator', 'base64', 'random-number'],
+  'hash-generator': ['password-generator', 'bcrypt-generator', 'api-key-generator', 'uuid-generator'],
+  'bcrypt-generator': ['password-strength', 'password-generator', 'api-key-generator', 'random-number'],
   // 生成器类
   'qrcode': ['url-encode', 'qr-scanner', 'image-compressor', 'favicon-emoji'],
   'uuid-generator': ['password-strength', 'password-generator', 'timestamp', 'random-number'],
-  'password-generator': ['hash-generator', 'bcrypt-generator', 'password-strength', 'random-number'],
+  'password-generator': ['hash-generator', 'bcrypt-generator', 'api-key-generator', 'password-strength'],
   'cron-generator': ['timestamp', 'uuid-generator', 'uuid-decoder', 'number-base'],
   'lorem-ipsum': ['word-count', 'markdown-to-html', 'ascii-art-generator', 'emoji-picker'],
   'regex': ['diff-checker', 'word-count', 'regex-tester', 'html-entity'],
-  'markdown-editor': ['word-count', 'markdown-to-html', 'ascii-art-generator', 'emoji-picker'],
+  'markdown-editor': ['word-count', 'markdown-to-html', 'html-to-markdown', 'ascii-art-generator'],
   'random-number': ['password-generator', 'uuid-generator', 'number-base', 'password-strength'],
   // 转换类
   'timestamp': ['uuid-generator', 'cron-generator', 'uuid-decoder', 'number-base'],
   'color-converter': ['css-gradient', 'qrcode', 'color-palette', 'box-shadow-generator'],
-  'json-to-csv': ['json-formatter', 'sql-formatter', 'csv-viewer', 'number-base'],
+  'json-to-csv': ['json-formatter', 'sql-formatter', 'json-to-typescript', 'number-base'],
   'yaml-formatter': ['json-formatter', 'json-minifier', 'json-to-csv', 'diff-checker'],
-  'case-converter': ['text-dedup', 'word-count', 'lorem-ipsum', 'markdown-editor'],
-  'number-base': ['color-converter', 'uuid-decoder', 'timestamp', 'cron-generator'],
-  'markdown-to-html': ['markdown-editor', 'html-minifier', 'ascii-art-generator', 'html-entity'],
+  'case-converter': ['text-dedup', 'word-count', 'slug-generator', 'markdown-editor'],
+  'number-base': ['color-converter', 'uuid-decoder', 'chmod-calculator', 'timestamp'],
+  'markdown-to-html': ['markdown-editor', 'html-minifier', 'html-to-markdown', 'ascii-art-generator'],
   'css-gradient': ['color-converter', 'css-formatter', 'box-shadow-generator', 'image-converter'],
   // 文本工具
   'word-count': ['case-converter', 'markdown-editor', 'emoji-picker', 'csv-viewer'],
@@ -124,7 +124,7 @@ const related: Record<string, string[]> = {
   'user-agent': ['my-ip', 'dns-lookup', 'http-status-codes', 'web-manifest'],
   'email-validator': ['user-agent', 'my-ip', 'http-status-codes', 'password-generator'],
   // 网络工具
-  'dns-lookup': ['my-ip', 'user-agent', 'http-status-codes', 'url-parser'],
+  'dns-lookup': ['my-ip', 'user-agent', 'chmod-calculator', 'http-status-codes'],
   // SEO工具
   'meta-tag': ['html-formatter', 'email-validator', 'html-playground', 'web-manifest'],
   // 图像/其他
@@ -136,11 +136,11 @@ const related: Record<string, string[]> = {
   'html-playground': ['markdown-editor', 'html-formatter', 'js-formatter', 'css-formatter'],
   'color-palette': ['color-converter', 'css-gradient', 'box-shadow-generator', 'css-formatter'],
   'password-strength': ['password-generator', 'hash-generator', 'bcrypt-generator', 'random-number'],
-  'http-status-codes': ['url-parser', 'dns-lookup', 'email-validator', 'curl-to-code'],
-  'url-parser': ['url-encode', 'email-validator', 'http-status-codes', 'curl-to-code'],
+  'http-status-codes': ['url-parser', 'dns-lookup', 'chmod-calculator', 'email-validator'],
+  'url-parser': ['url-encode', 'email-validator', 'slug-generator', 'http-status-codes'],
   // Round 5 (new)
   'regex-tester': ['regex', 'diff-checker', 'word-count', 'html-entity'],
-  'json-schema-validator': ['json-formatter', 'yaml-formatter', 'json-to-csv', 'csv-viewer'],
+  'json-schema-validator': ['json-formatter', 'yaml-formatter', 'json-to-typescript', 'csv-viewer'],
   'image-resizer': ['image-compressor', 'image-converter', 'svg-to-png', 'favicon-extractor'],
   'uuid-decoder': ['uuid-generator', 'hash-generator', 'timestamp', 'cron-generator'],
   'csv-viewer': ['json-to-csv', 'json-formatter', 'sql-formatter', 'number-base'],

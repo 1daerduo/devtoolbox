@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'WebApplication',
               name: 'MoreToolbox',
               url: 'https://moretoolbox.com',
-              description: '免费在线开发者工具集合，包含CSS渐变生成、图片格式转换、DNS查询、Meta标签生成、JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt等40+款实用工具。',
+              description: '免费在线开发者工具集合，包含JSON转TypeScript、API Key生成、Slug生成、Chmod计算、HTML转Markdown、CSS渐变生成、图片格式转换、DNS查询、Meta标签生成、JSON格式化、JWT解码、Cron表达式、进制转换、Bcrypt等70+款实用工具。',
               applicationCategory: 'DeveloperApplication',
               operatingSystem: 'All',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
