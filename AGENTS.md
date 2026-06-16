@@ -12,7 +12,7 @@
 | **域名** | moretoolbox.com |
 | **定位** | 免费在线开发者工具集合站，纯前端处理，数据不上传服务器 |
 | **目标** | 通过 SEO 自然流量吸引开发者用户 → AdSense 广告变现 |
-| **当前工具数** | 54 款 |
+| **当前工具数** | 70 款 |
 | **语言** | 中文（zh_CN） |
 | **仓库地址** | 本地 tool-site/ 目录，git remote 已配置 |
 
@@ -212,14 +212,14 @@ bash scripts/cf-analytics.sh [--days 30]
 
 ### 已完成 ✅
 - JSON-LD WebApplication schema（layout.tsx）
-- **JSON-LD BreadcrumbList + SoftwareApplication schema（全部 54 个工具页）**
+- **JSON-LD BreadcrumbList + SoftwareApplication schema（全部 70 个工具页）**
 - Open Graph / Twitter Card 标签（layout.tsx）
 - 每个工具页独立 metadata + canonical URL
 - **keywords 统一为数组格式（27 页修复）**
 - robots.txt（允许全部爬虫）
-- sitemap.xml（54 个工具页 + 首页 + 广告合作页）
+- sitemap.xml（70 个工具页 + 首页 + 广告合作页）
 - Google Search Console 验证文件已部署
-- 所有工具页含 RelatedTools 内链（**54 工具全覆盖，入链分布 Min=2/Max=7/Avg=4.0，0 个 orphan 页面**）
+- 所有工具页含 RelatedTools 内链（**70 工具全覆盖，入链分布 Min=3/Max=7/Avg=4.0，0 个 orphan 页面**）
 - Google Analytics 4 **已激活** — 测量 ID: G-HYD79KJF3L，实时数据正常
 - AdSense 广告组件已就绪 — 发布商 ID: ca-pub-2041541281963495（等待审核）
 - **首页 metadata 优化（title/description/keywords 关键词密度提升）**
