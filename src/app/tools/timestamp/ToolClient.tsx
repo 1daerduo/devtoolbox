@@ -47,7 +47,7 @@ export default function TimestampClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '时间戳转换' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">时间戳转换</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">时间戳转换 | Unix Timestamp Converter</h1>
       <p className="text-sm text-gray-500 mb-6">Unix 时间戳与日期时间互相转换，支持秒和毫秒，实时显示当前时间。</p>
 
       {/* Current time */}

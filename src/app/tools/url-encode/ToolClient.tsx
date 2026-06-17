@@ -34,7 +34,7 @@ export default function UrlEncodeClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'URL 编码解码' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          URL 在线编码解码工具
+          URL 编码解码 | URL Encoder & Decoder
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持 URL 编码（Encode）和解码（Decode），将特殊字符转为 %XX 格式或还原

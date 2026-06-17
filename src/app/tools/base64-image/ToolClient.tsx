@@ -86,7 +86,7 @@ export default function Base64ImageClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Base64 图片互转' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Base64 图片互转</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Base64 图片互转 | Image ↔ Base64</h1>
       <p className="text-sm text-gray-500 mb-6">
         图片与 Base64 编码互转，支持拖拽上传或粘贴图片，支持 PNG/JPG/WebP/SVG 格式。所有处理在浏览器本地完成。
       </p>

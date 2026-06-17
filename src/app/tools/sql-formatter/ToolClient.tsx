@@ -159,7 +159,7 @@ export default function SqlFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'SQL 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">SQL 在线格式化 / 美化</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">SQL 格式化 | SQL Formatter</h1>
       <p className="text-sm text-gray-500 mb-6">
         在线 SQL 语句格式化与压缩，支持 MySQL、PostgreSQL、SQLite 等常见数据库方言，自定义关键字大小写。
       </p>

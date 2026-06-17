@@ -42,7 +42,7 @@ export default function UUIDGeneratorClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'UUID 生成' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线 UUID 生成器
+          UUID 生成器 | UUID Generator
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           快速生成 UUID v4（随机）或 UUID v7（时间排序），支持批量生成，一次性复制全部

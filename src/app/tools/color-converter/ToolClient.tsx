@@ -120,7 +120,7 @@ export default function ColorConverterClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '颜色转换' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线颜色转换工具
+          颜色转换工具 | Color Converter
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持 HEX（十六进制）、RGB、HSL 三种颜色格式互相转换，实时预览颜色效果

@@ -46,7 +46,7 @@ export default function QrcodeClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '二维码生成器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">二维码生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">二维码生成器 | QR Code Generator</h1>
       <p className="text-sm text-gray-500 mb-6">输入文本或网址，实时生成高清二维码，支持自定义颜色和尺寸，一键下载 PNG。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

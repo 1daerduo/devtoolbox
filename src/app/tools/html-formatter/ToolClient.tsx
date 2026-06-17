@@ -80,7 +80,7 @@ export default function HtmlFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'HTML 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTML 在线格式化</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTML 格式化 | HTML Formatter</h1>
       <p className="text-sm text-gray-500 mb-6">
         HTML 代码美化与压缩，支持自定义缩进。适用于前端调试与生产环境优化。
       </p>

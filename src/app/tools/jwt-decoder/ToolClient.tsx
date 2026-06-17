@@ -76,7 +76,7 @@ export default function JwtDecoderClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'JWT 解码器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">JWT 在线解码工具</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">JWT 在线解码 | JWT Decoder</h1>
       <p className="text-sm text-gray-500 mb-6">
         解析 JWT (JSON Web Token) 的 Header、Payload 和 Signature，支持 iat/exp 时间戳转换。
         所有解析完全在浏览器本地完成，Token 不会上传到服务器。

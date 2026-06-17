@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "UUID 生成器 - MoreToolbox", "description": "UUID v4/v7 批量生成 | Free online UUID generator", "url": "https://moretoolbox.com/tools/uuid-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "UUID v4 和 UUID v7 有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "UUID v4 基于随机数生成，不包含时间信息，分布均匀但无序。UUID v7 基于时间戳生成，前 48 位为毫秒级时间戳，天然有序，适合作为数据库主键，可提高索引性能和范围查询效率。" } }, { "@type": "Question", "name": "UUID 重复的概率有多大？", "acceptedAnswer": { "@type": "Answer", "text": "UUID v4 重复概率极低。128 位空间中随机取值，生成 10 亿个 UUID 后碰撞概率约 0.00000000006%。实际应用中可以认为 UUID 是全局唯一的，不需要中心化分配。" } }, { "@type": "Question", "name": "UUID 和 GUID 是一回事吗？", "acceptedAnswer": { "@type": "Answer", "text": "是的。UUID（Universally Unique Identifier）是开放标准，GUID（Globally Unique Identifier）是微软对 UUID 的实现。两者格式相同，都是 128 位标识符，通常可以互换使用。" } }] }),
+          }}
+        />
         <UUIDGeneratorClient />
       </>
     )

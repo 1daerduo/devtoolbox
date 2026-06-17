@@ -200,7 +200,7 @@ export default function HashGeneratorClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '哈希生成' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线哈希（Hash）生成工具
+          哈希生成工具 | MD5/SHA Hash Generator
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持 MD5、SHA-1、SHA-256、SHA-512 哈希值生成，数据完全在浏览器本地计算，不上传服务器

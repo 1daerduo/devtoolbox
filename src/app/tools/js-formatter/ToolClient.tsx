@@ -111,7 +111,7 @@ export default function JsFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'JS 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">JavaScript 在线格式化</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">JavaScript 格式化 | JS Formatter</h1>
       <p className="text-sm text-gray-500 mb-6">
         JavaScript 代码美化与压缩，支持自定义缩进。适用于前端调试与代码优化。
       </p>

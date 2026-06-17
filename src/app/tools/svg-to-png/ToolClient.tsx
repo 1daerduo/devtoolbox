@@ -90,7 +90,7 @@ export default function SvgToPngClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'SVG 转 PNG' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">SVG 转 PNG 转换器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">SVG 转 PNG | SVG to PNG Converter</h1>
       <p className="text-sm text-gray-500 mb-6">在线将 SVG 矢量图转换为 PNG 位图，支持自定义尺寸和背景色，纯浏览器端处理。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

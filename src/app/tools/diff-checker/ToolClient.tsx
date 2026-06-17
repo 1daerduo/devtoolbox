@@ -100,7 +100,7 @@ export default function DiffCheckerClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '文本差异对比' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">文本差异对比工具</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">文本差异对比 | Diff Checker</h1>
       <p className="text-sm text-gray-500 mb-6">
         在线文本差异对比，左右并排显示两个文本的差异，高亮标记新增、删除、修改的行。
         支持代码 diff、文档版本对比等场景。

@@ -93,7 +93,7 @@ export default function ImageCompressorClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '图片压缩' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线图片压缩工具
+          图片压缩工具 | Image Compressor
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持 JPG、PNG、WebP 格式，调节压缩质量，完全在浏览器本地处理，不上传服务器

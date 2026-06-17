@@ -120,7 +120,7 @@ export default function CssFormatterClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'CSS 格式化' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线 CSS 格式化工具
+          CSS 格式化工具 | CSS Formatter
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持 CSS 美化（格式化）与压缩（Minify），完全在浏览器本地处理
