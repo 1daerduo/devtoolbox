@@ -79,6 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'slug-generator',
     'chmod-calculator',
     'html-to-markdown',
+    // SEO工具 + 转换工具 (Round 9)
+    'schema-generator',
+    'serp-simulator',
+    'seo-checker',
+    'percentage-calculator',
+    'json-xml-converter',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

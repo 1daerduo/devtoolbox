@@ -98,6 +98,12 @@ const tools = [
   { name: 'Slug 生成器', desc: '将标题转为 SEO 友好的 URL Slug，支持中文拼音自动转换。', href: '/tools/slug-generator', icon: '🔗', category: '生成器' },
   // 参考工具 (Round 8)
   { name: 'Chmod 计算器', desc: 'Linux/Unix 文件权限计算器，数字与符号表示法互转，可视化勾选。', href: '/tools/chmod-calculator', icon: '🐧', category: '参考工具' },
+  // SEO 工具 + 实用工具 (Round 9)
+  { name: 'Schema 生成器', desc: '可视化生成 JSON-LD 结构化数据，支持 Article/Product/FAQ/Recipe/BreadcrumbList 等 8 种类型。', href: '/tools/schema-generator', icon: '📊', category: 'SEO工具' },
+  { name: 'SERP 预览器', desc: 'Google 搜索结果实时预览，桌面/移动双视图，含字符长度 SEO 检查。', href: '/tools/serp-simulator', icon: '🔎', category: 'SEO工具' },
+  { name: 'SEO 检查器', desc: '输入 URL 或 HTML 抓取分析页面 SEO 关键指标，含 14 项检查 + 综合评分。', href: '/tools/seo-checker', icon: '✅', category: 'SEO工具' },
+  { name: '百分比计算器', desc: '6 种百分比计算模式：占比、增减、折扣、利润率，工作生活通用。', href: '/tools/percentage-calculator', icon: '％', category: '转换器' },
+  { name: 'JSON ↔ XML 转换', desc: 'JSON 和 XML 数据格式互相转换，支持嵌套对象、数组、可配置根节点。', href: '/tools/json-xml-converter', icon: 'J↔X', category: '转换器' },
   // Favicon 工具套件 (Round 6)
   { name: 'Favicon 生成器', desc: '上传图片生成全尺寸 Favicon（ICO + PNG 16/32/48/64/128/256px），一键下载。', href: '/tools/favicon-generator', icon: '🔖', category: 'Favicon工具' },
   { name: '文字 Favicon 生成器', desc: '输入文字，选择字体/颜色/背景，生成字母 Favicon，实时预览。', href: '/tools/favicon-text', icon: 'Aa', category: 'Favicon工具' },
@@ -175,7 +181,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          70 款开发工具，一站式解决。
+          75 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}

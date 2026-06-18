@@ -79,12 +79,18 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'slug-generator': { name: 'Slug 生成器', desc: '标题转 SEO 友好 URL Slug' },
   'chmod-calculator': { name: 'Chmod 计算器', desc: 'Linux 文件权限计算器' },
   'html-to-markdown': { name: 'HTML 转 Markdown', desc: 'HTML 代码转 Markdown 格式' },
+  // Round 9 (new)
+  'schema-generator': { name: 'Schema 生成器', desc: 'JSON-LD 结构化数据生成器' },
+  'serp-simulator': { name: 'SERP 预览器', desc: 'Google 搜索结果实时预览' },
+  'seo-checker': { name: 'SEO 检查器', desc: 'On-Page SEO 14 项综合审计' },
+  'percentage-calculator': { name: '百分比计算器', desc: '6 种百分比计算模式' },
+  'json-xml-converter': { name: 'JSON ↔ XML', desc: 'JSON 与 XML 数据格式互转' },
 }
 
 const related: Record<string, string[]> = {
   // 格式化类
-  'json-formatter': ['xml-formatter', 'hash-generator', 'json-to-typescript', 'base64'],
-  'xml-formatter': ['json-schema-validator', 'sql-formatter', 'yaml-formatter', 'html-formatter'],
+  'json-formatter': ['xml-formatter', 'hash-generator', 'json-to-typescript', 'json-xml-converter'],
+  'xml-formatter': ['json-schema-validator', 'sql-formatter', 'yaml-formatter', 'json-xml-converter'],
   'sql-formatter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'diff-checker'],
   'css-formatter': ['css-gradient', 'color-palette', 'html-playground', 'css-minifier'],
   'html-formatter': ['css-formatter', 'js-formatter', 'html-to-markdown', 'html-playground'],
@@ -105,14 +111,14 @@ const related: Record<string, string[]> = {
   'lorem-ipsum': ['word-count', 'markdown-to-html', 'ascii-art-generator', 'emoji-picker'],
   'regex': ['diff-checker', 'word-count', 'regex-tester', 'html-entity'],
   'markdown-editor': ['word-count', 'markdown-to-html', 'html-to-markdown', 'ascii-art-generator'],
-  'random-number': ['password-generator', 'uuid-generator', 'number-base', 'password-strength'],
+  'random-number': ['password-generator', 'uuid-generator', 'number-base', 'percentage-calculator'],
   // 转换类
   'timestamp': ['uuid-generator', 'cron-generator', 'uuid-decoder', 'number-base'],
   'color-converter': ['css-gradient', 'qrcode', 'color-palette', 'box-shadow-generator'],
-  'json-to-csv': ['json-formatter', 'sql-formatter', 'json-to-typescript', 'number-base'],
+  'json-to-csv': ['json-formatter', 'sql-formatter', 'json-to-typescript', 'json-xml-converter'],
   'yaml-formatter': ['json-formatter', 'json-minifier', 'json-to-csv', 'diff-checker'],
   'case-converter': ['text-dedup', 'word-count', 'slug-generator', 'markdown-editor'],
-  'number-base': ['color-converter', 'uuid-decoder', 'chmod-calculator', 'timestamp'],
+  'number-base': ['color-converter', 'uuid-decoder', 'chmod-calculator', 'percentage-calculator'],
   'markdown-to-html': ['markdown-editor', 'html-minifier', 'html-to-markdown', 'ascii-art-generator'],
   'css-gradient': ['color-converter', 'css-formatter', 'box-shadow-generator', 'image-converter'],
   // 文本工具
@@ -127,6 +133,7 @@ const related: Record<string, string[]> = {
   'dns-lookup': ['my-ip', 'user-agent', 'chmod-calculator', 'http-status-codes'],
   // SEO工具
   'meta-tag': ['html-formatter', 'email-validator', 'html-playground', 'web-manifest'],
+  // 转换器补充 (Round 9 工具的入链，从已有工具指向新工具)
   // 图像/其他
   'image-compressor': ['image-converter', 'image-resizer', 'svg-to-png', 'base64-image'],
   'image-converter': ['image-compressor', 'image-resizer', 'color-palette', 'svg-to-png'],
@@ -167,6 +174,12 @@ const related: Record<string, string[]> = {
   'slug-generator': ['url-encode', 'url-parser', 'meta-tag', 'case-converter'],
   'chmod-calculator': ['number-base', 'http-status-codes', 'url-parser', 'dns-lookup'],
   'html-to-markdown': ['markdown-to-html', 'markdown-editor', 'html-formatter', 'html-minifier'],
+  // Round 9 (new)
+  'schema-generator': ['serp-simulator', 'seo-checker', 'meta-tag', 'json-formatter'],
+  'serp-simulator': ['schema-generator', 'seo-checker', 'meta-tag', 'slug-generator'],
+  'seo-checker': ['serp-simulator', 'schema-generator', 'meta-tag', 'web-manifest'],
+  'percentage-calculator': ['number-base', 'case-converter', 'color-converter', 'random-number'],
+  'json-xml-converter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'json-to-typescript'],
 }
 
 interface Props {
