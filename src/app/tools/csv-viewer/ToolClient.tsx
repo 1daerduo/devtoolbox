@@ -81,7 +81,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-full mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'CSV 表格查看器' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">CSV 表格查看器</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">CSV 表格查看器 | CSV Viewer</h1>
       <p className="text-gray-600 mb-6">在线浏览 CSV/TSV 表格数据，支持搜索筛选和排序</p>
 
       <h2 className="text-xl font-semibold mt-8 mb-3">功能介绍</h2>

@@ -156,7 +156,7 @@ export default function ColorPaletteClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Color Palette Generator' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">配色方案生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">配色方案生成器 | Color Palette Generator</h1>
       <p className="text-sm text-gray-500 mb-6">Generate beautiful color palettes instantly. Choose a harmony scheme, lock favorites, and export.</p>
 
       {/* Controls */}

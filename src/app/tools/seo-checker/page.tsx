@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SEO 检查器 - MoreToolbox", "description": "On-Page SEO 页面分析 | Free online on-page SEO checker", "url": "https://moretoolbox.com/tools/seo-checker", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "什么是 On-Page SEO？", "acceptedAnswer": { "@type": "Answer", "text": "On-Page SEO 是指在网页本身进行的搜索引擎优化，包括标题标签、Meta 描述、H1-H6 标签、图片 Alt 属性、内链结构、页面速度、移动适配等。与 Off-Page SEO（外链建设）相对。" } }, { "@type": "Question", "name": "SEO 检查器检查哪些项目？", "acceptedAnswer": { "@type": "Answer", "text": "本工具检查页面标题、Meta 描述、关键词、H1 标签、图片 Alt 属性、内链外链数量、Open Graph 标签、Twitter Card 标签、canonical URL、robots 标签、页面大小等关键 SEO 指标。" } }, { "@type": "Question", "name": "如何提高页面 SEO 分数？", "acceptedAnswer": { "@type": "Answer", "text": "提高 SEO 分数的方法：1) 确保每个页面有唯一的 title 和 description；2) 使用语义化 HTML 标签（H1-H6）；3) 为所有图片添加 Alt 属性；4) 优化页面加载速度；5) 建立合理的内链结构；6) 添加结构化数据（JSON-LD）。" } }] }),
+          }}
+        />
         <SeoCheckerClient />
       </>
     )

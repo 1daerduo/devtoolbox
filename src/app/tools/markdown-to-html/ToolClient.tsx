@@ -75,7 +75,7 @@ export default function MarkdownToHtmlClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Markdown 转 HTML' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Markdown 转 HTML</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Markdown 转 HTML | Markdown to HTML Converter</h1>
       <p className="text-sm text-gray-500 mb-6">
         将 Markdown 文本转换为 HTML 代码，实时预览渲染效果。支持标题、粗体、斜体、链接、图片、代码块等常用语法。
       </p>

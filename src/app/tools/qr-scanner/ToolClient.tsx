@@ -93,7 +93,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8" onPaste={handlePaste} tabIndex={0}>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '二维码扫描器' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">二维码扫描器</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">二维码扫描器 | QR Code Scanner</h1>
       <p className="text-gray-600 mb-6">上传二维码图片或粘贴截图，在线识别解码 QR Code 内容</p>
 
       <h2 className="text-xl font-semibold mt-8 mb-3">支持的二维码类型</h2>

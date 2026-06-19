@@ -63,7 +63,7 @@ export default function MyIpClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'IP 查询' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">IP 地址查询</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">IP 地址查询 | What Is My IP</h1>
       <p className="text-sm text-gray-500 mb-6">
         查看当前设备的公网 IP 地址、地理位置、运营商信息及浏览器环境信息。
       </p>

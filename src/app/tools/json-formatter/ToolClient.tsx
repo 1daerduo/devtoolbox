@@ -38,7 +38,7 @@ export default function JsonFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'JSON 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">JSON 格式化 / 压缩</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">JSON 格式化 / 压缩 | JSON Formatter & Minify</h1>
       <p className="text-sm text-gray-500 mb-6">在线 JSON 数据格式化、压缩、验证，支持语法高亮，开发者必备工具。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

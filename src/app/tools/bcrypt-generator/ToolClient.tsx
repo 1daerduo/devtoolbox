@@ -89,7 +89,7 @@ export default function BcryptGeneratorClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Bcrypt 生成验证' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Bcrypt 哈希生成与验证</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Bcrypt 哈希生成与验证 | Bcrypt Hash Generator</h1>
       <p className="text-sm text-gray-500 mb-6">
         安全生成 Bcrypt 密码哈希，验证密码与哈希是否匹配。支持自定义 rounds（计算轮数），所有运算在浏览器本地完成。
       </p>

@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "大小写转换 - MoreToolbox", "description": "大写/小写/驼峰等9种格式 | Free online text case converter", "url": "https://moretoolbox.com/tools/case-converter", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "camelCase 和 PascalCase 有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "camelCase（小驼峰）首字母小写，如 myVariableName。PascalCase（大驼峰）首字母大写，如 MyClassName。JavaScript 变量用 camelCase，Java/C# 类名用 PascalCase。本工具一键转换两种格式。" } }, { "@type": "Question", "name": "snake_case 和 kebab-case 用在什么场景？", "acceptedAnswer": { "@type": "Answer", "text": "snake_case（蛇形）用下划线连接，如 user_name，常用于 Python、Ruby 变量命名和数据库字段名。kebab-case（短横线）用连字符连接，如 my-component，常用于 CSS 类名、HTML 标签属性、URL 路径。" } }, { "@type": "Question", "name": "编程中常用的命名规范有哪些？", "acceptedAnswer": { "@type": "Answer", "text": "常见命名规范：camelCase（JS变量）、PascalCase（类名）、snake_case（Python/DB）、kebab-case（CSS/URL）、CONSTANT_CASE（常量）、UPPERCASE（宏定义）、Title Case（标题）。本工具支持 9 种格式互转。" } }] }),
+          }}
+        />
         <CaseConverterClient />
       </>
     )

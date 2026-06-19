@@ -53,7 +53,7 @@ export default function WebManifestClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Web Manifest 生成器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Web Manifest 生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Web Manifest 生成器 | Web Manifest Generator</h1>
       <p className="text-sm text-gray-500 mb-6">可视化配置 PWA manifest.json，支持名称/主题色/显示模式/图标等完整字段。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

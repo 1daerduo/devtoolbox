@@ -91,7 +91,7 @@ export default function UserAgentClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'User Agent 解析器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">User Agent 解析器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">User Agent 解析器 | User Agent Parser</h1>
       <p className="text-sm text-gray-500 mb-6">解析浏览器 UA 字符串，识别浏览器、操作系统、设备类型等信息。</p>
 
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">

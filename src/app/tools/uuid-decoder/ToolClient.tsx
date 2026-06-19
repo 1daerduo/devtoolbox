@@ -78,7 +78,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'UUID 解码器' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">UUID 解码器</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">UUID 解码器 | UUID Decoder</h1>
       <p className="text-gray-600 mb-6">解析 UUID 结构，查看版本、变体、时间戳等详细信息</p>
 
       <h2 className="text-xl font-semibold mt-8 mb-3">UUID 版本说明</h2>

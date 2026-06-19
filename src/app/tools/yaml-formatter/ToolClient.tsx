@@ -168,7 +168,7 @@ export default function YamlFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'YAML 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">YAML ↔ JSON 在线转换</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">YAML ↔ JSON 在线转换 | YAML Formatter & Validator</h1>
       <p className="text-sm text-gray-500 mb-6">
         YAML 与 JSON 格式互转，支持 YAML 格式验证。适用于 Kubernetes 配置、Docker Compose、CI/CD 配置等场景。
       </p>

@@ -81,7 +81,7 @@ export default function EmailValidatorClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '邮箱验证器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">邮箱地址验证器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">邮箱地址验证器 | Email Validator</h1>
       <p className="text-sm text-gray-500 mb-6">验证邮箱地址格式是否正确，支持单邮箱校验和多邮箱批量检测。</p>
 
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">

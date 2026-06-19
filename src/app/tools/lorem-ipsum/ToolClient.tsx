@@ -51,7 +51,7 @@ export default function LoremIpsumClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Lorem Ipsum 生成器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Lorem Ipsum 占位文本生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Lorem Ipsum 占位文本生成器 | Lorem Ipsum Generator</h1>
       <p className="text-sm text-gray-500 mb-6">
         生成 Lorem Ipsum 或中文占位文本，适用于网页设计、排版测试、原型设计等场景。
       </p>

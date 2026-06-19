@@ -41,7 +41,7 @@ export default function Base64Client() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Base64 编解码' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Base64 编码 / 解码</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Base64 编码 / 解码 | Base64 Encode & Decode</h1>
       <p className="text-sm text-gray-500 mb-6">在线 Base64 编码解码工具，支持 UTF-8 中文，一键交换输入输出。</p>
 
       <div className="flex gap-2 mb-6 flex-wrap">

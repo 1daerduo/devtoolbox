@@ -71,7 +71,7 @@ export default function DnsLookupClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'DNS 查询' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">DNS 查询工具</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">DNS 查询工具 | DNS Lookup Tool</h1>
       <p className="text-sm text-gray-500 mb-6">在线查询域名的 DNS 记录，支持 A、AAAA、CNAME、MX、NS、TXT 等常见记录类型。</p>
 
       <div className="bg-white rounded-xl border border-gray-200 p-5 mb-6">

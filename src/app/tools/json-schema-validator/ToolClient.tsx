@@ -151,7 +151,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'JSON Schema 验证器' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">JSON Schema 验证器</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">JSON Schema 验证器 | JSON Schema Validator</h1>
       <p className="text-gray-600 mb-6">通过 JSON Schema 定义校验 JSON 数据结构的正确性</p>
 
       <h2 className="text-xl font-semibold mt-8 mb-3">Schema 验证规则</h2>

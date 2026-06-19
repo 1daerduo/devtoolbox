@@ -57,7 +57,7 @@ export default function MetaTagClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Meta 标签生成器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Meta 标签生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Meta 标签生成器 | Meta Tag Generator</h1>
       <p className="text-sm text-gray-500 mb-6">可视化生成 SEO Meta 标签、Open Graph 和 Twitter Card 标签，一键复制 HTML 代码。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

@@ -74,7 +74,7 @@ export default function CssGradientClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'CSS 渐变生成器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">CSS 渐变生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">CSS 渐变生成器 | CSS Gradient Generator</h1>
       <p className="text-sm text-gray-500 mb-6">可视化生成 CSS 渐变效果，支持线性、径向、圆锥渐变，自由调节颜色和位置。</p>
 
       {/* Preview */}

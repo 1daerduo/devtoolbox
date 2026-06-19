@@ -96,7 +96,7 @@ export default function CronGeneratorClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Cron 表达式生成器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Cron 表达式在线生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Cron 表达式在线生成器 | Cron Expression Generator</h1>
       <p className="text-sm text-gray-500 mb-6">
         可视化生成 Cron 定时表达式，实时预览下次执行时间。支持 Linux Crontab、Spring 等常见格式。
       </p>

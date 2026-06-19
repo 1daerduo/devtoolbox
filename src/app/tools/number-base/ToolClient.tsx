@@ -45,7 +45,7 @@ export default function NumberBaseClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '进制转换器' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">在线进制转换器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">在线进制转换器 | Number Base Converter</h1>
       <p className="text-sm text-gray-500 mb-6">
         支持二进制、八进制、十进制、十六进制、Base32、Base36 互转，输入任意进制的数值，自动计算其他进制结果。
       </p>

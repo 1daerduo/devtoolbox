@@ -105,7 +105,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '图片尺寸调整' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">图片尺寸调整</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">图片尺寸调整 | Image Resizer</h1>
       <p className="text-gray-600 mb-6">在线调整图片尺寸，支持像素/百分比缩放，纯浏览器端处理</p>
 
       <h2 className="text-xl font-semibold mt-8 mb-3">缩放方式</h2>

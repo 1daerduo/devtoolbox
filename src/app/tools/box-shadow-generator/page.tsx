@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "CSS Box Shadow Generator - MoreToolbox", "description": "Visual CSS box-shadow builder with multi-layer support", "url": "https://moretoolbox.com/tools/box-shadow-generator", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "CSS box-shadow 语法是什么？", "acceptedAnswer": { "@type": "Answer", "text": "box-shadow 语法：box-shadow: h-offset v-offset blur spread color; 例如 box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.2)。h-offset 和 v-offset 是水平和垂直偏移，blur 是模糊半径，spread 是扩散半径。" } }, { "@type": "Question", "name": "如何实现内阴影效果？", "acceptedAnswer": { "@type": "Answer", "text": "在 box-shadow 值前加 inset 关键字即可实现内阴影。例如 box-shadow: inset 0 2px 4px rgba(0,0,0,0.2)。内阴影常用于输入框、按钮按下效果等场景。本工具支持一键切换内外阴影。" } }, { "@type": "Question", "name": "box-shadow 支持多层阴影吗？", "acceptedAnswer": { "@type": "Answer", "text": "支持。用逗号分隔多组阴影值即可实现多层阴影。例如 box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.2)。多层阴影可以创建更丰富的深度效果。本工具支持添加无限层阴影。" } }] }),
+          }}
+        />
         <BoxShadowClient />
       </>
     )

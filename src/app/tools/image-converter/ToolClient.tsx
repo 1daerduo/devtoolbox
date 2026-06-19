@@ -75,7 +75,7 @@ export default function ImageConverterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '图片格式转换' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">图片格式转换</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">图片格式转换 | Image Converter</h1>
       <p className="text-sm text-gray-500 mb-6">在线转换图片格式，支持 PNG、JPEG、WebP、BMP 互转，纯浏览器端处理，无需上传。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

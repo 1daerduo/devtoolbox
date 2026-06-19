@@ -116,7 +116,7 @@ export default function XmlFormatterClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'XML 格式化' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">XML 格式化 / 压缩</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">XML 格式化 / 压缩 | XML Formatter & Minify</h1>
       <p className="text-sm text-gray-500 mb-6">在线 XML 数据格式化、压缩，支持自定义缩进，开发者必备 XML 处理工具。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
