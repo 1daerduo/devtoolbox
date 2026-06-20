@@ -97,7 +97,7 @@ export default function HtmlPlaygroundClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'HTML/CSS/JS Playground' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTML/CSS/JS Playground</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTML/CSS/JS 在线 Playground | HTML/CSS/JS Playground</h1>
       <p className="text-sm text-gray-500 mb-4">Write HTML, CSS, and JavaScript code with instant live preview. No setup needed.</p>
 
       {/* Toolbar */}

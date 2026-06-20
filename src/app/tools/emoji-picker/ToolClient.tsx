@@ -130,7 +130,7 @@ export default function ToolClient() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Emoji 选择器' }]} />
-      <h1 className="text-3xl font-bold mt-4 mb-2">Emoji 选择器</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-2">Emoji 选择器 | Emoji Picker</h1>
       <p className="text-gray-600 mb-6">浏览、搜索并复制 Emoji 表情符号</p>
 
       <div className="flex gap-3 mb-4 flex-wrap items-center">

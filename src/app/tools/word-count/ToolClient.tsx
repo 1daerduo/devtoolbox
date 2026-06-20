@@ -58,7 +58,7 @@ export default function WordCountClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '字数统计' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线字数统计工具
+          在线字数统计工具 | Word Counter
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           实时统计文本的字符数、中文字符、英文单词、段落数、句子数等多项指标

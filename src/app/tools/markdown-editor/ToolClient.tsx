@@ -105,7 +105,7 @@ export default function MarkdownEditorClient() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4 mb-4">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-              在线 Markdown 编辑器
+              在线 Markdown 编辑器 | Online Markdown Editor
             </h1>
             <p className="text-gray-500 text-sm mt-1">
               支持实时预览，可导出 HTML 或下载 .md 文件

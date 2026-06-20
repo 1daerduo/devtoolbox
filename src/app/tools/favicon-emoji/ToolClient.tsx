@@ -39,7 +39,7 @@ export default function FaviconEmojiClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Emoji Favicon 生成器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Emoji Favicon 生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Emoji Favicon 生成器 | Emoji Favicon Generator</h1>
       <p className="text-sm text-gray-500 mb-6">选择 Emoji，生成透明背景 Favicon，适合个人博客和小型项目。</p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>

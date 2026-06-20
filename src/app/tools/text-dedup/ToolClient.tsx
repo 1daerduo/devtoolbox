@@ -52,7 +52,7 @@ export default function TextDedupClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '文本去重排序' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线文本去重排序工具
+          在线文本去重排序工具 | Text Deduplication
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           按行去重、排序、反转、去空行，适合处理名单、列表、日志等文本数据

@@ -124,7 +124,7 @@ export default function PasswordStrengthClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Password Strength Checker' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Password Strength Checker</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">密码强度检测 | Password Strength Checker</h1>
       <p className="text-sm text-gray-500 mb-6">Test your password strength. All analysis runs 100% locally in your browser — nothing is sent to any server.</p>
 
       <div className="max-w-2xl mx-auto space-y-6">

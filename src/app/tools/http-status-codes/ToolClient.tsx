@@ -93,7 +93,7 @@ export default function HttpStatusCodesClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'HTTP Status Code Reference' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTTP Status Code Reference</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">HTTP 状态码参考 | HTTP Status Code Reference</h1>
       <p className="text-sm text-gray-500 mb-6">Quick reference for all standard HTTP response codes. Search by code number or name.</p>
 
       {/* Search & Filter */}

@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Color Palette Generator - MoreToolbox", "description": "Generate beautiful color palettes with one click", "url": "https://moretoolbox.com/tools/color-palette", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "颜色调色板生成器支持哪些配色模式？", "acceptedAnswer": { "@type": "Answer", "text": "支持 6 种色彩和谐模式：类比色（Analogous）适合柔和渐变、单色（Monochromatic）适合品牌一致性、三色（Triadic）适合活力配色、互补色（Complementary）适合强调对比、分裂互补色（Split-Complementary）适合平衡对比、随机模式适合灵感探索。每种模式根据色彩理论自动生成协调的配色方案。" } }, { "@type": "Question", "name": "如何锁定喜欢的颜色？", "acceptedAnswer": { "@type": "Answer", "text": "点击颜色卡上的锁定图标即可固定该颜色，后续点击生成新配色时，锁定的颜色不会变化，其余颜色围绕锁定色自动生成新的协调方案。适合已有主色需要搭配辅助色的场景。" } }, { "@type": "Question", "name": "生成的配色可以导出吗？支持哪些格式？", "acceptedAnswer": { "@type": "Answer", "text": "每个配色方案会显示 HEX、RGB 和 HSL 三种格式的颜色值，点击即可复制。如需导出，可一键复制全部颜色（多种格式可选），方便粘贴到 CSS、设计工具（Figma/Sketch）或 Tailwind 配置中直接使用。" } }] }),
+          }}
+        />
         <ColorPaletteClient />
       </>
     )

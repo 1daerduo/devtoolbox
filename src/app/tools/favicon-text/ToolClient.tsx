@@ -78,7 +78,7 @@ export default function FaviconTextClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '文字 Favicon 生成器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">文字 Favicon 生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">文字 Favicon 生成器 | Text Favicon Generator</h1>
       <p className="text-sm text-gray-500 mb-6">输入文字（建议1-2个字符），自定义字体/颜色/背景形状，生成字母 Favicon。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

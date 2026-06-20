@@ -50,7 +50,7 @@ export default function RegexClient() {
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '正则表达式测试' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">正则表达式测试</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">正则表达式测试 | Regex Tester</h1>
       <p className="text-sm text-gray-500 mb-6">在线测试正则表达式，支持标志位、实时匹配高亮，开发者调试必备。</p>
 
       <div className="bg-white border rounded-lg p-5 mb-4">

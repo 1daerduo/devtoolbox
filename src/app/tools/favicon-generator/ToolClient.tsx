@@ -72,7 +72,7 @@ export default function FaviconGeneratorClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Favicon 生成器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 生成器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 生成器 | Favicon Generator</h1>
       <p className="text-sm text-gray-500 mb-6">上传图片（PNG/JPG/SVG），自动生成 16/32/48/64/128/256px 全尺寸 Favicon，一键下载 ZIP 打包。</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

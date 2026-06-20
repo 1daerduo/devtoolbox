@@ -23,6 +23,12 @@ export default function Page() {
             __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "JSON 在线压缩工具 - MoreToolbox", "description": "在线压缩 JSON 数据，去除空白符和换行 | Free online JSON minifier", "url": "https://moretoolbox.com/tools/json-minifier", "applicationCategory": "DeveloperApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }, "inLanguage": "zh-CN" }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "JSON 压缩能减少多少体积？", "acceptedAnswer": { "@type": "Answer", "text": "压缩效果取决于原始 JSON 的缩进和空格量。典型情况下，格式化 JSON 压缩后可减少 30-50% 的体积。对于 API 响应数据，压缩 JSON 可显著降低网络传输带宽消耗，尤其在高并发场景下效果明显。工具会实时显示压缩前后大小对比和压缩率。" } }, { "@type": "Question", "name": "JSON 压缩和 Gzip 压缩有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "JSON 压缩（Minify）是去除空白符和换行的文本级优化，Gzip 是传输层的二进制压缩。两者互补：Minify 后的 JSON 配合 Gzip 可获得最佳的压缩效果。对于 API 开发，建议服务端同时开启 JSON Minify 和 Gzip 压缩。" } }, { "@type": "Question", "name": "压缩后的 JSON 还能格式化回来吗？", "acceptedAnswer": { "@type": "Answer", "text": "可以。只要原始 JSON 语法正确，压缩不会丢失任何数据或结构信息。压缩仅去除空白符和换行，JSON 的键值对、数组、嵌套结构完全保留。如需恢复可读格式，使用本网站的 JSON 格式化工具一键美化即可。" } }] }),
+          }}
+        />
         <JsonMinifierClient />
       </>
     )

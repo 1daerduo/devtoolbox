@@ -43,7 +43,7 @@ export default function HtmlEntityClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'HTML 实体编解码' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          HTML 实体编码解码工具
+          HTML 实体编码解码工具 | HTML Entity Encoder / Decoder
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           将 HTML 特殊字符（&lt; &gt; &amp; 等）与 HTML 实体互相转换，防止 XSS 攻击

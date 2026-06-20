@@ -71,7 +71,7 @@ export default function UrlParserClient() {
     <div>
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'URL Parser' }]} />
 
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">URL Parser</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">URL 解析器 | URL Parser</h1>
       <p className="text-sm text-gray-500 mb-6">Parse any URL into its components: protocol, hostname, port, path, query parameters, and hash fragment. All processing runs in your browser.</p>
 
       {/* Input */}

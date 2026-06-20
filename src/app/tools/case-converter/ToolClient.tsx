@@ -61,7 +61,7 @@ export default function CaseConverterClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '大小写转换' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线文本大小写转换工具
+          在线文本大小写转换工具 | Case Converter
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           支持大写、小写、首字母大写、驼峰、蛇形、短横等 9 种格式转换，输入即出结果

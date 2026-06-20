@@ -47,7 +47,7 @@ export default function FaviconValidatorClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Favicon 校验器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 校验器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 校验器 | Favicon Validator</h1>
       <p className="text-sm text-gray-500 mb-6">输入网站 URL，检测 Favicon 配置完整性，查看缺失的图标文件。</p>
 
       <div className="flex gap-3 mb-6">

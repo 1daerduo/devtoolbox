@@ -52,7 +52,7 @@ export default function PasswordGeneratorClient() {
         <Breadcrumb items={[{ label: '首页', href: '/' }, { label: '密码生成器' }]} />
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-2">
-          在线随机密码生成器
+          在线随机密码生成器 | Password Generator
         </h1>
         <p className="text-gray-500 text-sm mb-6">
           生成安全的随机密码，数据在浏览器本地生成，不上传服务器

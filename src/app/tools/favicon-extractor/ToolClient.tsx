@@ -55,7 +55,7 @@ export default function FaviconExtractorClient() {
   return (
     <div>
       <Breadcrumb items={[{ label: '首页', href: '/' }, { label: 'Favicon 提取器' }]} />
-      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 提取器</h1>
+      <h1 className="text-2xl font-bold mb-2 text-gray-900">Favicon 提取器 | Favicon Extractor</h1>
       <p className="text-sm text-gray-500 mb-6">输入网站 URL（如 `github.com`），自动查找并提取 Favicon 图标。</p>
 
       <div className="flex gap-3 mb-6">
