@@ -85,6 +85,12 @@ const toolMap: Record<string, { name: string; desc: string }> = {
   'seo-checker': { name: 'SEO 检查器', desc: 'On-Page SEO 14 项综合审计' },
   'percentage-calculator': { name: '百分比计算器', desc: '6 种百分比计算模式' },
   'json-xml-converter': { name: 'JSON ↔ XML', desc: 'JSON 与 XML 数据格式互转' },
+  // Round 10 (new)
+  'cidr-calculator': { name: 'CIDR 计算器', desc: 'IP 子网划分计算器' },
+  'credit-card-validator': { name: '信用卡验证器', desc: 'Luhn 算法校验卡号' },
+  'passphrase-generator': { name: '密码短语生成器', desc: '安全易记密码短语' },
+  'json-diff': { name: 'JSON 对比工具', desc: 'JSON 差异比较' },
+  'border-radius-generator': { name: 'CSS 圆角生成器', desc: '可视化圆角工具' },
 }
 
 const related: Record<string, string[]> = {
@@ -106,7 +112,7 @@ const related: Record<string, string[]> = {
   // 生成器类
   'qrcode': ['url-encode', 'qr-scanner', 'image-compressor', 'favicon-emoji'],
   'uuid-generator': ['password-strength', 'password-generator', 'timestamp', 'random-number'],
-  'password-generator': ['hash-generator', 'bcrypt-generator', 'api-key-generator', 'password-strength'],
+  'password-generator': ['passphrase-generator', 'hash-generator', 'api-key-generator', 'password-strength'],
   'cron-generator': ['timestamp', 'uuid-generator', 'uuid-decoder', 'number-base'],
   'lorem-ipsum': ['word-count', 'markdown-to-html', 'ascii-art-generator', 'emoji-picker'],
   'regex': ['diff-checker', 'word-count', 'regex-tester', 'html-entity'],
@@ -124,13 +130,13 @@ const related: Record<string, string[]> = {
   // 文本工具
   'word-count': ['case-converter', 'markdown-editor', 'emoji-picker', 'csv-viewer'],
   'text-dedup': ['word-count', 'case-converter', 'regex', 'regex-tester'],
-  'diff-checker': ['regex', 'yaml-formatter', 'regex-tester', 'case-converter'],
+  'diff-checker': ['regex', 'yaml-formatter', 'json-diff', 'case-converter'],
   // 查询工具
   'my-ip': ['dns-lookup', 'user-agent', 'url-parser', 'curl-to-code'],
   'user-agent': ['my-ip', 'dns-lookup', 'http-status-codes', 'web-manifest'],
   'email-validator': ['user-agent', 'my-ip', 'http-status-codes', 'password-generator'],
   // 网络工具
-  'dns-lookup': ['my-ip', 'user-agent', 'chmod-calculator', 'http-status-codes'],
+  'dns-lookup': ['my-ip', 'user-agent', 'cidr-calculator', 'http-status-codes'],
   // SEO工具
   'meta-tag': ['html-formatter', 'email-validator', 'html-playground', 'web-manifest'],
   // 转换器补充 (Round 9 工具的入链，从已有工具指向新工具)
@@ -139,10 +145,10 @@ const related: Record<string, string[]> = {
   'image-converter': ['image-compressor', 'image-resizer', 'color-palette', 'svg-to-png'],
   'svg-to-png': ['image-converter', 'image-compressor', 'image-resizer', 'qr-scanner'],
   // Round 4 (new)
-  'box-shadow-generator': ['css-gradient', 'color-converter', 'favicon-text', 'color-palette'],
+  'box-shadow-generator': ['border-radius-generator', 'color-converter', 'css-gradient', 'color-palette'],
   'html-playground': ['markdown-editor', 'html-formatter', 'js-formatter', 'css-formatter'],
   'color-palette': ['color-converter', 'css-gradient', 'box-shadow-generator', 'css-formatter'],
-  'password-strength': ['password-generator', 'hash-generator', 'bcrypt-generator', 'random-number'],
+  'password-strength': ['password-generator', 'hash-generator', 'passphrase-generator', 'credit-card-validator'],
   'http-status-codes': ['url-parser', 'dns-lookup', 'chmod-calculator', 'email-validator'],
   'url-parser': ['url-encode', 'email-validator', 'slug-generator', 'http-status-codes'],
   // Round 5 (new)
@@ -180,6 +186,12 @@ const related: Record<string, string[]> = {
   'seo-checker': ['serp-simulator', 'schema-generator', 'meta-tag', 'web-manifest'],
   'percentage-calculator': ['number-base', 'case-converter', 'color-converter', 'random-number'],
   'json-xml-converter': ['json-formatter', 'xml-formatter', 'json-to-csv', 'json-to-typescript'],
+  // Round 10 (new)
+  'cidr-calculator': ['dns-lookup', 'my-ip', 'http-status-codes', 'url-parser'],
+  'credit-card-validator': ['password-strength', 'password-generator', 'bcrypt-generator', 'email-validator'],
+  'passphrase-generator': ['password-generator', 'password-strength', 'bcrypt-generator', 'api-key-generator'],
+  'json-diff': ['json-formatter', 'diff-checker', 'json-schema-validator', 'json-to-csv'],
+  'border-radius-generator': ['box-shadow-generator', 'css-gradient', 'color-palette', 'css-formatter'],
 }
 
 interface Props {

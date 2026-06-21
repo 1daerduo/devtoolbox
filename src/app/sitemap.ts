@@ -85,6 +85,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'seo-checker',
     'percentage-calculator',
     'json-xml-converter',
+    // Round 10 (new)
+    'cidr-calculator',
+    'credit-card-validator',
+    'passphrase-generator',
+    'json-diff',
+    'border-radius-generator',
   ]
 
   const toolEntries: MetadataRoute.Sitemap = tools.map((slug) => ({

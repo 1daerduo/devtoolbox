@@ -104,6 +104,12 @@ const tools = [
   { name: 'SEO 检查器', desc: '输入 URL 或 HTML 抓取分析页面 SEO 关键指标，含 14 项检查 + 综合评分。', href: '/tools/seo-checker', icon: '✅', category: 'SEO工具' },
   { name: '百分比计算器', desc: '6 种百分比计算模式：占比、增减、折扣、利润率，工作生活通用。', href: '/tools/percentage-calculator', icon: '％', category: '转换器' },
   { name: 'JSON ↔ XML 转换', desc: 'JSON 和 XML 数据格式互相转换，支持嵌套对象、数组、可配置根节点。', href: '/tools/json-xml-converter', icon: 'J↔X', category: '转换器' },
+  // Round 10 (new)
+  { name: 'CIDR 计算器', desc: 'IP 子网划分计算器，输入 CIDR 即可计算网络地址、广播地址、可用主机数等。', href: '/tools/cidr-calculator', icon: '🌐', category: '网络工具' },
+  { name: '信用卡验证器', desc: '基于 Luhn 算法校验信用卡号，识别卡类型（Visa/MC/Amex），支持批量验证。', href: '/tools/credit-card-validator', icon: '💳', category: '安全工具' },
+  { name: '密码短语生成器', desc: '生成安全易记的密码短语，EFF 单词列表，支持自定义分隔符和单词数。', href: '/tools/passphrase-generator', icon: '🔐', category: '生成器' },
+  { name: 'JSON 对比工具', desc: '可视化比较两个 JSON 数据差异，高亮新增/删除/修改字段，深层嵌套对比。', href: '/tools/json-diff', icon: '≠', category: '文本工具' },
+  { name: 'CSS 圆角生成器', desc: '可视化 CSS border-radius 生成器，四角独立控制，快速预设，一键复制。', href: '/tools/border-radius-generator', icon: '▢', category: '设计工具' },
   // Favicon 工具套件 (Round 6)
   { name: 'Favicon 生成器', desc: '上传图片生成全尺寸 Favicon（ICO + PNG 16/32/48/64/128/256px），一键下载。', href: '/tools/favicon-generator', icon: '🔖', category: 'Favicon工具' },
   { name: '文字 Favicon 生成器', desc: '输入文字，选择字体/颜色/背景，生成字母 Favicon，实时预览。', href: '/tools/favicon-text', icon: 'Aa', category: 'Favicon工具' },
@@ -181,7 +187,7 @@ export default function HomePage() {
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 px-4">
           免费、快速、无需注册。JSON 格式化、JWT 解码、SQL 格式化、时间戳转换……
-          75 款开发工具，一站式解决。
+          80 款开发工具，一站式解决。
         </p>
 
         {/* 搜索框 */}
